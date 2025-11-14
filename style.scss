@@ -1,0 +1,140 @@
+body{
+    font-family: "Noto Serif JP";
+    background-color: rgb(247, 248, 247);
+    color:#040404;
+}
+.common__inner{
+
+}
+.common{
+    &__txt{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    &__title{
+        color: #040404;
+        text-align: center;
+        font-family: "Noto Serif JP";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 37px; /* 154.167% */
+        letter-spacing: 0.96px;
+    }
+    &__sub-title{
+        color: #040404;
+        text-align: center;
+        font-family: "Noto Serif JP";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 56px; /* 140% */
+        letter-spacing: 4px;
+    }
+    &__desc{
+        color: #040404;
+        text-align: center;
+        font-family: "Noto Serif JP";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 200% */
+        letter-spacing: 0.8px;
+    }
+}
+.section{
+    &__fv{
+        width:100%;
+        padding:40px 40px 0 40px;
+        height:100vh;
+        &__bg{
+            background-image: url(img/fv__bg.jpg);
+            background-size:cover;
+            background-position: center bottom;
+            height:calc(100% - 40px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color:#FFF;
+            border-radius: 10px;
+        }
+        &__title{
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            gap:50px;
+            height: 100%;
+            padding-left:190px;
+            & p{
+                writing-mode:vertical-lr;
+                font-size:80px;
+                padding-left:40px;
+            }
+            &__img{
+                max-width:341px;
+                width:100%;
+                & img{
+                    width:100%;
+                }
+            }
+        }
+        &__copy-right{
+            height:40px;
+            margin:auto 0;
+            color:#2D3630;
+            line-height:40px;
+            letter-spacing:0.1rem;
+            align-items: center;
+        }
+    }
+    &__concept{
+        &__figure{
+            max-width:1400px;
+            width:calc(1400/1920*100%);
+            & img{
+                width:100%;
+            }
+        }
+    }
+    &__merit{
+        &__items{
+
+        }
+        &__item{
+            display: flex;
+        }
+    }
+    &__cta{
+        background-image: url(img/cta__bg.jpg);
+        background-size: cover;
+        height:500px;
+        background-repeat: no-repeat;
+    }
+    &__company-profile{
+        &__head{
+            background-image: url(img/company-profile__bg.jpg);
+            background-position: center center;
+            background-size: cover;
+            height:490px;
+            color:#fff;
+        }
+        &__items{
+            display: flex;
+            flex-direction: column;
+            max-width:1048px;
+            padding:0 24px;margin: 0 auto;
+        }
+        &__item{
+            display: flex;
+            flex-direction:column ;
+            text-align: center;
+            &__img{
+                width:1000px;
+                & img{
+                    width:100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+body {
+  font-family: "Noto Serif JP";
+  background-color: rgb(247, 248, 247);
+  color: #040404;
+}
+
+.common__txt {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.common__title {
+  color: #040404;
+  text-align: center;
+  font-family: "Noto Serif JP";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px; /* 154.167% */
+  letter-spacing: 0.96px;
+}
+.common__sub-title {
+  color: #040404;
+  text-align: center;
+  font-family: "Noto Serif JP";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 140% */
+  letter-spacing: 4px;
+}
+.common__desc {
+  color: #040404;
+  text-align: center;
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 200% */
+  letter-spacing: 0.8px;
+}
+
+.section__fv {
+  width: 100%;
+  padding: 40px 40px 0 40px;
+  height: 100vh;
+}
+.section__fv__bg {
+  background-image: url(img/fv__bg.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  height: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFF;
+  border-radius: 10px;
+}
+.section__fv__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  height: 100%;
+  padding-left: 190px;
+}
+.section__fv__title p {
+  writing-mode: vertical-lr;
+  font-size: 80px;
+  padding-left: 40px;
+}
+.section__fv__title__img {
+  max-width: 341px;
+  width: 100%;
+}
+.section__fv__title__img img {
+  width: 100%;
+}
+.section__fv__copy-right {
+  height: 40px;
+  margin: auto 0;
+  color: #2D3630;
+  line-height: 40px;
+  letter-spacing: 0.1rem;
+  align-items: center;
+}
+.section__concept__figure {
+  max-width: 1400px;
+  width: 72.9166666667%;
+}
+.section__concept__figure img {
+  width: 100%;
+}
+.section__merit__item {
+  display: flex;
+}
+.section__cta {
+  background-image: url(img/cta__bg.jpg);
+  background-size: cover;
+  height: 500px;
+  background-repeat: no-repeat;
+}
+.section__company-profile__head {
+  background-image: url(img/company-profile__bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 490px;
+  color: #fff;
+}
+.section__company-profile__items {
+  display: flex;
+  flex-direction: column;
+  max-width: 1048px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+.section__company-profile__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.section__company-profile__item__img {
+  width: 1000px;
+}
+.section__company-profile__item__img img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
