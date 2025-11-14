@@ -103,6 +103,36 @@ body{
         }
         &__item{
             display: flex;
+            &__txt{
+                &__number{
+                    color: #040404;
+                    text-align: right;
+                    font-family: "Noto Serif JP";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height:162.5%;
+                    letter-spacing: 0.48px;
+                }
+                &__title{
+                    color: #000;
+                    font-family: "Noto Serif JP";
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height:  175%;
+                    letter-spacing: 3.2px;
+                }
+                &__desc{
+                    color: #040404;
+                    font-family: "Noto Serif JP";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 26px; /* 162.5% */
+                    letter-spacing: 0.48px;
+                }
+            }
         }
     }
     &__cta{
