@@ -1,8 +1,23 @@
 body{
     font-family: "Noto Serif JP";
-    background-color: rgb(247, 248, 247);
-    color:#040404;
+    background-color:#E4E4E4;
+    color:#F7F8F7;
 }
+
+
+.swiper-slide{
+    & img{
+        width:100%;
+        aspect-ratio: 640/440;
+    }
+}
+.swiper{
+    width:100%;
+    max-width: 1920px;
+    padding: 40px 0;
+}
+
+
 .common__inner{
 
 }
@@ -21,6 +36,7 @@ body{
         font-weight: 400;
         line-height: 37px; /* 154.167% */
         letter-spacing: 0.96px;
+        padding-top:120px;
     }
     &__sub-title{
         color: #040404;
@@ -31,6 +47,7 @@ body{
         font-weight: 400;
         line-height: 56px; /* 140% */
         letter-spacing: 4px;
+        padding:60px 0 54px 0;
     }
     &__desc{
         color: #040404;
@@ -41,6 +58,7 @@ body{
         font-weight: 400;
         line-height: 32px; /* 200% */
         letter-spacing: 0.8px;
+        padding-bottom: 60px;
     }
 }
 .section{
@@ -89,6 +107,21 @@ body{
         }
     }
     &__concept{
+        background-image: url(img/concept__bg.png);
+        background-size: contain;
+        // position: relative;
+        // ::before{
+        //     position: absolute;
+        //     content: "";
+        //     top:0%;
+        //     right:0%;
+        //     background: url(img/concept__bg.png);
+        //     background-size: contain;
+        //     background-repeat: no-repeat;
+        //     width:1400px;
+        //     height:900px;
+        //     z-index:-1;
+        }
         &__figure{
             max-width:1400px;
             width:calc(1400/1920*100%);
@@ -96,15 +129,202 @@ body{
                 width:100%;
             }
         }
+    &__feature{
+        &__visual{
+            display: flex;
+        }
+        &__figure{
+            max-width:1400px;
+            & img{
+                width:100%;
+                aspect-ratio: 1400 / 825;
+            }    
+        }
+        &__title{
+            writing-mode: vertical-lr;
+            color: #040404;
+            text-align: center;
+            font-family: "Noto Serif JP";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 50px; /* 125% */
+            letter-spacing: 16px;
+            padding-left:140px;
+        }
+        &__thumb{
+            &__items{
+                display: flex;
+                flex-wrap: wrap;
+                width:1000px;
+                gap:24px;
+                margin:0 auto;
+                padding-bottom:20px;
+            }
+            &__item{
+                width:483px;
+                display: flex;
+                align-items: center;
+                background-color: #536C5B;
+                color:#FFF;
+                border-radius: 10px;
+                font-family: "Noto Serif JP";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px; /* 200% */
+                letter-spacing: 1.6px;
+                &__img{
+                    width:105px;
+                    & img{
+                        aspect-ratio: 105/100;
+                        width:100%;
+                    }
+                }
+                &__txt{
+                    padding:18px 0 18px 24px;
+                }
+            }
+        }
+        &__main{
+            &__items{
+                width:1100px;
+                margin:0 auto;
+            }
+            &__item{
+                display: flex;
+                gap:56px;
+                align-items: center;
+                padding-top: 100px;
+                &__txt{
+                    width:800px;
+                    &__title{
+                        color: #536C5B;
+                        font-family: "Noto Serif JP";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 56px; /* 233.333% */
+                        letter-spacing: 2.4px;
+                        border-bottom:1px solid #A5A5A5;
+                        padding-bottom: 14px;
+                        & span{
+                            color: #536C5B;
+                            font-family: "Noto Serif JP";
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 56px; /* 175% */
+                            letter-spacing: 3.2px;
+                            padding-right:20px;
+                        }
+                    }
+                    &__desc{
+                        color: #040404;
+                        font-family: "Noto Serif JP";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 32px; /* 200% */
+                        letter-spacing: 0.8px;
+                    }
+                }
+                &__img{
+                    width:230px;
+                    & img{
+                        aspect-ratio: 230 /220;
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+    &__works{
+        &__visual{
+            width:100%;
+            display: flex;
+        }
+        &__title{
+            writing-mode: vertical-lr;
+            color: #040404;
+            text-align: center;
+            font-family: "Noto Serif JP";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 50px; /* 125% */
+            letter-spacing: 16px;
+            padding-left:140px;
+            }
+        &__figure{
+            max-width: 1400px;
+            & img{
+                aspect-ratio: 1400 / 825;
+                width:100%;
+            }
+        }
     }
     &__merit{
+        &__visual{
+            display: flex;
+        }
+        &__figure{
+            max-width:1440px;
+            & img{
+                aspect-ratio: 1400 / 825;
+                width:100%;
+            }
+        }
+        &__title{
+            writing-mode: vertical-lr;
+            color: #040404;
+            text-align: center;
+            font-family: "Noto Serif JP";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 50px; /* 125% */
+            letter-spacing: 16px;
+            padding-left:140px;
+        }
         &__items{
-
+            max-width:1300px;
+            margin:0 auto;
         }
         &__item{
             display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height:555px;
+            align-items: center;
+            &__img-01{
+                aspect-ratio: 643/401;
+                max-width:643px;
+            }
+            &__img-02{
+                aspect-ratio:587/423;
+                max-width:587px;
+            }
+            &__img-03{
+                aspect-ratio:649/417;
+                max-width:649px;
+            }
+            &__img-04{
+                aspect-ratio:587/503;
+                max-width:587px;
+            }
+            &__img-05{
+                aspect-ratio:571/469;
+                max-width:571px ;
+            }
             &__txt{
+                border-top:1px solid #A5A5A5;
+                width:405px;
+                position:relative;
                 &__number{
+                    position:absolute;
+                    top:-3%;
+                    right:-20%;
                     color: #040404;
                     text-align: right;
                     font-family: "Noto Serif JP";
@@ -122,6 +342,7 @@ body{
                     font-weight: 400;
                     line-height:  175%;
                     letter-spacing: 3.2px;
+                    padding:50px 0;
                 }
                 &__desc{
                     color: #040404;
@@ -133,13 +354,28 @@ body{
                     letter-spacing: 0.48px;
                 }
             }
+            &:nth-child(even){
+                flex-direction: row-reverse;
+            }
         }
     }
     &__cta{
-        background-image: url(img/cta__bg.jpg);
+        background-image: url(img/cta__bg--form.jpg);
         background-size: cover;
         height:500px;
         background-repeat: no-repeat;
+        margin: 0 auto;
+        &__part{
+            
+            margin:0 auto;
+        }
+        &__img{
+            width:100%;
+            & img{
+                aspect-ratio: 1920/495;
+                width:100%;
+            }
+        }
     }
     &__company-profile{
         &__head{
@@ -165,6 +401,42 @@ body{
                     width:100%;
                 }
             }
+        }
+        &__txt{
+            &__title{
+                color: #000;
+                text-align: center;
+                text-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+                font-family: "Noto Serif JP";
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 56px; /* 175% */
+                letter-spacing: 3.2px;
+            }
+            &__desc{
+                color: #040404;
+                font-family: "Noto Serif JP";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px; /* 200% */
+                letter-spacing: 0.8px;
+            }
+        }
+    }
+}
+.footer{
+    background-color: #2D3630;
+    padding:100px 0 150px 0;
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:240px;
+        &__items{
+            display: flex;
+            gap:60px;
         }
     }
 }

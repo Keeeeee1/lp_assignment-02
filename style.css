@@ -1,7 +1,18 @@
 body {
   font-family: "Noto Serif JP";
-  background-color: rgb(247, 248, 247);
-  color: #040404;
+  background-color: #E4E4E4;
+  color: #F7F8F7;
+}
+
+.swiper-slide img {
+  width: 100%;
+  aspect-ratio: 640/440;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1920px;
+  padding: 40px 0;
 }
 
 .common__txt {
@@ -18,6 +29,7 @@ body {
   font-weight: 400;
   line-height: 37px; /* 154.167% */
   letter-spacing: 0.96px;
+  padding-top: 120px;
 }
 .common__sub-title {
   color: #040404;
@@ -28,6 +40,7 @@ body {
   font-weight: 400;
   line-height: 56px; /* 140% */
   letter-spacing: 4px;
+  padding: 60px 0 54px 0;
 }
 .common__desc {
   color: #040404;
@@ -38,6 +51,7 @@ body {
   font-weight: 400;
   line-height: 32px; /* 200% */
   letter-spacing: 0.8px;
+  padding-bottom: 60px;
 }
 
 .section__fv {
@@ -84,17 +98,206 @@ body {
   letter-spacing: 0.1rem;
   align-items: center;
 }
-.section__concept__figure {
+.section__concept {
+  background-image: url(img/concept__bg.png);
+  background-size: contain;
+}
+.section__figure {
   max-width: 1400px;
   width: 72.9166666667%;
 }
-.section__concept__figure img {
+.section__figure img {
   width: 100%;
+}
+.section__feature__visual {
+  display: flex;
+}
+.section__feature__figure {
+  max-width: 1400px;
+}
+.section__feature__figure img {
+  width: 100%;
+  aspect-ratio: 1400/825;
+}
+.section__feature__title {
+  writing-mode: vertical-lr;
+  color: #040404;
+  text-align: center;
+  font-family: "Noto Serif JP";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  letter-spacing: 16px;
+  padding-left: 140px;
+}
+.section__feature__thumb__items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+  gap: 24px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.section__feature__thumb__item {
+  width: 483px;
+  display: flex;
+  align-items: center;
+  background-color: #536C5B;
+  color: #FFF;
+  border-radius: 10px;
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 200% */
+  letter-spacing: 1.6px;
+}
+.section__feature__thumb__item__img {
+  width: 105px;
+}
+.section__feature__thumb__item__img img {
+  aspect-ratio: 105/100;
+  width: 100%;
+}
+.section__feature__thumb__item__txt {
+  padding: 18px 0 18px 24px;
+}
+.section__feature__main__items {
+  width: 1100px;
+  margin: 0 auto;
+}
+.section__feature__main__item {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+  padding-top: 100px;
+}
+.section__feature__main__item__txt {
+  width: 800px;
+}
+.section__feature__main__item__txt__title {
+  color: #536C5B;
+  font-family: "Noto Serif JP";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 233.333% */
+  letter-spacing: 2.4px;
+  border-bottom: 1px solid #A5A5A5;
+  padding-bottom: 14px;
+}
+.section__feature__main__item__txt__title span {
+  color: #536C5B;
+  font-family: "Noto Serif JP";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 175% */
+  letter-spacing: 3.2px;
+  padding-right: 20px;
+}
+.section__feature__main__item__txt__desc {
+  color: #040404;
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 200% */
+  letter-spacing: 0.8px;
+}
+.section__feature__main__item__img {
+  width: 230px;
+}
+.section__feature__main__item__img img {
+  aspect-ratio: 230/220;
+  width: 100%;
+}
+.section__works__visual {
+  width: 100%;
+  display: flex;
+}
+.section__works__title {
+  writing-mode: vertical-lr;
+  color: #040404;
+  text-align: center;
+  font-family: "Noto Serif JP";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  letter-spacing: 16px;
+  padding-left: 140px;
+}
+.section__works__figure {
+  max-width: 1400px;
+}
+.section__works__figure img {
+  aspect-ratio: 1400/825;
+  width: 100%;
+}
+.section__merit__visual {
+  display: flex;
+}
+.section__merit__figure {
+  max-width: 1440px;
+}
+.section__merit__figure img {
+  aspect-ratio: 1400/825;
+  width: 100%;
+}
+.section__merit__title {
+  writing-mode: vertical-lr;
+  color: #040404;
+  text-align: center;
+  font-family: "Noto Serif JP";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  letter-spacing: 16px;
+  padding-left: 140px;
+}
+.section__merit__items {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .section__merit__item {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 555px;
+  align-items: center;
+}
+.section__merit__item__img-01 {
+  aspect-ratio: 643/401;
+  max-width: 643px;
+}
+.section__merit__item__img-02 {
+  aspect-ratio: 587/423;
+  max-width: 587px;
+}
+.section__merit__item__img-03 {
+  aspect-ratio: 649/417;
+  max-width: 649px;
+}
+.section__merit__item__img-04 {
+  aspect-ratio: 587/503;
+  max-width: 587px;
+}
+.section__merit__item__img-05 {
+  aspect-ratio: 571/469;
+  max-width: 571px;
+}
+.section__merit__item__txt {
+  border-top: 1px solid #A5A5A5;
+  width: 405px;
+  position: relative;
 }
 .section__merit__item__txt__number {
+  position: absolute;
+  top: -3%;
+  right: -20%;
   color: #040404;
   text-align: right;
   font-family: "Noto Serif JP";
@@ -112,6 +315,7 @@ body {
   font-weight: 400;
   line-height: 175%;
   letter-spacing: 3.2px;
+  padding: 50px 0;
 }
 .section__merit__item__txt__desc {
   color: #040404;
@@ -122,11 +326,25 @@ body {
   line-height: 26px; /* 162.5% */
   letter-spacing: 0.48px;
 }
+.section__merit__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
 .section__cta {
-  background-image: url(img/cta__bg.jpg);
+  background-image: url(img/cta__bg--form.jpg);
   background-size: cover;
   height: 500px;
   background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.section__cta__part {
+  margin: 0 auto;
+}
+.section__cta__img {
+  width: 100%;
+}
+.section__cta__img img {
+  aspect-ratio: 1920/495;
+  width: 100%;
 }
 .section__company-profile__head {
   background-image: url(img/company-profile__bg.jpg);
@@ -152,4 +370,39 @@ body {
 }
 .section__company-profile__item__img img {
   width: 100%;
+}
+.section__company-profile__txt__title {
+  color: #000;
+  text-align: center;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+  font-family: "Noto Serif JP";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 175% */
+  letter-spacing: 3.2px;
+}
+.section__company-profile__txt__desc {
+  color: #040404;
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 200% */
+  letter-spacing: 0.8px;
+}
+
+.footer {
+  background-color: #2D3630;
+  padding: 100px 0 150px 0;
+}
+.footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 240px;
+}
+.footer__nav__items {
+  display: flex;
+  gap: 60px;
 }/*# sourceMappingURL=style.css.map */
