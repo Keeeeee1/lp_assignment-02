@@ -1,18 +1,18 @@
+@charset "UTF-8";
 body {
   font-family: "Noto Serif JP";
-  background-color: #E4E4E4;
+  background-color: #F7F8F7;
   color: #F7F8F7;
 }
 
-.swiper-slide img {
-  width: 100%;
-  aspect-ratio: 640/440;
+.common__inner {
+  margin: 0 auto;
 }
 
-.swiper {
-  width: 100%;
-  max-width: 1920px;
-  padding: 40px 0;
+.common__inner--1048 {
+  max-width: 1048px;
+  padding: 0 24px;
+  margin: 0 auto;
 }
 
 .common__txt {
@@ -29,7 +29,6 @@ body {
   font-weight: 400;
   line-height: 37px; /* 154.167% */
   letter-spacing: 0.96px;
-  padding-top: 120px;
 }
 .common__sub-title {
   color: #040404;
@@ -40,7 +39,6 @@ body {
   font-weight: 400;
   line-height: 56px; /* 140% */
   letter-spacing: 4px;
-  padding: 60px 0 54px 0;
 }
 .common__desc {
   color: #040404;
@@ -51,18 +49,69 @@ body {
   font-weight: 400;
   line-height: 32px; /* 200% */
   letter-spacing: 0.8px;
-  padding-bottom: 60px;
+}
+.common__border {
+  height: 1px;
+  width: 32px;
+  background-color: #000;
+  margin: 0 auto;
+}
+
+.toggle__content {
+  display: none;
+  transition: all 0.3s;
+}
+.toggle__content.is-open {
+  display: block;
+}
+.toggle__btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 12px 0;
+}
+.toggle__btn.is-open .toggle__icon::after {
+  transform: rotate(90deg);
+}
+.toggle__btn.is-open .toggle__icon::before {
+  transform: scaleX(0);
+}
+.toggle__icon {
+  position: relative;
+}
+.toggle__icon::before {
+  content: "";
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background: #536C5B;
+  transition: 0.5s;
+}
+.toggle__icon::after {
+  content: "";
+  right: 15px;
+  top: -15px;
+  position: absolute;
+  height: 30px;
+  width: 1px;
+  background: #536C5B;
+  transition: 0.5s;
 }
 
 .section__fv {
   width: 100%;
   padding: 40px 40px 0 40px;
   height: 100vh;
+  position: relative;
 }
 .section__fv__bg {
   background-image: url(img/fv__bg.jpg);
   background-size: cover;
-  background-position: center bottom;
+  background-position: right top;
+  background-repeat: no-repeat;
   height: calc(100% - 40px);
   display: flex;
   justify-content: space-between;
@@ -90,6 +139,41 @@ body {
 .section__fv__title__img img {
   width: 100%;
 }
+.section__fv__nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 310px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(45, 54, 48, 0.3);
+}
+.section__fv__nav__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+}
+.section__fv__nav__group--middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section__fv__nav__group--middle > li {
+  padding-bottom: 32px;
+}
+.section__fv__nav__logo img {
+  aspect-ratio: 125/50;
+  max-width: 125px;
+}
+.section__fv__nav__cta img {
+  aspect-ratio: 193/193;
+  max-width: 193px;
+}
 .section__fv__copy-right {
   height: 40px;
   margin: auto 0;
@@ -100,17 +184,38 @@ body {
 }
 .section__concept {
   background-image: url(img/concept__bg.png);
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 120px 0 100px 0;
 }
-.section__figure {
+.section__concept__title {
+  padding: 0 0 16px 0;
+}
+.section__concept__subtitle {
+  padding: 40px 0 56px 0;
+}
+.section__concept__figure {
   max-width: 1400px;
   width: 72.9166666667%;
 }
-.section__figure img {
+.section__concept__figure img {
   width: 100%;
+}
+.section__concept__desc--top {
+  padding-bottom: 24px;
+}
+.section__concept__desc--bottom {
+  padding-bottom: 60px;
+}
+.section__feature {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 54px;
 }
 .section__feature__visual {
   display: flex;
+  width: 100%;
 }
 .section__feature__figure {
   max-width: 1400px;
@@ -120,9 +225,9 @@ body {
   aspect-ratio: 1400/825;
 }
 .section__feature__title {
+  padding-top: 130px;
   writing-mode: vertical-lr;
   color: #040404;
-  text-align: center;
   font-family: "Noto Serif JP";
   font-size: 40px;
   font-style: normal;
@@ -130,14 +235,29 @@ body {
   line-height: 50px; /* 125% */
   letter-spacing: 16px;
   padding-left: 140px;
+  position: relative;
+}
+.section__feature__title::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 1px;
+  background-color: #2D3630;
+  right: 25px;
+  top: 0;
+}
+.section__feature__title span {
+  padding-top: 32px;
+  font-size: 32px;
 }
 .section__feature__thumb__items {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 1000px;
   gap: 24px;
-  margin: 0 auto;
   padding-bottom: 20px;
+  padding-top: 200px;
+  margin-left: 360px;
 }
 .section__feature__thumb__item {
   width: 483px;
@@ -164,8 +284,9 @@ body {
   padding: 18px 0 18px 24px;
 }
 .section__feature__main__items {
-  width: 1100px;
-  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  margin-left: 310px;
 }
 .section__feature__main__item {
   display: flex;
@@ -213,14 +334,112 @@ body {
   aspect-ratio: 230/220;
   width: 100%;
 }
+.section__access {
+  padding: 60px 0 120px 0;
+}
+.section__access__list {
+  color: #040404;
+  font-family: "Noto Serif JP";
+}
+.section__access__list__head {
+  align-items: center;
+  border-bottom: 1px solid #A5A5A5;
+}
+.section__access__list__left {
+  color: #FFF;
+  text-align: center;
+  font-family: "Noto Serif JP";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 233.333% */
+  letter-spacing: 1.2px;
+  max-width: 350px;
+  width: 100%;
+}
+.section__access__list__right {
+  color: #000;
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.8px;
+}
+.section__access__list__content {
+  display: flex;
+  max-width: 940px;
+  width: 94%;
+  gap: 50px;
+}
+.section__access__list__item {
+  border-bottom: 1px solid #A5A5A5;
+}
+.section__access__eyebrow {
+  color: #040404;
+  font-family: "Noto Serif JP";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px; /* 154.167% */
+  letter-spacing: 0.96px;
+  border-bottom: 1px solid #A5A5A5;
+  padding-bottom: 24px;
+}
+.section__access__house {
+  margin-bottom: 30px;
+}
+.section__access__house img {
+  aspect-ratio: 350/230;
+  max-width: 350px;
+  width: 100%;
+}
+.section__access__address-detail {
+  padding-top: 31px;
+}
+.section__access__contact {
+  padding: 23px 0 41px 0;
+}
+.section__access__contact-btn {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  background-color: #2D3630;
+  color: #FFF;
+  text-align: center;
+  font-family: "Noto Serif JP";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 233.333% */
+  letter-spacing: 1.2px;
+}
+.section__access__feature {
+  padding-bottom: 62px;
+}
+.section__access__title {
+  color: #040404;
+  font-family: "Noto Serif JP";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+}
+.section__access__adress-about {
+  color: #040404;
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px; /* 350% */
+}
 .section__works__visual {
   width: 100%;
   display: flex;
 }
 .section__works__title {
+  padding-top: 130px;
   writing-mode: vertical-lr;
   color: #040404;
-  text-align: center;
   font-family: "Noto Serif JP";
   font-size: 40px;
   font-style: normal;
@@ -228,6 +447,16 @@ body {
   line-height: 50px; /* 125% */
   letter-spacing: 16px;
   padding-left: 140px;
+  position: relative;
+}
+.section__works__title::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 1px;
+  background-color: #2D3630;
+  right: 25px;
+  top: 0;
 }
 .section__works__figure {
   max-width: 1400px;
@@ -235,6 +464,153 @@ body {
 .section__works__figure img {
   aspect-ratio: 1400/825;
   width: 100%;
+}
+.section__works__swiper--01, .section__works__swiper--02 {
+  max-width: 1248px;
+  padding: 0 24px;
+  margin-left: 310px;
+  display: flex;
+  gap: 24px;
+  /* main */
+  /* thumbnail */
+}
+.section__works__swiper--01 .swiper__works--main-01,
+.section__works__swiper--01 .swiper__works--main-02, .section__works__swiper--02 .swiper__works--main-01,
+.section__works__swiper--02 .swiper__works--main-02 {
+  width: 75%;
+}
+.section__works__swiper--01 .swiper__works--main-01 img,
+.section__works__swiper--01 .swiper__works--main-02 img, .section__works__swiper--02 .swiper__works--main-01 img,
+.section__works__swiper--02 .swiper__works--main-02 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 893/596;
+  cursor: pointer;
+}
+.section__works__swiper--01 .swiper__works--thumb-01,
+.section__works__swiper--01 .swiper__works--thumb-02, .section__works__swiper--02 .swiper__works--thumb-01,
+.section__works__swiper--02 .swiper__works--thumb-02 {
+  width: 25%;
+  height: 320px;
+}
+.section__works__swiper--01 .swiper__works--thumb-01 .swiper-slide,
+.section__works__swiper--01 .swiper__works--thumb-02 .swiper-slide, .section__works__swiper--02 .swiper__works--thumb-01 .swiper-slide,
+.section__works__swiper--02 .swiper__works--thumb-02 .swiper-slide {
+  height: auto !important;
+}
+.section__works__swiper--01 .swiper__works--thumb-01 img,
+.section__works__swiper--01 .swiper__works--thumb-02 img, .section__works__swiper--02 .swiper__works--thumb-01 img,
+.section__works__swiper--02 .swiper__works--thumb-02 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 136/142;
+  cursor: pointer;
+}
+.section__contact {
+  /* input 共通 */
+  /* ラジオボタン */
+  /* チェックボックス */
+  /* 送信ボタン */
+  /* 右矢印 */
+}
+.section__contact__form {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.section__contact__form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.section__contact__form__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.section__contact__form__input, .section__contact__form__select, .section__contact__form__textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: #F6F6F6;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+.section__contact__form__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("img/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+}
+.section__contact__form__textarea {
+  height: 140px;
+  resize: none;
+}
+.section__contact__form__note {
+  font-size: 11px;
+  color: #999;
+}
+.section__contact__form__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.section__contact__form__radio-group label {
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.section__contact__form__privacy {
+  margin-top: 10px;
+}
+.section__contact__form__privacy label {
+  font-size: 12px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.section__contact__form__submit {
+  width: 260px;
+  margin: 30px auto 0;
+  padding: 16px 40px;
+  border: 1px solid #333;
+  background: transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.3s ease;
+}
+.section__contact__form__submit:hover {
+  background: #333;
+  color: #fff;
+}
+.section__contact__form__submit__arrow {
+  width: 12px;
+  height: 12px;
+  background-image: url("img/arrow-right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.section__merit {
+  padding: 160px 0 320px 0;
 }
 .section__merit__visual {
   display: flex;
@@ -247,9 +623,9 @@ body {
   width: 100%;
 }
 .section__merit__title {
+  padding-top: 130px;
   writing-mode: vertical-lr;
   color: #040404;
-  text-align: center;
   font-family: "Noto Serif JP";
   font-size: 40px;
   font-style: normal;
@@ -257,6 +633,24 @@ body {
   line-height: 50px; /* 125% */
   letter-spacing: 16px;
   padding-left: 140px;
+  position: relative;
+}
+.section__merit__title::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 1px;
+  background-color: #2D3630;
+  right: 25px;
+  top: 0;
+}
+.section__merit__introduce {
+  padding-top: 100px;
+  margin-left: 500px;
+}
+.section__merit__introduce img {
+  aspect-ratio: 885/226;
+  max-width: 885px;
 }
 .section__merit__items {
   max-width: 1300px;
@@ -332,9 +726,36 @@ body {
 .section__cta {
   background-image: url(img/cta__bg--form.jpg);
   background-size: cover;
+  background-position: center center;
   height: 500px;
   background-repeat: no-repeat;
   margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  /* ボタン */
+}
+.section__cta__circle {
+  width: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
+  background: rgba(45, 54, 48, 0.3);
+  opacity: 0.9;
+  border-radius: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.section__cta__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 24px;
+  z-index: 2;
+  position: relative;
 }
 .section__cta__part {
   margin: 0 auto;
@@ -345,6 +766,117 @@ body {
 .section__cta__img img {
   aspect-ratio: 1920/495;
   width: 100%;
+}
+.section__cta__eyebrow {
+  color: #FFF;
+  font-feature-settings: "halt" on;
+  font-family: "Noto Serif JP";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 3.2px;
+  border-bottom: 1px solid #FFF;
+  padding: 50px 0 20px 0;
+}
+.section__cta__deadline {
+  margin-bottom: 24px;
+  padding-top: 16px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.section__cta__date {
+  color: #fff;
+  padding: 4px 12px;
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 0 12px;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.section__cta__date span {
+  font-size: 28px;
+}
+.section__cta__amazon {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Noto Serif JP";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+}
+.section__cta__amazon span {
+  font-size: 17px;
+}
+.section__cta__max {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  background-color: #536C5B;
+  color: #FFF;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Noto Serif JP";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+  padding: 5px;
+  text-align: center;
+  vertical-align: center;
+}
+.section__cta__price {
+  color: #FFF;
+  font-family: "Noto Serif JP";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -1.12px;
+  padding-left: 4px;
+}
+.section__cta__price span {
+  writing-mode: vertical-rl;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  padding-left: 4px;
+}
+.section__cta__item {
+  margin-bottom: 12px;
+}
+.section__cta__item img {
+  aspect-ratio: 938/289;
+  max-width: 469px;
+  height: auto;
+}
+.section__cta__btn {
+  display: block;
+  width: 100%;
+  background: #536C5B;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 100px;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  font-family: "Shippori Mincho";
+}
+.section__cta__btn:hover {
+  opacity: 0.7;
 }
 .section__company-profile__head {
   background-image: url(img/company-profile__bg.jpg);
@@ -405,4 +937,142 @@ body {
 .footer__nav__items {
   display: flex;
   gap: 60px;
+}
+
+.card {
+  width: 90%;
+  max-width: 780px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.card__images {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.card__images .card__img-main {
+  width: 70%;
+  border-radius: 12px;
+}
+.card__images .card__img-sub {
+  width: 25%;
+  border-radius: 12px;
+}
+.card__images .card__zoom-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 38px;
+  height: 38px;
+}
+.card__images .card__zoom-icon img {
+  width: 100%;
+}
+.card__title {
+  color: #2D3630;
+  font-family: "Noto Serif JP";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 166.667% */
+  letter-spacing: 1.2px;
+}
+.card__text {
+  color: #040404;
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 200% */
+  letter-spacing: 0.8px;
+}
+
+/* Swiper のパーツはカード外なので別管理 */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #7da48f;
+}
+
+.swiper-pagination-bullet-active {
+  background: #7da48f;
+}
+
+.swiper--concept {
+  width: 100%;
+  max-width: 1920px;
+}
+.swiper--concept img {
+  width: 100%;
+  aspect-ratio: 640/440;
+}
+
+.swiper__works--thumb-01 {
+  height: 1000px;
+}
+.swiper__works--thumb-01 img {
+  aspect-ratio: 136/142;
+}
+
+/* =========================
+   Lightbox モーダル
+========================= */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none; /* 初期は非表示 */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.lightbox-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 4px;
+}
+
+.section__card-slider {
+  padding: 60px 0;
+}
+
+.cardSwiper {
+  width: 100%;
+  padding: 20px 0 40px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 90%;
+  max-width: 780px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ページネーションの全体 */
+.swiper-pagination-progressbar {
+  position: relative;
+  width: 85%; /* 横幅を調整する */
+  height: 4px; /* 太さ */
+  background: #dcdcdc; /* 背景ラインの色 */
+  border-radius: 4px;
+  margin: 40px auto 0;
+}
+
+/* 実際に伸びる進捗ライン */
+.swiper-pagination-progressbar-fill {
+  background: #7da48f; /* 緑のバー */
+  border-radius: 4px;
 }/*# sourceMappingURL=style.css.map */

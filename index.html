@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Noto+Serif+JP:wght@200..900&family=Oswald:wght@200..700&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Noto+Serif+JP:wght@400;500;700&family=Oswald:wght@200..700&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Noto+Serif+JP:wght@200..900&family=Oswald:wght@500&family=Shippori+Mincho&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
-    <link rel="stylesheet"href="style.css"/>    
+    <link rel="stylesheet"href="/style.css"/>    
     <title>lp-sala</title>
 </head>
 <body>
@@ -20,19 +21,25 @@
                     <img src="img/fv__illust.png">
                 </div>
             </div>
-            <nav class="section__fv__nav">
-                <ul class="section__fv__nav__items">
-                    <li class="section__fv__nav__item"><a href="#"><img src="img/nav__logo.png"></a></li>
+        </div>
+        <nav class="section__fv__nav">
+            <ul class="section__fv__nav__items">
+                <div class="section__fv__nav__group--top">
+                    <li class="section__fv__nav__item section__fv__nav__logo"><a href="#"><img src="img/nav__logo.png"></a></li>
+                </div>
+                <div class="section__fv__nav__group--middle">
                     <li class="section__fv__nav__item"><a href="#merit">Merit</a></li>
                     <li class="section__fv__nav__item"><a href="#feature">Feature</a></li>
                     <li class="section__fv__nav__item"><a href="#access">Access</a></li>
                     <li class="section__fv__nav__item"><a href="#works">Works</a></li>
                     <li class="section__fv__nav__item"><a href="#contact">Contact</a></li>
-                    <li class="section__fv__nav__item"><a href="#company-profile">Company profile</a></li>
-                    <li class="section__fv__nav__item"><a href="#contact"><img src="img/nav__cta.png"></a></li>
-                </ul>
-            </nav>
-        </div>
+                    <li class="section__fv__nav__item"><a href="#company-profile">Company Profile</a></li>
+                </div>
+                <div class="section__fv__nav__group--bottom">
+                    <li class="section__fv__nav__item section__fv__nav__cta"><a href="#contact"><img src="img/nav__cta.png"></a></li>
+                </div>
+            </ul>
+        </nav>
         <p class="section__fv__copy-right">
             Copyright 2023 SALA HOUSE CO.,LTD. All rights reserved.
         </p>
@@ -41,11 +48,14 @@
         <div class="section__concept__inner">
             <div class="section__concept__txt common__txt">
                 <h2 class="section__concept__title common__title">Concept</h2>
-                <p class="section__concept__sub-title common__sub-title">「サーラの平屋」とは？</p>
-                <p class="section__concept__desc common__desc">
+                <div class="section__concept__border common__border"></div>
+                <p class="section__concept__subtitle common__sub-title">「サーラの平屋」とは？</p>
+                <p class="section__concept__desc--top common__desc">
                     どんなライフスタイルにもフィットする、シンプルモダンなデザイン。<br>
                     生活空間を最大化しながら、外断熱で夏も冬も快適。いいとこどりの平屋の暮らし。<br>
-                    創業55年、平屋づくりの豊富なノウハウと確かな技術で実現します。<br>
+                    創業55年、平屋づくりの豊富なノウハウと確かな技術で実現します。
+                </p>
+                <p class="section__concept__desc--bottom common__desc">
                     一度きりの家づくりだからこそ、知ってほしいことがたくさんあります。<br>
                     平屋の家を建てるなら、あなたにも「サーラの平屋」を知ってほしい。
                 </p>
@@ -80,6 +90,9 @@
                 <img src="img/concept__merit.jpg">
             </div>
             <h2 class="section__merit__title">平屋のメリット</h2>
+        </div>
+        <div class="section__merit__introduce">
+            <img src="img/merit__introduce.png">
         </div>
         <div class="section__merit__items">
             <div class="section__merit__item">
@@ -150,9 +163,25 @@
             
         </div>
     </section>
-    <section class="section__cta" id="cta-01">
+<section class="section__cta" id="cta-01">
+    <div class="section__cta__circle">    </div>
+        <div class="section__cta__inner">
+            <p class="section__cta__eyebrow">予約来場キャンペーン開催中！</p>
+            <div class="section__cta__deadline">
+                <span class="section__cta__date">2025.<span>4.30</span>まで</span>
+                <span class="section__cta__amazon">Amazon <br><span>ギフトカード</span></span>
+                <span class="section__cta__max">最大</span>
+                <span class="section__cta__price">20,000<span>円分</span></span>
+            </div>
+            <div class="section__cta__item">
+                <img src="img/cta__part.png">
+            </div>
+            <a href="#contact" class="section__cta__btn">
+                お問い合わせフォーム
+            </a>
+        </div>
+</section>
 
-    </section>
     <section class="section__feature" id="feature">
         <div class="section__feature__visual">
             <div class="section__feature__figure">
@@ -250,61 +279,299 @@
                 「設計士と建てる家づくり」を参考までにご紹介します。
             </p>
         </div>
-    </section>
-    <section class="section__cta" id="cta-02" >
+        <div class="section__card-slider">
+            <div class="swiper cardSwiper">
+                <div class="swiper-wrapper">
+                    <!-- ===== SLIDE 1 ===== -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__images">
+                                <img class="card__img-main" src="img/feature__plan-01--exterior.jpg" alt="">
+                                <img class="card__img-sub" src="img/feature__plan-01--layout.jpg" alt="">
+                                <div class="card__zoom-icon">
+                                    <img src="img/zoom-icon.png" alt="">
+                                </div>
+                            </div>
+                            <h3 class="card__title">我が家流 “サーファーズハウス”</h3>
+                            <p class="card__text">
+                                映画、音楽、陶芸、絵画、写真、サイクリング、サーフィン…自分の好きなことに熱中できる場所があるだけで、毎日の暮らしは豊かになっていきます。そんな場所には自然と仲間が集い、語り合う時間が生まれます。
+                                なかでも、アウトドアリビングとして利用できる広々としたデッキと、リビング空間が一体となった開放的なスペースは、心ゆくまで寛ぎの時を楽しめる場所。ダイニング・キッチンはゆるやかにプライベート空間を区分けし、プライバシー性にも配慮した伸びやかで柔軟な暮らしを演出します。
+                            </p>
+                        </div>
+                    </div>
 
+                    <!-- ===== SLIDE 2 ===== -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__images">
+                                <img class="card__img-main" src="img/feature__plan-02--exterior.jpg" alt="">
+                                <img class="card__img-sub" src="img/feature__plan-02--layout.jpg" alt="">
+                                <div class="card__zoom-icon">
+                                    <img src="img/zoom-icon.png" alt="">
+                                </div>
+                            </div>
+                            <h3 class="card__title">スローライフを楽しむ暮らし</h3>
+                            <p class="card__text">
+                                窓の外に広がる風景を眺めながら、開放感あふれる空間に身をゆだねる。そこで感じるのは、ゆったりとした時間の流れです。
+                                外の風景との一体感を考え、リビングの外にデッキスペースを設け、庭へとつながるようにデザイン。
+                                また、リビングを中心に各居室をつなぐ配置としたシンプルな生活動線で、軽快かつ開放感たっぷりのここちよい暮らしが楽しめます。
+                                ロケーションを活かした平屋での暮らしが、季節の移ろいを心から楽しむ毎日を演出します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ===== SLIDE 3 ===== -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__images">
+                                <img class="card__img-main" src="img/feature__plan-03--exterior.jpg" alt="">
+                                <img class="card__img-sub" src="img/feature__plan-03--layout.jpg" alt="">
+                                <div class="card__zoom-icon">
+                                    <img src="img/zoom-icon.png" alt="">
+                                </div>
+                            </div>
+                            <h3 class="card__title">共働き家族の家事ラクスタイル</h3>
+                            <p class="card__text">
+                                共働き家族にとって住まいに求める重要なポイントは、いかに効率良く家事をこなし、限られた時間の中でどれだけたくさんの家族の時間をつくることができるか。
+                                その観点から考えれば、平屋は無駄がなくコンパクトな生活動線が描け、ゆとりある住空間を生みだします。また、平屋なら家事もワンフロアでテキパキ完了。家族の気配がどこにいても感じられる距離感は、いつでもかけがえのない家族の温もりの時間を与えてくれます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ===== SLIDE 4 ===== -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__images">
+                                <img class="card__img-main" src="img/feature__plan-04--exterior.jpg" alt="">
+                                <img class="card__img-sub" src="img/feature__plan-04--layout.jpg" alt="">
+                                <div class="card__zoom-icon">
+                                    <img src="img/zoom-icon.png" alt="">
+                                </div>
+                            </div>
+                            <h3 class="card__title">家族想いの縁を結ぶ住まい</h3>
+                            <p class="card__text">
+                                和室とリビング空間につながる戸外のアウトドアリビングは、庭の緑を楽しみながら家族が集い語らう場所としてレイアウト。
+                                キッチンやダイニングは、子ども世帯も含め、みんなで一緒に食事が楽しめるほどの広々空間に。
+                                大きなゆとりと落ち着きある雰囲気が、四季折々の自然の趣と相まって、誰にとっても懐かしく居心地がよい、寛ぎの時間を生みだします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- dots -->
+                <div class="swiper-pagination "></div>
+
+                <!-- arrows -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+    </section>
+    <section class="section__cta" id="cta-02">
+        <div class="section__cta__circle">    </div>
+            <div class="section__cta__inner">
+                <p class="section__cta__eyebrow">予約来場キャンペーン開催中！</p>
+                <div class="section__cta__deadline">
+                    <span class="section__cta__date">2025.<span>4.30</span>まで</span>
+                    <span class="section__cta__amazon">Amazon <br><span>ギフトカード</span></span>
+                    <span class="section__cta__max">最大</span>
+                    <span class="section__cta__price">20,000<span>円分</span></span>
+                </div>
+                <div class="section__cta__item">
+                    <img src="img/cta__part.png">
+                </div>
+                <a href="#contact" class="section__cta__btn">
+                    お問い合わせフォーム
+                </a>
+            </div>
     </section>
     <section class="section__access" id="access">
-        <div class="section__access__txt common__txt">
-            <h3 class="section__access__title common__title">Tour & Consultation</h3>
-            <p class="section__access__sub-title common__sub-title">平屋づくり相談＆展示場見学はこちら</p>
-            <p class="section__access__desc common__desc">
-                お近くの展示場でサーラの家づくりを体感しつつ、平屋づくりのご相談ができます。
-            </p>
+        <div class="common__inner--1048">
+            <div class="section__access__txt common__txt">
+                <h3 class="section__access__title common__title">Tour & Consultation</h3>
+                <p class="section__access__sub-title common__sub-title">平屋づくり相談＆展示場見学はこちら</p>
+                <p class="section__access__desc common__desc">
+                    お近くの展示場でサーラの家づくりを体感しつつ、平屋づくりのご相談ができます。
+                </p>
+            </div>
+            <div class="section__access__list">
+                <p class="section__access__eyebrow">Access</p>
+                <div class="section__access__list__item toggle">
+                    <button class="section__access__head toggle__btn is-open">
+                        <span class="section__access__title ">春日井展示場</span>
+                        <span class="section__access__address-about">愛知県春日井市</span>
+                        <span class="toggle__icon"></span>
+                    </button>
+                    <div class="toggle__content is-open">
+                        <div class="section__access__list__content">
+                            <div class="section__access__list__left">
+                                <div class="section__access__house">
+                                    <img src="img/access__kasugaisi.jpg">
+                                </div>
+                                <a href="#contact" class="section__access__contact-btn">来場予約</a>
+                            </div>
+                            <div class="section__access__list__right">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.235964912034!2d136.97096787576965!3d35.275259072721056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600372879754c691%3A0x47a23a5f70203354!2z44K144O844Op5L2P5a6F44ixIOaYpeaXpeS6leWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1763356789415!5m2!1sja!2sjp" width="540" height="340" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <p class="section__access__address-detail">
+                                    愛知県春日井市西山町2丁目8-1<br>
+                                    ナゴヤハウジングセンター春日井会場内
+                                </p>
+                                <div class="section__access__contact">
+                                    <p class="section__access__time--open">営業時間：10:00~17:00</p>
+                                    <p class="section__access__time-close">定休日：火曜日・水曜日</p>
+                                    <p class="section__access__tel">電話番号：0120-301-770</p>
+                                </div>
+                                <p class="section__access__feature">
+                                    キッズスペース有、オムツ交換OK、ハウンジングセンター内に託児サービス、ライブラリー、授乳室、レンタル備品有（インフォメーションへお問い合わせください）
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__access__list__item toggle">
+                    <button class="section__access__head toggle__btn">
+                        <span class="section__access__title ">日進展示場</span>
+                        <span class="section__access__address-about">愛知県日進市</span>
+                        <span class="toggle__icon"></span>
+                    </button>
+                    <div class="toggle__content">
+                        <div class="section__access__list__content">
+                            <div class="section__access__list__left">
+                                <div class="section__access__house">
+                                    <img src="img/access__kasugaisi.jpg">
+                                </div>
+                                <a href="#contact" class="section__access__contact-btn">来場予約</a>
+                            </div>
+                            <div class="section__access__list__right">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.235964912034!2d136.97096787576965!3d35.275259072721056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600372879754c691%3A0x47a23a5f70203354!2z44K144O844Op5L2P5a6F44ixIOaYpeaXpeS6leWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1763356789415!5m2!1sja!2sjp" width="540" height="340" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <p class="section__access__address-detail">
+                                    愛知県日進市梅森町西田面15番地<br>
+                                    ナゴヤハウジングセンター日進梅森会場内
+                                </p>
+                                <div class="section__access__contact">
+                                    <p class="section__access__time--open">営業時間：10:00~17:00</p>
+                                    <p class="section__access__time-close">定休日：火曜日・水曜日</p>
+                                    <p class="section__access__tel">電話番号：0120-071-051</p>
+                                </div>
+                                <p class="section__access__feature">
+                                    キッズスペース有、オムツ交換OK、ハウンジングセンター内に託児サービス、ライブラリー、授乳室、レンタル備品有（インフォメーションへお問い合わせください）
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__access__list__item toggle">
+                    <button class="section__access__head toggle__btn">
+                        <span class="section__access__title ">大府展示場</span>
+                        <span class="section__access__address-about">愛知県大府市</span>
+                        <span class="toggle__icon"></span>
+                    </button>
+                    <div class="toggle__content">
+                        <div class="section__access__list__content">
+                            <div class="section__access__list__left">
+                                <div class="section__access__house">
+                                    <img src="img/access__kasugaisi.jpg">
+                                </div>
+                                <a href="#contact" class="section__access__contact-btn">来場予約</a>
+                            </div>
+                            <div class="section__access__list__right">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.235964912034!2d136.97096787576965!3d35.275259072721056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600372879754c691%3A0x47a23a5f70203354!2z44K144O844Op5L2P5a6F44ixIOaYpeaXpeS6leWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1763356789415!5m2!1sja!2sjp" width="540" height="340" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <p class="section__access__address-detail">
+                                    愛知県大府市横根町前田40-1<br>中京テレビハウジング大府内
+                                </p>
+                                <div class="section__access__contact">
+                                    <p class="section__access__time--open">営業時間：10:00~17:00</p>
+                                    <p class="section__access__time-close">定休日：火曜日・水曜日</p>
+                                    <p class="section__access__tel">電話番号：0120-071-051</p>
+                                </div>
+                                <p class="section__access__feature">
+                                    キッズスペース有、オムツ交換OK、ハウンジングセンター内に託児サービス、ライブラリー、授乳室、レンタル備品有（インフォメーションへお問い合わせください）
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    
+
+
+
+
+
+
     <section class="section__works" id="works">
-        <div class="section__works__visual">
-            <div class="section__works__figure">
-                <img src="img/works__bg.jpg">
+        <div class="common__inner">
+            <div class="section__works__visual">
+                <div class="section__works__figure">
+                    <img src="img/works__bg.jpg">
+                </div>
+                <h2 class="section__works__title">施工例</h2>
             </div>
-            <h2 class="section__works__title">施工例</h2>
-        </div>
-        <div class="swiper swiper--works-01">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/works01-01.jpg" alt="">
+            <div class="section__works__swiper--01">
+                <div class="swiper swiper__works--main-01">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/works01-01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/works01-02.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/works01-03.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/works01-04.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/works01-05.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/works01-02.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/works01-03.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/works01-04.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/works01-05.jpg" alt="">
+                <div class="swiper swiper__works--thumb-01">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/works01-01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/works01-02.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/works01-03.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/works01-04.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/works01-05.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="swiper swiper--works-02">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/works02-01.jpg" alt="">
+            <div class="section__works__swiper--02">
+                <!-- main -->
+                <div class="swiper swiper__works--main-02">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/works02-01.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/works02-02.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/works02-03.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/works02-04.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/works02-05.jpg" alt=""></div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/works02-02.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/works02-03.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/works02-04.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/works02-05.jpg" alt="">
+
+                <!-- thumbnail -->
+                <div class="swiper swiper__works--thumb-02">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/works02-01.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/works02-02.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/works02-03.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/works02-04.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/works02-05.jpg" alt=""></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -323,6 +590,95 @@
                 <span>＊は入力必須項目です。</span>
             </p>
         </div>
+        <!-- ▼▼ ここからフォーム部分 ▼▼ -->
+        <form class="section__contact__form">
+
+            <!-- ご希望の会場 -->
+            <div class="section__contact__form__field">
+                <label class="section__contact__form__label">＊ご希望の会場</label>
+                <select class="section__contact__form__select">
+                    <option value="">選択してください</option>
+                </select>
+            </div>
+
+            <!-- ご来場希望日時 -->
+            <div class="section__contact__form__field">
+                <label class="section__contact__form__label">＊ご来場希望日時</label>
+                <select class="section__contact__form__select">
+                    <option value="">ご希望日時を選択してください</option>
+                </select>
+                <p class="section__contact__form__note">
+                    当日ご来場につきましてはお電話にてお問い合わせください。
+                </p>
+            </div>
+
+            <!-- お名前 -->
+            <div class="section__contact__form__field">
+                <label class="section__contact__form__label">＊お名前</label>
+                <input class="section__contact__form__input" type="text" placeholder="山田　太郎">
+            </div>
+
+            <!-- フリガナ -->
+            <div class="section__contact__form__field">
+                <label class="section__contact__form__label">＊フリガナ</label>
+                <input class="section__contact__form__input" type="text" placeholder="ヤマダ　タロウ">
+            </div>
+
+            <!-- 郵便番号 -->
+            <div class="section__contact__form__field">
+                <label class="section__contact__form__label">＊郵便番号</label>
+                <input class="section__contact__form__input" type="text" placeholder="1234567">
+                <p class="section__contact__form__note">
+                    郵便番号を入力すると住所が表示される場合があります
+                </p>
+            </div>
+
+            <!-- 住所 -->
+            <div class="section__contact__form__field">
+                <label class="section__contact__form__label">＊住所</label>
+                <input class="section__contact__form__input" type="text"
+                    placeholder="東京都〇〇丁目・番地・建物名">
+            </div>
+
+            <!-- メールアドレス -->
+            <div class="section__contact__form__field">
+                <label class="section__contact__form__label">＊メールアドレス</label>
+                <input class="section__contact__form__input" type="email" placeholder="info@example.com">
+            </div>
+
+            <!-- ご相談内容（ラジオ） -->
+            <div class="section__contact__form__field">
+                <label class="section__contact__form__label">＊ご相談内容</label>
+
+                <div class="section__contact__form__radio-group">
+                    <label><input type="radio" name="type"> 新築（新検）</label>
+                    <label><input type="radio" name="type"> 新築（土地探しから）</label>
+                    <label><input type="radio" name="type"> 建て替え</label>
+                </div>
+            </div>
+
+            <!-- お問い合わせ内容 -->
+            <div class="section__contact__form__field">
+                <label class="section__contact__form__label">お問い合わせ内容</label>
+                <textarea class="section__contact__form__textarea"></textarea>
+            </div>
+
+            <!-- プライバシーポリシー -->
+            <div class="section__contact__form__privacy">
+                <label>
+                    <input type="checkbox">
+                    プライバシーポリシーに同意します。
+                </label>
+            </div>
+
+            <!-- 送信ボタン -->
+            <button class="section__contact__form__submit" type="submit">
+                送信内容を確認する
+                <span class="section__contact__form__submit__arrow"></span>
+            </button>
+
+        </form>
+        <!-- ▲▲ フォーム部分ここまで ▲▲ -->
     </section>
     <section class="section__company-profile" id="company-profile">
         <div class="section__company-profile__head">
@@ -390,7 +746,12 @@
             </a>
         </nav>
     </footer>
-    
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <img id="lightbox-image" src="" alt="">
+    </div>  
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
