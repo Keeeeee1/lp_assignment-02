@@ -1,0 +1,45 @@
+$custom00:1640px;
+$custom01:1440px;
+$custom02:1240px;
+$pc:1080px;
+$tb:768px;
+$sm:640px;
+$sp:375px;
+@mixin custom00{
+    @media screen and (max-width:($custom00)){
+        @content;
+    }
+}
+@mixin custom01{
+    @media screen and (max-width:($custom01)){
+        @content;
+    }
+}
+@mixin custom02{
+    @media screen and (max-width:($custom02)){
+        @content;
+    }
+}
+
+@mixin pc{
+    @media screen and (max-width:($pc)){
+        @content;
+    }
+}
+@mixin tb{
+    @media screen and (max-width:($tb)){
+        @content;
+    }
+}
+@mixin sm{
+    @media screen and (max-width:($sm)){
+        @content;
+    }
+}
+
+@mixin sp{
+    @media screen and (max-width:($sp)){
+        @content;
+    }
+}
+

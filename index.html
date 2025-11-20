@@ -22,6 +22,23 @@
                 </div>
             </div>
         </div>
+        <div class="section__fv__cta">
+            <a class="section__fv__cta--phone" href="tel:0120500500">
+                <img src="img/cta__tb--phone.png">
+            </a>
+            <a class="section__fv__cta--contact" href="#contact">
+                <img src="img/cta__tb--contact.png">
+            </a>
+        </div>
+        <button class="section__fv__menu-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="fv-drawer">
+        <span class="section__fv__menu-btn__text">menu</span>
+        <span class="section__fv__menu-btn__icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </span>
+        </button>
         <nav class="section__fv__nav">
             <ul class="section__fv__nav__items">
                 <div class="section__fv__nav__group--top">
@@ -40,8 +57,25 @@
                 </div>
             </ul>
         </nav>
+
+        <div class="section__fv__drawer" id="fv-drawer" aria-hidden="true">
+            <button class="section__fv__drawer__close" type="button" aria-label="close menu">
+            <span class="section__fv__drawer__close-text">close</span>
+            <span class="section__fv__drawer__close-icon" aria-hidden="true"></span>
+            </button>
+
+            <ul class="section__fv__drawer__items">
+            <li class="section__fv__drawer__item"><a href="#merit">Merit</a></li>
+            <li class="section__fv__drawer__item"><a href="#feature">Feature</a></li>
+            <li class="section__fv__drawer__item"><a href="#access">Access</a></li>
+            <li class="section__fv__drawer__item"><a href="#works">Works</a></li>
+            <li class="section__fv__drawer__item"><a href="#contact">Contact</a></li>
+            <li class="section__fv__drawer__item"><a href="#company-profile">Company Profile</a></li>
+            </ul>
+        </div>
+
         <p class="section__fv__copy-right">
-            Copyright 2023 SALA HOUSE CO.,LTD. All rights reserved.
+            Copyright 2023 SALA HOUSE CO.,LTD.  rights reserved.
         </p>
     </section>
     <section class="section__concept" id="concept">
@@ -51,12 +85,12 @@
                 <div class="section__concept__border common__border"></div>
                 <p class="section__concept__subtitle common__sub-title">「サーラの平屋」とは？</p>
                 <p class="section__concept__desc--top common__desc">
-                    どんなライフスタイルにもフィットする、シンプルモダンなデザイン。<br>
-                    生活空間を最大化しながら、外断熱で夏も冬も快適。いいとこどりの平屋の暮らし。<br>
+                    どんなライフスタイルにもフィットする、シンプルモダンなデザイン。<br class="br-tb--none">
+                    生活空間を最大化しながら、外断熱で夏も冬も快適。いいとこどりの平屋の暮らし。<br class="br-tb--none">
                     創業55年、平屋づくりの豊富なノウハウと確かな技術で実現します。
                 </p>
                 <p class="section__concept__desc--bottom common__desc">
-                    一度きりの家づくりだからこそ、知ってほしいことがたくさんあります。<br>
+                    一度きりの家づくりだからこそ、知ってほしいことがたくさんあります。<br class="br-tb--none">
                     平屋の家を建てるなら、あなたにも「サーラの平屋」を知ってほしい。
                 </p>
             </div>
@@ -91,283 +125,94 @@
             </div>
             <h2 class="section__merit__title">平屋のメリット</h2>
         </div>
-        <div class="section__merit__introduce">
-            <img src="img/merit__introduce.png">
-        </div>
-        <div class="section__merit__items">
-            <div class="section__merit__item">
-                <div class="section__merit__item__txt">
-                    <p class="section__merit__item__txt__number">Merit01</p>
-                    <h3 class="section__merit__item__txt__title">伸びやかで<br>開放的な住空間</h3>
-                    <p class="section__merit__item__txt__desc">
-                        LDKと屋外空間がフラットにつながるつくりを愉しむなど、アウトドアリビングとして開放感のあるくつろぎの時間を演出します。<br>
-                        また上下の移動がなく、ひと続きの空間は目線の距離が長く、広く感じやすい設計に。<br>
-                        周辺環境の緑なども取り入れやすく快適な住空間を実現します。
-                    </p>
-                </div>
-                <div class="section__merit__item__img">
-                    <img class="section__merit__item__img-01" src="img/concept__merit-01.png">
-                </div>
+        <div class="section__merit__inner">
+            <div class="section__merit__introduce">
+                <a href="#merit01" class="section__merit__introduce__item" data-num="01">
+                    <span class="text">伸びやかで開放的な<br class="br-sp--none">住空間</span>
+                </a>
+                <a href="#merit02" class="section__merit__introduce__item"  data-num="02">
+                    <span class="text">家族の様子がよく見える一体感のある暮らし</span>
+                </a>
+                <a href="#merit03" class="section__merit__introduce__item"  data-num="03">
+                    <span class="text">重心が低く、地震や台風に強い</span>
+                </a>
+                <a href="#merit04" class="section__merit__introduce__item"  data-num="04">
+                    <span class="text">アフターメンテナンスがしやすい</span>
+                </a>
+                <a href="#merit05" class="section__merit__introduce__item"  data-num="05">
+                    <span class="text">老後も心地よいバリアフリーの暮らし</span>
+                </a>
             </div>
-            <div class="section__merit__item">
-                <div class="section__merit__item__txt">
-                    <p class="section__merit__item__txt__number">Merit02</p>
-                    <h3 class="section__merit__item__txt__title">家族の様子がよく見える<br>一体感のある暮らし</h3>
-                    <p class="section__merit__item__txt__desc">
-                        すべての生活空間が同一フロアに配置されていることから、どの場所からも家族の様子を感じやすく、絆を一層深めることができます。<br>
-                    その結果、会話が自然と生まれ、笑顔が絶えないかけがえのない時間を満喫できます。この一体感こそが、古来より日本人に愛されてきた平屋の最大の魅力と言えるでしょう。
-                    </p>
+            <div class="section__merit__items">
+                <div class="section__merit__item" id="merit01">
+                    <div class="section__merit__item__txt">
+                        <p class="section__merit__item__txt__number">Merit01</p>
+                        <h3 class="section__merit__item__txt__title">伸びやかで<br>開放的な住空間</h3>
+                        <p class="section__merit__item__txt__desc">
+                            LDKと屋外空間がフラットにつながるつくりを愉しむなど、アウトドアリビングとして開放感のあるくつろぎの時間を演出します。<br>
+                            また上下の移動がなく、ひと続きの空間は目線の距離が長く、広く感じやすい設計に。<br>
+                            周辺環境の緑なども取り入れやすく快適な住空間を実現します。
+                        </p>
+                    </div>
+                    <div class="section__merit__item__img">
+                        <img class="section__merit__item__img-01" src="img/concept__merit-01.png">
+                    </div>
                 </div>
-                <div class="section__merit__item__img">
-                    <img class="section__merit__item__img-02" src="img/concept__merit-02.png">
+                <div class="section__merit__item" id="merit02">
+                    <div class="section__merit__item__txt">
+                        <p class="section__merit__item__txt__number">Merit02</p>
+                        <h3 class="section__merit__item__txt__title">家族の様子がよく見える<br>一体感のある暮らし</h3>
+                        <p class="section__merit__item__txt__desc">
+                            すべての生活空間が同一フロアに配置されていることから、どの場所からも家族の様子を感じやすく、絆を一層深めることができます。<br>
+                        その結果、会話が自然と生まれ、笑顔が絶えないかけがえのない時間を満喫できます。この一体感こそが、古来より日本人に愛されてきた平屋の最大の魅力と言えるでしょう。
+                        </p>
+                    </div>
+                    <div class="section__merit__item__img">
+                        <img class="section__merit__item__img-02" src="img/concept__merit-02.png">
+                    </div>
                 </div>
-            </div>
-            <div class="section__merit__item">
-                <div class="section__merit__item__txt">
-                    <p class="section__merit__item__txt__number">Merit03</p>
-                    <h3 class="section__merit__item__txt__title">重心が低く、<br>地震や台風に強い</h3>
-                    <p class="section__merit__item__txt__desc">
-                        建物の高さは高いと不安定で揺れやすく、揺れの収まりも遅いという特性があります。高さを抑えた平屋は重心が低く、建物の重量も軽いため、地震に強い建物となります。<br>
-                        さらに１階に居住空間があるので、万が一のときに外に逃げやすいこと、台風など風の影響を受けにくいといった安全の側面も嬉しいポイントです。
-                    </p>
+                <div class="section__merit__item" id="merit03">
+                    <div class="section__merit__item__txt">
+                        <p class="section__merit__item__txt__number">Merit03</p>
+                        <h3 class="section__merit__item__txt__title">重心が低く、<br>地震や台風に強い</h3>
+                        <p class="section__merit__item__txt__desc">
+                            建物の高さは高いと不安定で揺れやすく、揺れの収まりも遅いという特性があります。高さを抑えた平屋は重心が低く、建物の重量も軽いため、地震に強い建物となります。<br>
+                            さらに１階に居住空間があるので、万が一のときに外に逃げやすいこと、台風など風の影響を受けにくいといった安全の側面も嬉しいポイントです。
+                        </p>
+                    </div>
+                    <div class="section__merit__item__img ">
+                        <img class="section__merit__item__img-03" src="img/concept__merit-03.png">
+                    </div>
                 </div>
-                <div class="section__merit__item__img ">
-                    <img class="section__merit__item__img-03" src="img/concept__merit-03.png">
+                <div class="section__merit__item" id="merit04">
+                    <div class="section__merit__item__txt">
+                        <p class="section__merit__item__txt__number">Merit04</p>
+                        <h3 class="section__merit__item__txt__title">アフターメンテナンス<br>がしやすい</h3>
+                        <p class="section__merit__item__txt__desc">
+                            平屋の場合、特に屋根や窓、外壁などのメンテナンスが容易です。高いところへの昇降が不要で、高所作業のリスクを軽減することができます。<br>
+                            こうしたことは専門業者へ依頼する際のコストに影響するのはもちろん、自分自身でメンテナンスを行う場合にも容易となります。
+                        </p>
+                    </div>
+                    <div class="section__merit__item__img ">
+                        <img class="section__merit__item__img-04" src="img/concept__merit-04.png">
+                    </div>
                 </div>
-            </div>
-            <div class="section__merit__item">
-                <div class="section__merit__item__txt">
-                    <p class="section__merit__item__txt__number">Merit04</p>
-                    <h3 class="section__merit__item__txt__title">アフターメンテナンス<br>がしやすい</h3>
-                    <p class="section__merit__item__txt__desc">
-                        平屋の場合、特に屋根や窓、外壁などのメンテナンスが容易です。高いところへの昇降が不要で、高所作業のリスクを軽減することができます。<br>
-                        こうしたことは専門業者へ依頼する際のコストに影響するのはもちろん、自分自身でメンテナンスを行う場合にも容易となります。
-                    </p>
-                </div>
-                <div class="section__merit__item__img ">
-                    <img class="section__merit__item__img-04" src="img/concept__merit-04.png">
-                </div>
-            </div>
-            <div class="section__merit__item">
-                <div class="section__merit__item__txt">
-                    <p class="section__merit__item__txt__number">Merit05</p>
-                    <h3 class="section__merit__item__txt__title">老後も心地よい<br>バリアフリーの暮らし</h3>
-                    <p class="section__merit__item__txt__desc">
-                        上下移動がなく、１階にすべて生活の空間が集約されており、バリアフリーの暮らしを実現しやすいです。建築時でも、何年か経った後を想定し、バリアフリーを意識した間取りを作ることで、ふとした危険によるケガを未然に防ぎ、より安全で健康的な暮らしを長く続けることができます。
-                    </p>
-                </div>
-                <div class="section__merit__item__img">
-                    <img class="section__merit__item__img-05" src="img/concept__merit-05.png">
-                </div>
-            </div>
-            
-        </div>
-    </section>
-<section class="section__cta" id="cta-01">
-    <div class="section__cta__circle">    </div>
-        <div class="section__cta__inner">
-            <p class="section__cta__eyebrow">予約来場キャンペーン開催中！</p>
-            <div class="section__cta__deadline">
-                <span class="section__cta__date">2025.<span>4.30</span>まで</span>
-                <span class="section__cta__amazon">Amazon <br><span>ギフトカード</span></span>
-                <span class="section__cta__max">最大</span>
-                <span class="section__cta__price">20,000<span>円分</span></span>
-            </div>
-            <div class="section__cta__item">
-                <img src="img/cta__part.png">
-            </div>
-            <a href="#contact" class="section__cta__btn">
-                お問い合わせフォーム
-            </a>
-        </div>
-</section>
-
-    <section class="section__feature" id="feature">
-        <div class="section__feature__visual">
-            <div class="section__feature__figure">
-                <img src="img/feature__bg.png">
-            </div>
-            <h2 class="section__feature__title">サーラの平屋<span>の特徴</span></h2>
-        </div>
-        <div class="section__feature__thumb__items">
-            <div class="section__feature__thumb__item">
-                <div class="section__feature__thumb__item__img">
-                    <img src="img/feature__thumb-01.png">
-                </div>
-                <p class="section__feature__thumb__item__txt">家全体を断熱材で包みこむ<br>「まるごと外断熱」</p>
-            </div>
-            <div class="section__feature__thumb__item">
-                <div class="section__feature__thumb__item__img">
-                    <img src="img/feature__thumb-02.png">
-                </div>
-                <p class="section__feature__thumb__item__txt">勾配天井や小屋裏空間が生む<br>「気持ちのいい大空間」</p>
-            </div>
-            <div class="section__feature__thumb__item">
-                <div class="section__feature__thumb__item__img">
-                    <img src="img/feature__thumb-03.png">
-                </div>
-                <p class="section__feature__thumb__item__txt">数値だけでは測れない<br>「安心・快適へのこだわり」</p>
-            </div>
-            <div class="section__feature__thumb__item">
-                <div class="section__feature__thumb__item__img">
-                    <img src="img/feature__thumb-04.png">
-                </div>
-                <p class="section__feature__thumb__item__txt">「専属の設計士がサポート」 <br>マンツーマンの家づくり</p>
-            </div>
-        </div>
-        <div class="section__feature__main__items">
-            <div class="section__feature__main__item">
-                <div class="section__feature__main__item__img">
-                    <img src="img/feature__main-01.png">
-                </div>
-                <div class="section__feature__main__item__txt">
-                    <h3 class="section__feature__main__item__txt__title">
-                        <span>01.</span>家全体を断熱材で包みこむ「まるごと外断熱」
-                    </h3>
-                    <p class="section__feature__main__item__txt__desc">
-                        サーラの平屋は、屋根と基礎まで家全体をすっぽりと包みこむ「まるごと外断熱」。柱や筋交いに干渉されず断熱材を柱の外側から覆うことができるため、隙間がなくムラのない断熱性と高い気密性を保つことができ、季節を問わず温度が安定した室内環境をつくります。夏場、屋根裏に熱がこもったり、冬に床下から底冷えするのを防ぐので、一年中いつでも快適に過ごすことができます。
-                    </p>
-                </div>
-            </div>
-            <div class="section__feature__main__item">
-                <div class="section__feature__main__item__img">
-                    <img src="img/feature__main-02.png">
-                </div>
-                <div class="section__feature__main__item__txt">
-                    <h3 class="section__feature__main__item__txt__title">
-                        <span>02.</span>勾配天井や小屋裏空間が生む「気持ちのいい大空間」
-                    </h3>
-                    <p class="section__feature__main__item__txt__desc">
-                        平屋は二階建てより屋根の面積が大きく、熱の影響を受けやすい。「まるごと外断熱」は屋根で断熱することにより、夏場でも熱気がこもらないのが特長。そのため勾配天井でのびのびと気持ちのいい大空間リビングや、小屋裏スペースを活用することが可能です。スキップフロアを組み合わせるなど自由度の高い空間設計で、広々と快適な生活空間＋平屋でもたっぷり収納スペースを確保することができます。                    
-                    </p>
-                </div>
-            </div>
-            <div class="section__feature__main__item">
-                <div class="section__feature__main__item__img">
-                    <img src="img/feature__main-03.png">
-                </div>
-                <div class="section__feature__main__item__txt">
-                    <h3 class="section__feature__main__item__txt__title">
-                        <span>03.</span>数値だけでは測れない「安心・快適へのこだわり」
-                    </h3>
-                    <p class="section__feature__main__item__txt__desc">
-                        湿度が高いと蒸し暑く感じる。足元ほど寒さを感じやすい。体感温度は住まいの快適性を左右する重要な要素。室温が同じでも湿度や表面温度によって体感温度は大きく変わります。サーラの平屋は数値化して表すことができる断熱性能だけでなく「温度・湿度・気流・輻射熱」という環境側の要素から、断熱区画やパッシブデザインなど、からだにやさしい快適性を考えています。
-                    </p>
-                </div>
-            </div>
-            <div class="section__feature__main__item">
-                <div class="section__feature__main__item__img">
-                    <img src="img/feature__main-04.png">
-                </div>
-                <div class="section__feature__main__item__txt">
-                    <h3 class="section__feature__main__item__txt__title">
-                        <span>04.</span>「専属の設計士がサポート」 マンツーマンの家づくり
-                    </h3>
-                    <p class="section__feature__main__item__txt__desc">
-                        家をつくることは、住まう人が物語を紡ぐ場所をつくること。家族の数だけ、オンリーワンの暮らしがあります。思い描くライフスタイルを叶えるプラン設計はもちろん、20年、30年、その先までずっと安心で快適で、環境や家族のカタチが変わっても暮らしを守る住まいづくりを、お客さま専属の設計士が担当。暮らしはじめてからも頼れるパートナーとしてサポートします。
-                    </p>
+                <div class="section__merit__item" id="merit05">
+                    <div class="section__merit__item__txt">
+                        <p class="section__merit__item__txt__number">Merit05</p>
+                        <h3 class="section__merit__item__txt__title">老後も心地よい<br>バリアフリーの暮らし</h3>
+                        <p class="section__merit__item__txt__desc">
+                            上下移動がなく、１階にすべて生活の空間が集約されており、バリアフリーの暮らしを実現しやすいです。建築時でも、何年か経った後を想定し、バリアフリーを意識した間取りを作ることで、ふとした危険によるケガを未然に防ぎ、より安全で健康的な暮らしを長く続けることができます。
+                        </p>
+                    </div>
+                    <div class="section__merit__item__img">
+                        <img class="section__merit__item__img-05" src="img/concept__merit-05.png">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section__plan" id="plan">
-        <div class="section__txt common__txt">
-            <h2 class="section__plan__title common__title">Plan</h2>
-            <p class="section__plan__sub-title common__sub-title">プラン例</p>
-            <p class="section__plan__desc common__desc">
-                お客さまのご要望に合わせたプランをご提案しています。
-                「設計士と建てる家づくり」を参考までにご紹介します。
-            </p>
-        </div>
-        <div class="section__card-slider">
-            <div class="swiper cardSwiper">
-                <div class="swiper-wrapper">
-                    <!-- ===== SLIDE 1 ===== -->
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="card__images">
-                                <img class="card__img-main" src="img/feature__plan-01--exterior.jpg" alt="">
-                                <img class="card__img-sub" src="img/feature__plan-01--layout.jpg" alt="">
-                                <div class="card__zoom-icon">
-                                    <img src="img/zoom-icon.png" alt="">
-                                </div>
-                            </div>
-                            <h3 class="card__title">我が家流 “サーファーズハウス”</h3>
-                            <p class="card__text">
-                                映画、音楽、陶芸、絵画、写真、サイクリング、サーフィン…自分の好きなことに熱中できる場所があるだけで、毎日の暮らしは豊かになっていきます。そんな場所には自然と仲間が集い、語り合う時間が生まれます。
-                                なかでも、アウトドアリビングとして利用できる広々としたデッキと、リビング空間が一体となった開放的なスペースは、心ゆくまで寛ぎの時を楽しめる場所。ダイニング・キッチンはゆるやかにプライベート空間を区分けし、プライバシー性にも配慮した伸びやかで柔軟な暮らしを演出します。
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- ===== SLIDE 2 ===== -->
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="card__images">
-                                <img class="card__img-main" src="img/feature__plan-02--exterior.jpg" alt="">
-                                <img class="card__img-sub" src="img/feature__plan-02--layout.jpg" alt="">
-                                <div class="card__zoom-icon">
-                                    <img src="img/zoom-icon.png" alt="">
-                                </div>
-                            </div>
-                            <h3 class="card__title">スローライフを楽しむ暮らし</h3>
-                            <p class="card__text">
-                                窓の外に広がる風景を眺めながら、開放感あふれる空間に身をゆだねる。そこで感じるのは、ゆったりとした時間の流れです。
-                                外の風景との一体感を考え、リビングの外にデッキスペースを設け、庭へとつながるようにデザイン。
-                                また、リビングを中心に各居室をつなぐ配置としたシンプルな生活動線で、軽快かつ開放感たっぷりのここちよい暮らしが楽しめます。
-                                ロケーションを活かした平屋での暮らしが、季節の移ろいを心から楽しむ毎日を演出します。
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- ===== SLIDE 3 ===== -->
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="card__images">
-                                <img class="card__img-main" src="img/feature__plan-03--exterior.jpg" alt="">
-                                <img class="card__img-sub" src="img/feature__plan-03--layout.jpg" alt="">
-                                <div class="card__zoom-icon">
-                                    <img src="img/zoom-icon.png" alt="">
-                                </div>
-                            </div>
-                            <h3 class="card__title">共働き家族の家事ラクスタイル</h3>
-                            <p class="card__text">
-                                共働き家族にとって住まいに求める重要なポイントは、いかに効率良く家事をこなし、限られた時間の中でどれだけたくさんの家族の時間をつくることができるか。
-                                その観点から考えれば、平屋は無駄がなくコンパクトな生活動線が描け、ゆとりある住空間を生みだします。また、平屋なら家事もワンフロアでテキパキ完了。家族の気配がどこにいても感じられる距離感は、いつでもかけがえのない家族の温もりの時間を与えてくれます。
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- ===== SLIDE 4 ===== -->
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="card__images">
-                                <img class="card__img-main" src="img/feature__plan-04--exterior.jpg" alt="">
-                                <img class="card__img-sub" src="img/feature__plan-04--layout.jpg" alt="">
-                                <div class="card__zoom-icon">
-                                    <img src="img/zoom-icon.png" alt="">
-                                </div>
-                            </div>
-                            <h3 class="card__title">家族想いの縁を結ぶ住まい</h3>
-                            <p class="card__text">
-                                和室とリビング空間につながる戸外のアウトドアリビングは、庭の緑を楽しみながら家族が集い語らう場所としてレイアウト。
-                                キッチンやダイニングは、子ども世帯も含め、みんなで一緒に食事が楽しめるほどの広々空間に。
-                                大きなゆとりと落ち着きある雰囲気が、四季折々の自然の趣と相まって、誰にとっても懐かしく居心地がよい、寛ぎの時間を生みだします。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- dots -->
-                <div class="swiper-pagination "></div>
-
-                <!-- arrows -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-            </div>
-        </div>
-    </section>
-    <section class="section__cta" id="cta-02">
+    <section class="section__cta" id="cta-01">
         <div class="section__cta__circle">    </div>
             <div class="section__cta__inner">
                 <p class="section__cta__eyebrow">予約来場キャンペーン開催中！</p>
@@ -385,20 +230,250 @@
                 </a>
             </div>
     </section>
+
+    <section class="section__feature" id="feature">
+        <div class="section__feature__visual">
+            <div class="section__feature__figure">
+                <img src="img/feature__bg.png">
+            </div>
+            <h2 class="section__feature__title">サーラの平屋<span>の特徴</span></h2>
+        </div>
+        <div class="section__feature__thumb__items">
+            <a class="section__feature__thumb__item" href="#feature01">
+                <div class="section__feature__thumb__item__left">
+                    <div class="section__feature__thumb__item__img">
+                        <img src="img/feature__thumb-01.png">
+                    </div>
+                    <p class="section__feature__thumb__item__txt">家全体を断熱材で包みこむ<br>「まるごと外断熱」</p>
+                </div>
+                <div class="section__feature__thumb__item__right">
+                    詳しく<br>見る
+                </div>
+            </a>
+
+            <a class="section__feature__thumb__item" href="#feature02">
+                <div class="section__feature__thumb__item__left">
+                    <div class="section__feature__thumb__item__img">
+                        <img src="img/feature__thumb-02.png">
+                    </div>
+                    <p class="section__feature__thumb__item__txt">勾配天井や小屋裏空間が生む<br>「気持ちのいい大空間」</p>
+                </div>
+                <div class="section__feature__thumb__item__right">
+                    詳しく<br>見る
+                </div>
+            </a>
+
+            <a class="section__feature__thumb__item" href="#feature03">
+                <div class="section__feature__thumb__item__left">
+                    <div class="section__feature__thumb__item__img">
+                        <img src="img/feature__thumb-03.png">
+                    </div>
+                    <p class="section__feature__thumb__item__txt">数値だけでは測れない<br>「安心・快適へのこだわり」</p>
+                </div>
+                <div class="section__feature__thumb__item__right">
+                    詳しく<br>見る
+                </div>
+            </a>
+
+            <a class="section__feature__thumb__item" href="#feature04">
+                <div class="section__feature__thumb__item__left">
+                    <div class="section__feature__thumb__item__img">
+                        <img src="img/feature__thumb-04.png">
+                    </div>
+                    <p class="section__feature__thumb__item__txt">「専属の設計士がサポート」<br>マンツーマンの家づくり</p>
+                </div>
+                <div class="section__feature__thumb__item__right">
+                    詳しく<br>見る
+                </div>
+            </a>
+        </div>
+        <div class="section__feature__main__items">
+            <div class="section__feature__main__item" id="feature01">
+                <div class="section__feature__main__item__img">
+                    <img src="img/feature__main-01.png">
+                </div>
+                <div class="section__feature__main__item__txt">
+                    <h3 class="section__feature__main__item__txt__title">
+                        <span>01.</span>家全体を断熱材で包みこむ「まるごと外断熱」
+                    </h3>
+                    <p class="section__feature__main__item__txt__desc">
+                        サーラの平屋は、屋根と基礎まで家全体をすっぽりと包みこむ「まるごと外断熱」。柱や筋交いに干渉されず断熱材を柱の外側から覆うことができるため、隙間がなくムラのない断熱性と高い気密性を保つことができ、季節を問わず温度が安定した室内環境をつくります。夏場、屋根裏に熱がこもったり、冬に床下から底冷えするのを防ぐので、一年中いつでも快適に過ごすことができます。
+                    </p>
+                </div>
+            </div>
+            <div class="section__feature__main__item" id="feature02">
+                <div class="section__feature__main__item__img">
+                    <img src="img/feature__main-02.png">
+                </div>
+                <div class="section__feature__main__item__txt">
+                    <h3 class="section__feature__main__item__txt__title">
+                        <span>02.</span>勾配天井や小屋裏空間が生む「気持ちのいい大空間」
+                    </h3>
+                    <p class="section__feature__main__item__txt__desc">
+                        平屋は二階建てより屋根の面積が大きく、熱の影響を受けやすい。「まるごと外断熱」は屋根で断熱することにより、夏場でも熱気がこもらないのが特長。そのため勾配天井でのびのびと気持ちのいい大空間リビングや、小屋裏スペースを活用することが可能です。スキップフロアを組み合わせるなど自由度の高い空間設計で、広々と快適な生活空間＋平屋でもたっぷり収納スペースを確保することができます。                    
+                    </p>
+                </div>
+            </div>
+            <div class="section__feature__main__item" id="feature03">
+                <div class="section__feature__main__item__img">
+                    <img src="img/feature__main-03.png">
+                </div>
+                <div class="section__feature__main__item__txt">
+                    <h3 class="section__feature__main__item__txt__title">
+                        <span>03.</span>数値だけでは測れない「安心・快適へのこだわり」
+                    </h3>
+                    <p class="section__feature__main__item__txt__desc">
+                        湿度が高いと蒸し暑く感じる。足元ほど寒さを感じやすい。体感温度は住まいの快適性を左右する重要な要素。室温が同じでも湿度や表面温度によって体感温度は大きく変わります。サーラの平屋は数値化して表すことができる断熱性能だけでなく「温度・湿度・気流・輻射熱」という環境側の要素から、断熱区画やパッシブデザインなど、からだにやさしい快適性を考えています。
+                    </p>
+                </div>
+            </div>
+            <div class="section__feature__main__item" id="feature04">
+                <div class="section__feature__main__item__img">
+                    <img src="img/feature__main-04.png">
+                </div>
+                <div class="section__feature__main__item__txt">
+                    <h3 class="section__feature__main__item__txt__title">
+                        <span>04.</span>「専属の設計士がサポート」 マンツーマンの家づくり
+                    </h3>
+                    <p class="section__feature__main__item__txt__desc">
+                        家をつくることは、住まう人が物語を紡ぐ場所をつくること。家族の数だけ、オンリーワンの暮らしがあります。思い描くライフスタイルを叶えるプラン設計はもちろん、20年、30年、その先までずっと安心で快適で、環境や家族のカタチが変わっても暮らしを守る住まいづくりを、お客さま専属の設計士が担当。暮らしはじめてからも頼れるパートナーとしてサポートします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section__plan" id="plan">
+        <div class="section__txt common__txt">
+            <h2 class="section__plan__title common__title">Plan</h2>
+            <div class="section__plan__border common__border"></div>
+            <p class="section__plan__subtitle common__sub-title">プラン例</p>
+            <p class="section__plan__desc common__desc">
+                お客さまのご要望に合わせたプランをご提案しています。<br>
+                「設計士と建てる家づくり」を参考までにご紹介します。
+            </p>
+        </div>
+        <div class="section__card-slider">
+            <div class="swiper cardSwiper">
+                <div class="swiper-wrapper swiper-wrapper--card">
+                    <!-- ===== SLIDE 1 ===== -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__images">
+                                <img class="card__img--main" src="img/feature__plan-01--exterior.jpg" alt="">
+                                <img class="card__img--sub" src="img/feature__plan-01--layout.png" alt="">
+                                <div class="card__zoom-icon">
+                                    <img src="img/zoom.png" alt="">
+                                </div>
+                            </div>
+                            <div class="card__txt">
+                                <h3 class="card__title">我が家流 “サーファーズハウス”</h3>
+                                <p class="card__text">
+                                    映画、音楽、陶芸、絵画、写真、サイクリング、サーフィン…自分の好きなことに熱中できる場所があるだけで、毎日の暮らしは豊かになっていきます。そんな場所には自然と仲間が集い、語り合う時間が生まれます。
+                                    なかでも、アウトドアリビングとして利用できる広々としたデッキと、リビング空間が一体となった開放的なスペースは、心ゆくまで寛ぎの時を楽しめる場所。ダイニング・キッチンはゆるやかにプライベート空間を区分けし、プライバシー性にも配慮した伸びやかで柔軟な暮らしを演出します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===== SLIDE 2 ===== -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__images">
+                                <img class="card__img--main" src="img/feature__plan-02--exterior.jpg" alt="">
+                                <img class="card__img--sub" src="img/feature__plan-02--layout.png" alt="">
+                                <div class="card__zoom-icon">
+                                    <img src="img/zoom.png" alt="">
+                                </div>
+                            </div>
+                            <h3 class="card__title">スローライフを楽しむ暮らし</h3>
+                            <p class="card__text">
+                                窓の外に広がる風景を眺めながら、開放感あふれる空間に身をゆだねる。そこで感じるのは、ゆったりとした時間の流れです。
+                                外の風景との一体感を考え、リビングの外にデッキスペースを設け、庭へとつながるようにデザイン。
+                                また、リビングを中心に各居室をつなぐ配置としたシンプルな生活動線で、軽快かつ開放感たっぷりのここちよい暮らしが楽しめます。
+                                ロケーションを活かした平屋での暮らしが、季節の移ろいを心から楽しむ毎日を演出します。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ===== SLIDE 3 ===== -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__images">
+                                <img class="card__img--main" src="img/feature__plan-03--exterior.jpg" alt="">
+                                <img class="card__img--sub" src="img/feature__plan-03--layout.png" alt="">
+                                <div class="card__zoom-icon">
+                                    <img src="img/zoom.png" alt="">
+                                </div>
+                            </div>
+                            <h3 class="card__title">共働き家族の家事ラクスタイル</h3>
+                            <p class="card__text">
+                                共働き家族にとって住まいに求める重要なポイントは、いかに効率良く家事をこなし、限られた時間の中でどれだけたくさんの家族の時間をつくることができるか。
+                                その観点から考えれば、平屋は無駄がなくコンパクトな生活動線が描け、ゆとりある住空間を生みだします。また、平屋なら家事もワンフロアでテキパキ完了。家族の気配がどこにいても感じられる距離感は、いつでもかけがえのない家族の温もりの時間を与えてくれます。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ===== SLIDE 4 ===== -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__images">
+                                <img class="card__img--main" src="img/feature__plan-04--exterior.jpg" alt="">
+                                <img class="card__img--sub" src="img/feature__plan-04--layout.png" alt="">
+                                <div class="card__zoom-icon">
+                                    <img src="img/zoom.png" alt="">
+                                </div>
+                            </div>
+                            <h3 class="card__title">家族想いの縁を結ぶ住まい</h3>
+                            <p class="card__text">
+                                和室とリビング空間につながる戸外のアウトドアリビングは、庭の緑を楽しみながら家族が集い語らう場所としてレイアウト。
+                                キッチンやダイニングは、子ども世帯も含め、みんなで一緒に食事が楽しめるほどの広々空間に。
+                                大きなゆとりと落ち着きある雰囲気が、四季折々の自然の趣と相まって、誰にとっても懐かしく居心地がよい、寛ぎの時間を生みだします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan__pager-row">
+                    <div class="plan__progress-wrapper">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="plan__nav-buttons">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section__cta" id="cta-02">
+        <div class="section__cta__circle">    </div>
+            <div class="section__cta__inner">
+                <p class="section__cta__eyebrow">予約来場キャンペーン<br class="br-tb">開催中！</p>
+                <div class="section__cta__deadline">
+                    <span class="section__cta__date">2025.<span>4.30</span>まで</span>
+                    <span class="section__cta__amazon">Amazon <br class="br-tb--none"><span>ギフトカード</span></span>
+                    <span class="section__cta__max">最大</span>
+                    <span class="section__cta__price">20,000<span>円分</span></span>
+                </div>
+                <div class="section__cta__item">
+                    <img src="img/cta__part.png">
+                </div>
+                <a href="#contact" class="section__cta__btn">
+                    お問い合わせフォーム
+                </a>
+            </div>
+    </section>
     <section class="section__access" id="access">
         <div class="common__inner--1048">
             <div class="section__access__txt common__txt">
                 <h3 class="section__access__title common__title">Tour & Consultation</h3>
-                <p class="section__access__sub-title common__sub-title">平屋づくり相談＆展示場見学はこちら</p>
+                <div class="section__access__border common__border"></div>
+                <p class="section__access__subtitle common__sub-title">平屋づくり相談＆展示場見学はこちら</p>
                 <p class="section__access__desc common__desc">
                     お近くの展示場でサーラの家づくりを体感しつつ、平屋づくりのご相談ができます。
                 </p>
             </div>
             <div class="section__access__list">
-                <p class="section__access__eyebrow">Access</p>
+                <p class="section__access__list__eyebrow">Access</p>
                 <div class="section__access__list__item toggle">
                     <button class="section__access__head toggle__btn is-open">
-                        <span class="section__access__title ">春日井展示場</span>
+                        <span class="section__access__place ">春日井展示場</span>
                         <span class="section__access__address-about">愛知県春日井市</span>
                         <span class="toggle__icon"></span>
                     </button>
@@ -411,7 +486,7 @@
                                 <a href="#contact" class="section__access__contact-btn">来場予約</a>
                             </div>
                             <div class="section__access__list__right">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.235964912034!2d136.97096787576965!3d35.275259072721056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600372879754c691%3A0x47a23a5f70203354!2z44K144O844Op5L2P5a6F44ixIOaYpeaXpeS6leWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1763356789415!5m2!1sja!2sjp" width="540" height="340" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe class="access-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.235964912034!2d136.97096787576965!3d35.275259072721056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600372879754c691%3A0x47a23a5f70203354!2z44K144O844Op5L2P5a6F44ixIOaYpeaXpeS6leWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1763356789415!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 <p class="section__access__address-detail">
                                     愛知県春日井市西山町2丁目8-1<br>
                                     ナゴヤハウジングセンター春日井会場内
@@ -430,7 +505,7 @@
                 </div>
                 <div class="section__access__list__item toggle">
                     <button class="section__access__head toggle__btn">
-                        <span class="section__access__title ">日進展示場</span>
+                        <span class="section__access__place ">日進展示場</span>
                         <span class="section__access__address-about">愛知県日進市</span>
                         <span class="toggle__icon"></span>
                     </button>
@@ -438,13 +513,12 @@
                         <div class="section__access__list__content">
                             <div class="section__access__list__left">
                                 <div class="section__access__house">
-                                    <img src="img/access__kasugaisi.jpg">
+                                    <img src="img/access__nitisinsi.jpg">
                                 </div>
                                 <a href="#contact" class="section__access__contact-btn">来場予約</a>
                             </div>
                             <div class="section__access__list__right">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.235964912034!2d136.97096787576965!3d35.275259072721056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600372879754c691%3A0x47a23a5f70203354!2z44K144O844Op5L2P5a6F44ixIOaYpeaXpeS6leWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1763356789415!5m2!1sja!2sjp" width="540" height="340" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <p class="section__access__address-detail">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.039721897685!2d137.0091194757632!3d35.13068227276991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600364f31fde2381%3A0x81836b9abf75f154!2z44K144O844Op5L2P5a6F44ixIOaXpemAsuWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1763613481893!5m2!1sja!2sjp"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                                <p class="section__access__address-detail">
                                     愛知県日進市梅森町西田面15番地<br>
                                     ナゴヤハウジングセンター日進梅森会場内
                                 </p>
@@ -462,7 +536,7 @@
                 </div>
                 <div class="section__access__list__item toggle">
                     <button class="section__access__head toggle__btn">
-                        <span class="section__access__title ">大府展示場</span>
+                        <span class="section__access__place">大府展示場</span>
                         <span class="section__access__address-about">愛知県大府市</span>
                         <span class="toggle__icon"></span>
                     </button>
@@ -470,13 +544,12 @@
                         <div class="section__access__list__content">
                             <div class="section__access__list__left">
                                 <div class="section__access__house">
-                                    <img src="img/access__kasugaisi.jpg">
+                                    <img src="img/access__daihusi.jpg">
                                 </div>
                                 <a href="#contact" class="section__access__contact-btn">来場予約</a>
                             </div>
                             <div class="section__access__list__right">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.235964912034!2d136.97096787576965!3d35.275259072721056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600372879754c691%3A0x47a23a5f70203354!2z44K144O844Op5L2P5a6F44ixIOaYpeaXpeS6leWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1763356789415!5m2!1sja!2sjp" width="540" height="340" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <p class="section__access__address-detail">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13070.520320600708!2d136.962758706581!3d35.01596410343059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60049d4d284df48f%3A0x7d31e94d0205b143!2z44K144O844Op5L2P5a6F44ixIOWkp-W6nOWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1763613533727!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                                <p class="section__access__address-detail">
                                     愛知県大府市横根町前田40-1<br>中京テレビハウジング大府内
                                 </p>
                                 <div class="section__access__contact">
@@ -491,18 +564,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
-    
-
-
-
-
-
-
     <section class="section__works" id="works">
         <div class="common__inner">
             <div class="section__works__visual">
@@ -510,6 +574,10 @@
                     <img src="img/works__bg.jpg">
                 </div>
                 <h2 class="section__works__title">施工例</h2>
+            </div>
+            <div class="section__works__lead">
+                <p class="section__works__lead__txt">Works.01</p>
+                <div class="section__works__lead__border"></div>
             </div>
             <div class="section__works__swiper--01">
                 <div class="swiper swiper__works--main-01">
@@ -551,6 +619,10 @@
                     </div>
                 </div>
             </div>
+            <div class="section__works__lead">
+                <p class="section__works__lead__txt">Works.01</p>
+                <div class="section__works__lead__border"></div>
+            </div>
             <div class="section__works__swiper--02">
                 <!-- main -->
                 <div class="swiper swiper__works--main-02">
@@ -577,81 +649,146 @@
         </div>
     </section>
     <section class="section__cta section__cta-form" id="cta-03">
-        <div class="section__cta__part">
-        </div>
+        <div class="section__cta__circle">    </div>
+            <div class="section__cta__inner">
+                <p class="section__cta__eyebrow">予約来場キャンペーン開催中！</p>
+                <div class="section__cta__deadline">
+                    <span class="section__cta__date">2025.<span>4.30</span>まで</span>
+                    <span class="section__cta__amazon">Amazon <br><span>ギフトカード</span></span>
+                    <span class="section__cta__max">最大</span>
+                    <span class="section__cta__price">20,000<span>円分</span></span>
+                </div>
+                <p class="section__cta__attention">
+                    ①初めてご来場された方<br>
+                    ②ご来場後、1ヶ月以内に次回のお打ち合わせにご来場いただいた方<br>
+                    ③初めて間取りプラン作成をご依頼 or 建築予定地の敷地調査を正式にお申し込みされた方<br>
+                    【注意事項】<br>
+                    特典の進呈はお一人様1回までとなります。<br>
+                    ご夫婦又はご家族(未成年のお子様は除く)と一緒にご来場された方が対象となります。<br>
+                    他の来場特典との併用はできません。<br>
+                    弊社施工エリア内で2年以内の建築をご検討の方が対象となります。<br>
+                    ご建築・ご成約・計画なしの方は対象外となります。<br>
+                    ご予約申込後、電話・メール等で連絡がつかない場合は、誠に勝手ながら予約キャンセルとさせていただきます。
+                </p>
+                <a href="#contact" class="section__cta__btn--03">
+                    お問い合わせフォーム
+                </a>
+                <p class="section__cta__copyright">【サーラ住宅株式会社】と【AmazonはAmazon.com,lnc.またはその関連会社の商標です。】</p>
+            </div>
     </section>
     <section class="section__contact" id="contact">
-        <h2 class="section__contact__eyebrow">Contact</h2>
-        <div class="section__contact__txt common__title">
-            <h2 class="section__contact__title common__title">Contact</h2>
-            <p class="section__contact__sub-title common__sub-title">お問い合わせ</p>
-            <p class="section__contact__desc common__desc">
-                下記からご希望のお問合せをお選び頂き、フォーム内の必要事項をご記入ください。
-                <span>＊は入力必須項目です。</span>
-            </p>
+        <div class="section__contact__inner">
+            <!-- <h2 class="section__contact__eyebrow">Contact</h2> -->
+            <div class="section__contact__txt common__title">
+                <h2 class="section__contact__title">Contact</h2>
+                <p class="section__contact__subtitle common__sub-title">お問い合わせ</p>
+                <p class="section__contact__desc common__desc">
+                    下記からご希望のお問合せをお選び頂き、<br class="br-pc">フォーム内の必要事項をご記入ください。<br>
+                    <span>＊は入力必須項目です。</span>
+                </p>
+            </div>
         </div>
+        <div class="section__contact__options">
+            <!-- ===== Option 01 ===== -->
+            <a href="#" class="contact-option">
+                <div class="contact-option__img">
+                    <img src="img/contact__consult.jpg" alt="平屋づくり相談＆展示場見学">
+                </div>
+                <p class="contact-option__txt">平屋づくり相談＆展示場見学</p>
+            </a>
+
+            <!-- ===== Option 02 ===== -->
+            <a href="#" class="contact-option">
+                <div class="contact-option__img">
+                    <img src="img/contact__request.jpg" alt="資料請求">
+                </div>
+                <p class="contact-option__txt">資料請求</p>
+            </a>
+        </div>
+
         <!-- ▼▼ ここからフォーム部分 ▼▼ -->
         <form class="section__contact__form">
 
             <!-- ご希望の会場 -->
             <div class="section__contact__form__field">
                 <label class="section__contact__form__label">＊ご希望の会場</label>
-                <select class="section__contact__form__select">
-                    <option value="">選択してください</option>
-                </select>
+                <div class="section__contact__form__right section__contact__form__select-wrapper">
+                    <select class="section__contact__form__select">
+                        <option value="">選択してください</option>
+                        <option value="春日井">春日井展示場</option>
+                        <option value="日進">日進展示場</option>
+                        <option value="大府">大府展示場</option>
+                    </select>
+                </div>
             </div>
 
             <!-- ご来場希望日時 -->
             <div class="section__contact__form__field">
                 <label class="section__contact__form__label">＊ご来場希望日時</label>
-                <select class="section__contact__form__select">
-                    <option value="">ご希望日時を選択してください</option>
-                </select>
-                <p class="section__contact__form__note">
-                    当日ご来場につきましてはお電話にてお問い合わせください。
-                </p>
+                <div class="section__contact__form__right section__contact__form__select-wrapper">
+                    <select class="section__contact__form__select ">
+                        <option value="">ご希望日時を選択してください</option>
+                            <option value="10:00">10:00〜</option>
+                            <option value="11:00">11:00〜</option>
+                            <option value="13:00">13:00〜</option>
+                    </select>
+                    <p class="section__contact__form__note">
+                        当日のご予約はご希望に沿えない可能性があります。
+                    </p>
+                </div>
             </div>
 
             <!-- お名前 -->
             <div class="section__contact__form__field">
                 <label class="section__contact__form__label">＊お名前</label>
-                <input class="section__contact__form__input" type="text" placeholder="山田　太郎">
+                <div class="section__contact__form__right">
+                    <input class="section__contact__form__input" type="text" placeholder="山田 太郎">
+                </div>
             </div>
 
             <!-- フリガナ -->
             <div class="section__contact__form__field">
                 <label class="section__contact__form__label">＊フリガナ</label>
-                <input class="section__contact__form__input" type="text" placeholder="ヤマダ　タロウ">
+                <div class="section__contact__form__right">
+                    <input class="section__contact__form__input" type="text" placeholder="ヤマダ タロウ">
+                </div>
             </div>
 
             <!-- 郵便番号 -->
             <div class="section__contact__form__field">
                 <label class="section__contact__form__label">＊郵便番号</label>
-                <input class="section__contact__form__input" type="text" placeholder="1234567">
-                <p class="section__contact__form__note">
-                    郵便番号を入力すると住所が表示される場合があります
-                </p>
+                <div class="section__contact__form__right">
+                    <input class="section__contact__form__input" type="text" placeholder="1234567">
+                    <p class="section__contact__form__note">
+                        郵便番号を入力すると住所が自動で反映されます
+                    </p>
+                </div>
             </div>
 
             <!-- 住所 -->
             <div class="section__contact__form__field">
                 <label class="section__contact__form__label">＊住所</label>
-                <input class="section__contact__form__input" type="text"
-                    placeholder="東京都〇〇丁目・番地・建物名">
+                <div class="section__contact__form__right">
+                    <input class="section__contact__form__input" type="text" placeholder="東京都〇〇丁目・番地・建物名">
+                    <p class="section__contact__form__note">
+                        市区町村・丁目・番地・建物名
+                    </p>
+                </div>
             </div>
 
-            <!-- メールアドレス -->
+            <!-- メール -->
             <div class="section__contact__form__field">
                 <label class="section__contact__form__label">＊メールアドレス</label>
-                <input class="section__contact__form__input" type="email" placeholder="info@example.com">
+                <div class="section__contact__form__right">
+                    <input class="section__contact__form__input" type="email" placeholder="info@...">
+                </div>
             </div>
 
             <!-- ご相談内容（ラジオ） -->
             <div class="section__contact__form__field">
                 <label class="section__contact__form__label">＊ご相談内容</label>
-
-                <div class="section__contact__form__radio-group">
-                    <label><input type="radio" name="type"> 新築（新検）</label>
+                <div class="section__contact__form__right section__contact__form__radio-group">
+                    <label><input type="radio" name="type" checked> 新築（新検）</label>
                     <label><input type="radio" name="type"> 新築（土地探しから）</label>
                     <label><input type="radio" name="type"> 建て替え</label>
                 </div>
@@ -660,45 +797,49 @@
             <!-- お問い合わせ内容 -->
             <div class="section__contact__form__field">
                 <label class="section__contact__form__label">お問い合わせ内容</label>
-                <textarea class="section__contact__form__textarea"></textarea>
+                <div class="section__contact__form__right">
+                    <textarea class="section__contact__form__textarea"></textarea>
+                </div>
             </div>
 
-            <!-- プライバシーポリシー -->
-            <div class="section__contact__form__privacy">
-                <label>
-                    <input type="checkbox">
-                    プライバシーポリシーに同意します。
-                </label>
+            <!-- フッター -->
+            <div class="section__contact__form__footer">
+                <div class="section__contact__form__privacy">
+                    <label>
+                        <input type="checkbox">
+                        <span class="section__contact__form__privacy__text">
+                            プライバシーポリシーに同意します。
+                        </span>
+                    </label>
+                </div>
+                <button class="section__contact__form__submit" type="submit">
+                    送信内容を確認する
+                </button>
             </div>
-
-            <!-- 送信ボタン -->
-            <button class="section__contact__form__submit" type="submit">
-                送信内容を確認する
-                <span class="section__contact__form__submit__arrow"></span>
-            </button>
 
         </form>
         <!-- ▲▲ フォーム部分ここまで ▲▲ -->
     </section>
     <section class="section__company-profile" id="company-profile">
         <div class="section__company-profile__head">
-            <h2 class="section__company-profile__title">Company profile</h2>
-            <p class="section__company-profile__sub-title">企業概要</p>
+            <h2 class="section__company-profile__title">Company Profile</h2>
+            <p class="section__company-profile__title-sub">企業概要</p>
         </div>
         <div class="section__company-profile__txt common__txt">
-            <p class="section__company-profile__sub-title common__sub-title">住みごこち良い家づくりのために</p>
+            <p class="section__company-profile__subtitle common__sub-title">住みごこち良い家づくりのために</p>
             <p class="section__company-profile__desc common__desc">
-                長い歴史の中で培った木造へのこだわりと高い断熱・気密性能。湿度コントロールによる健康配慮。丁寧な施工品質の家づくり。それらはすべて、お客さま一人ひとりの喜びと笑顔のために。
+                長い歴史の中で培った木造へのこだわりと高い断熱・気密性能。<br class="br-sp">湿度コントロールによる健康配慮。<br class="br-sp">丁寧な施工品質の家づくり。<br class="br-sp">それらはすべて、お客さま一人ひとりの喜びと笑顔のために。<br>
                 感動の家づくり体験と、いつまでも快適な住みごこちを提供します。
             </p>
         </div>
+        
         <div class="section__company-profile__items">
             <div class="section__company-profile__item">
                 <div class="section__company-profile__item__img">
                     <img src="img/company-profile__stance-01.jpg">
                 </div>
                 <div class="section__company-profile__txt">
-                    <p class="section__company-profile__txt__title">「サーラグループ」の一員として</p>
+                    <p class="section__company-profile__txt__title">「サーラグループ」の<br>一員として</p>
                     <p class="section__company-profile__txt__desc">
                         サーラ住宅は、1969年に愛知県豊橋市で「中部ガス企業グループ」の1社として産声をあげました。創業以来、快適・健康・省エネ・環境といったコンセプトを基に商品開発・技術開発を推進し、地域の住環境の向上に貢献しています。
                         100年にわたって地域のエネルギー供給を支え、地域とともに成長してきたサーラグループ。その一員として、お客さまの家づくりに寄り添い、次の100年も信頼されるパートナーであり続ける企業を目指しています。
@@ -710,7 +851,7 @@
                     <img src="img/company-profile__stance-02.jpg">
                 </div>
                 <div class="section__company-profile__txt">
-                    <p class="section__company-profile__txt__title">全国トップクラスの「長期優良住宅」認定取得率</p>
+                    <p class="section__company-profile__txt__title">全国トップクラスの<br>「長期優良住宅」<br>認定取得率</p>
                     <p class="section__company-profile__txt__desc">
                         長期優良住宅とは、「長期にわたって安全かつ快適に住むことを目的とする、環境にも配慮された住宅」と認定された住まい。認定を受けるためにはすぐれた耐震性や省エネルギー性などの基本性能に加え、耐久性やメンテナンス体制が求められます。サーラ住宅では原則として、すべての建物で長期優良住宅の認定を取得しており、木造住宅としての認定取得率は２年連続※の全国１位含めトップクラスを維持しています。（※2016〜2017年）
                     </p>
@@ -721,7 +862,7 @@
                     <img src="img/company-profile__stance-03.jpg">
                 </div>
                 <div class="section__company-profile__txt">
-                    <p class="section__company-profile__txt__title">地域密着だからこそ実現できる、充実のアフターサービス</p>
+                    <p class="section__company-profile__txt__title">地域密着だからこそ<br>実現できる、<br>充実のアフターサービス</p>
                     <p class="section__company-profile__txt__desc">
                         サーラ住宅では、お引渡し後もさまざまなご要望にきめ細かくお応えできるよう、すべての支店にアフターサービス専任部署を設置しています。加えて、保証延長の有無に関わらず「50年にわたる定期的な無償点検」と「最長50年の長期保証」をご用意。
                         地域密着企業だからこそ「住まいのかかりつけ医」として、安心して長くご利用いただけるアフターサービス体制で、お客さまの暮らしを支え続けます。
@@ -729,7 +870,65 @@
                 </div>
             </div>
         </div>
-        
+        <div class="section__company-info">
+            <div class="section__company-info__inner">
+                <dl class="section__company-info__list">
+                    <div class="section__company-info__row">
+                        <dt class="section__company-info__dt">社名</dt>
+                        <dd class="section__company-info__dd">サーラ住宅株式会社</dd>
+                    </div>
+
+                    <div class="section__company-info__row">
+                        <dt class="section__company-info__dt">創立</dt>
+                        <dd class="section__company-info__dd">昭和44年11月17日（1969年）</dd>
+                    </div>
+
+                    <div class="section__company-info__row">
+                        <dt class="section__company-info__dt">本社所在地</dt>
+                        <dd class="section__company-info__dd">
+                            〒441-8021 愛知県豊橋市白河町100
+                        </dd>
+                    </div>
+
+                    <div class="section__company-info__row">
+                        <dt class="section__company-info__dt">代表取締役</dt>
+                        <dd class="section__company-info__dd">大場 吉恭</dd>
+                    </div>
+
+                    <div class="section__company-info__row">
+                        <dt class="section__company-info__dt">事業内容</dt>
+                        <dd class="section__company-info__dd">
+                            注文住宅の請負<br>
+                            分譲住宅の販売<br>
+                            不動産の売買、賃貸、管理、仲介、鑑定<br>
+                            木造非住宅建築の請負
+                        </dd>
+                    </div>
+
+                    <div class="section__company-info__row">
+                        <dt class="section__company-info__dt">資本金</dt>
+                        <dd class="section__company-info__dd">10億1,859万円</dd>
+                    </div>
+
+                    <div class="section__company-info__row">
+                        <dt class="section__company-info__dt">許可番号</dt>
+                        <dd class="section__company-info__dd">
+                            建設業許可番号<br>
+                            国土交通大臣許可（特-2）第9240号<br>
+                            建築工事業／土木工事業 大工工事業／屋根工事業 タイル・れんが・ブロック工事業 内装仕上工事業<br><br>
+
+                            一級建築士事務所登録番号<br>
+                            サーラ環境建築設計 愛知県知事登録（い-3）第2626号<br>
+                            サーラ環境建築設計／名古屋分室 愛知県知事登録（い-4）第4705号<br>
+                            サーラ環境建築設計／名古屋東分室 愛知県知事登録（い-3）第14049号<br><br>
+
+                            宅地建物取引業者免許証番号<br>
+                            国土交通大臣（12）第2744号
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
     </section>
     <footer class="footer">
         <nav class="footer__nav">

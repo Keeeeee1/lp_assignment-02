@@ -1,759 +1,2159 @@
-body{
-    font-family: "Noto Serif JP";
-    background-color:#F7F8F7;
-    color:#F7F8F7;
-}
+    @import './mixin';
 
-
-
-.common__inner{
-    margin: 0 auto;
-}
-.common__inner--1048{
-    max-width: 1048px;
-    padding:0 24px;
-    margin: 0 auto;
-}
-.common{
-    &__txt{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+    html{
+        scroll-behavior: smooth;
     }
-    &__title{
-        color: #040404;
-        text-align: center;
+    body{
         font-family: "Noto Serif JP";
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 37px; /* 154.167% */
-        letter-spacing: 0.96px;
+        background-color:#F7F8F7;
+        color:#F7F8F7;
+        box-sizing:border-box;
     }
-    &__sub-title{
-        color: #040404;
-        text-align: center;
-        font-family: "Noto Serif JP";
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 56px; /* 140% */
-        letter-spacing: 4px;
-    }
-    &__desc{
-        color: #040404;
-        text-align: center;
-        font-family: "Noto Serif JP";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 32px; /* 200% */
-        letter-spacing: 0.8px;
-    }
-    &__border{
-        height:1px;
-        width:32px;
-        background-color: #000;
-        margin:0 auto;
-    }
-}
-.toggle{
-    &__content{
-        display:none;
-        transition:all .3s;
-        &.is-open{
-            display: block;
-        }
-    }
-    &__btn{
-        width:100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding:20px 0 12px 0;
-        &.is-open{
-            
-            .toggle__icon::after{
-                transform: rotate(90deg);
-            }
-            .toggle__icon::before{
-                transform: scaleX(0);
-            }
-        }
-    }
-    &__icon{
-        position:relative;
-        &::before{
-            content:"";
-            right:0;
-            top:0;
-            position: absolute;
-            width:30px;
-            height:1px;
-            background:#536C5B;
-            transition: .5s;
-        }
-        &::after{
-            content:"";
-            right:15px;
-            top:-15px;
-            position: absolute;
-            height:30px;
-            width:1px;
-            background:#536C5B;
-            transition: .5s;
 
-        }
-    }
-}
-.section{
-    &__fv{
-        width:100%;
-        padding:40px 40px 0 40px;
-        height:100vh;
-        position: relative;
-        &__bg{
-            background-image: url(img/fv__bg.jpg);
-            background-size:cover;
-            background-position: right top;
-            background-repeat: no-repeat;
-            height:calc(100% - 40px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color:#FFF;
-            border-radius: 10px;
-        }
-        &__title{
-            display: flex;
-            flex-direction:column;
-            justify-content: center;
-            gap:50px;
-            height: 100%;
-            padding-left:190px;
-            & p{
-                writing-mode:vertical-lr;
-                font-size:80px;
-                padding-left:40px;
-            }
-            &__img{
-                max-width:341px;
-                width:100%;
-                & img{
-                    width:100%;
-                }
-            }
-        }
-        &__nav{
-            position: absolute;
-            top:0 ;
-            right:0;
-            width: 310px;
-            height:100vh;
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color:rgba(45,54,48,0.3);
-            &__items{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                height:70%;
-            }
-            &__group{
-                &--top{
-                }
-                &--middle{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    &>li{
-                        padding-bottom:32px;
-                    }
-                }
-            }
-            &__logo{
-                & img{
-                    aspect-ratio: 125/50;
-                    max-width:125px;
-                }
-            }
-            &__cta{
-                & img{
-                    aspect-ratio: 193/193;
-                    max-width:193px;
-                }
-            }
-        }
-        &__copy-right{
-            height:40px;
-            margin:auto 0;
-            color:#2D3630;
-            line-height:40px;
-            letter-spacing:0.1rem;
-            align-items: center;
-        }
-    }
-    &__concept{
-        background-image: url(img/concept__bg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 120px 0 100px 0;
-        // position: relative;
-        // ::before{
-        //     position: absolute;
-        //     content: "";
-        //     top:0%;
-        //     right:0%;
-        //     background: url(img/concept__bg.png);
-        //     background-size: contain;
-        //     background-repeat: no-repeat;
-        //     width:1400px;
-        //     height:900px;
-        //     z-index:-1;
-        &__title{
-            padding:0 0 16px 0;
-        }
-        &__subtitle{
-            padding:40px 0 56px 0;
-        }
-        &__figure{
-            max-width:1400px;
-            width:calc(1400/1920*100%);
-            & img{
-                width:100%;
-            }
-        }
-        &__desc{
-            &--top{
-                padding-bottom: 24px;
-            }
-            &--bottom{
-                padding-bottom: 60px;
-            }
-        }
-    }
-        &__feature{
-        max-width:1920px;
-        width:100%;
+
+
+
+    .common__inner{
         margin: 0 auto;
-        padding-top:54px;
-        &__visual{
+    }
+    .common__inner--1048{
+        max-width: 1048px;
+        padding:0 24px;
+        margin: 0 auto;
+    }
+    .common{
+        &__txt{
             display: flex;
-            width:100%;
-        }
-        &__figure{
-            max-width:1400px;
-            & img{
-                width:100%;
-                aspect-ratio: 1400 / 825;
-            }    
+            flex-direction: column;
+            text-align: center;
         }
         &__title{
-            padding-top:130px;
-            writing-mode: vertical-lr;
             color: #040404;
-            font-family: "Noto Serif JP";
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 50px; /* 125% */
-            letter-spacing: 16px;
-            padding-left:140px;
-            position:relative;
-            &::before{
-                content:"";
-                position:absolute;
-                height:100px;
-                width:1px;
-                background-color:#2D3630;
-                right:25px;
-                top:0;
-            }
-            & span{
-                padding-top:32px;
-                font-size:32px;
-            }
-        }
-        &__thumb{
-            &__items{
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                width:1000px;
-                gap:24px;
-                // margin-right:0;
-                padding-bottom:20px;
-                padding-top:200px;
-                margin-left:360px;
-            }
-            &__item{
-                width:483px;
-                display: flex;
-                align-items: center;
-                background-color: #536C5B;
-                color:#FFF;
-                border-radius: 10px;
-                font-family: "Noto Serif JP";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 32px; /* 200% */
-                letter-spacing: 1.6px;
-                &__img{
-                    width:105px;
-                    & img{
-                        aspect-ratio: 105/100;
-                        width:100%;
-                    }
-                }
-                &__txt{
-                    padding:18px 0 18px 24px;
-                }
-            }
-        }
-        &__main{
-            &__items{
-                max-width:1100px;
-                width:100%;
-                margin-left:310px;
-            }
-            &__item{
-                display: flex;
-                gap:56px;
-                align-items: center;
-                padding-top: 100px;
-                &__txt{
-                    width:800px;
-                    &__title{
-                        color: #536C5B;
-                        font-family: "Noto Serif JP";
-                        font-size: 24px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 56px; /* 233.333% */
-                        letter-spacing: 2.4px;
-                        border-bottom:1px solid #A5A5A5;
-                        padding-bottom: 14px;
-                        & span{
-                            color: #536C5B;
-                            font-family: "Noto Serif JP";
-                            font-size: 32px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 56px; /* 175% */
-                            letter-spacing: 3.2px;
-                            padding-right:20px;
-                        }
-                    }
-                    &__desc{
-                        color: #040404;
-                        font-family: "Noto Serif JP";
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 32px; /* 200% */
-                        letter-spacing: 0.8px;
-                    }
-                }
-                &__img{
-                    width:230px;
-                    & img{
-                        aspect-ratio: 230 /220;
-                        width:100%;
-                    }
-                }
-            }
-        }
-    }
-    &__access{
-        padding:60px 0 120px 0;
-        &__list{
-            color: #040404;
-            font-family: "Noto Serif JP";
-            &__head{
-                align-items: center;
-                border-bottom: 1px solid #A5A5A5;
-            }
-            &__left{
-                color: #FFF;
-                text-align: center;
-                font-family: "Noto Serif JP";
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 56px; /* 233.333% */
-                letter-spacing: 1.2px;
-                max-width:350px;
-                width:100%;
-            }
-            &__right{
-                color: #000;
-                font-family: "Noto Serif JP";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 24px; /* 150% */
-                letter-spacing: 0.8px;
-            }
-            &__content{
-                display: flex;
-                max-width:940px;
-                width:94%;
-                gap:50px;
-            }
-            &__item{
-                border-bottom:1px solid #A5A5A5;
-            }
-        }
-        &__eyebrow{
-            color: #040404;
+            text-align: center;
             font-family: "Noto Serif JP";
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
             line-height: 37px; /* 154.167% */
             letter-spacing: 0.96px;
-            border-bottom: 1px solid #A5A5A5;
-            padding-bottom: 24px;
-        }
-        &__house{
-            margin-bottom:30px;
-            
-            & img{
-                aspect-ratio: 350 /230 ;
-                max-width: 350px;
-                width:100%;
+            @include pc{
+                font-size: 18px;
+            }
+            @include tb{
+                font-size: 16px;
             }
         }
-        &__address-detail{
-            padding-top:31px;
+        &__border{
+            height:1px;
+            width:32px;
+            background-color: #000;
+            margin:0 auto;
         }
-
-        &__contact{
-            padding:23px 0 41px 0;
-            &-btn{
-                display: block;
-                width: 100%;
-                padding:16px 0;
-                background-color: #2D3630;
-                color: #FFF;
-                text-align: center;
-                font-family: "Noto Serif JP";
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 56px; /* 233.333% */
-                letter-spacing: 1.2px;
-            }
-        }
-        &__feature{
-            padding-bottom:62px;
-        }
-        &__title{
+        &__sub-title{
             color: #040404;
-            font-family: "Noto Serif JP";
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            // line-height: 56px; /* 175% */
-        }
-        &__adress-about{
-            color: #040404;
-            font-family: "Noto Serif JP";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 56px; /* 350% */
-        }
-    }
-    &__works{
-        &__visual{
-            width:100%;
-            display: flex;
-        }
-        &__title{
-            padding-top:130px;
-            writing-mode: vertical-lr;
-            color: #040404;
+            text-align: center;
             font-family: "Noto Serif JP";
             font-size: 40px;
             font-style: normal;
             font-weight: 400;
-            line-height: 50px; /* 125% */
-            letter-spacing: 16px;
-            padding-left:140px;
-            position:relative;
-            &::before{
-                content:"";
-                position:absolute;
-                height:100px;
-                width:1px;
-                background-color:#2D3630;
-                right:25px;
-                top:0;
+            line-height: 56px; /* 140% */
+            letter-spacing: 4px;
+            @include pc{
+                font-size: 28px;
+            }
+            @include tb{
+                font-size: 20px;
             }
         }
-        &__figure{
-            max-width: 1400px;
-            & img{
-                aspect-ratio: 1400 / 825;
-                width:100%;
+        &__desc{
+            color: #040404;
+            text-align: center;
+            font-family: "Noto Serif JP";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px; /* 200% */
+            letter-spacing: 0.8px;
+            @include pc{
+                font-size: 14px;
             }
-        }
-        &__swiper--01,
-        &__swiper--02 {
-            max-width: 1248px;
-            padding: 0 24px;
-            margin-left:310px;
-            display: flex;
-            gap: 24px;
-
-            /* main */
-            .swiper__works--main-01,
-            .swiper__works--main-02 {
-                width: 75%;
-
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                    aspect-ratio: 893 / 596;
-                    cursor: pointer;
-                }
-            }
-
-            /* thumbnail */
-            .swiper__works--thumb-01,
-            .swiper__works--thumb-02 {
-                width: 25%;
-                height: 320px;
-
-                .swiper-slide {
-                    height: auto !important;
-                }
-
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                    aspect-ratio: 136 / 142;
-                    cursor: pointer;
-                }
+            @include tb{
+                font-size: 12px;
             }
         }
     }
-    &__contact{
-        
-        &__form {
-            width: 100%;
-            max-width: 640px;
-            margin: 0 auto;
+    .toggle{
+        &__content{
+            display:none;
+            transition:all .3s;
+            &.is-open{
+                display: block;
+            }
+        }
+        &__btn{
+            width:100%;
             display: flex;
-            flex-direction: column;
-            gap: 28px;
+            justify-content: space-between;
+            align-items: center;
+            padding:20px 0 12px 0;
+            &.is-open{
+                
+                .toggle__icon::after{
+                    transform: rotate(90deg);
+                }
+                .toggle__icon::before{
+                    transform: scaleX(0);
+                }
+            }
+        }
+        &__icon{
+            position:relative;
+            &::before{
+                content:"";
+                right:0;
+                top:0;
+                position: absolute;
+                width:30px;
+                height:1px;
+                background:#536C5B;
+                transition: .5s;
+            }
+            &::after{
+                content:"";
+                right:15px;
+                top:-15px;
+                position: absolute;
+                height:30px;
+                width:1px;
+                background:#536C5B;
+                transition: .5s;
+
+            }
+        }
+    }
+    .br-sp--none{
+        display: block;
+        @include pc{
+            display: none;
+        }
+    }
+    .br-tb{
+        display: none;
+        @include tb{
+            display: block;
+        }
+    }
+    .br-tb--none{
+        display: block;
+        @include tb{
+            display: none;
+        }
+    }
+
+    .section{
+        &__fv{
+            width:100%;
+            padding:40px 40px 0 40px;
+            height:100vh;
+            position: relative;
+            &__bg{
+                background-image: url(img/fv__bg.jpg);
+                background-size:cover;
+                background-position: right top;
+                background-repeat: no-repeat;
+                height:calc(100% - 40px);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color:#FFF;
+                border-radius: 10px;
+            }
+            &__title{
+                display: flex;
+                flex-direction:column;
+                justify-content: center;
+                gap:50px;
+                height: 100%;
+                padding-left:10vw;
+                @include tb{
+                    width:50%;
+                }
+                & p{
+                    writing-mode:vertical-lr;
+                    font-size:80px;
+                    padding-left:40px;
+                    @include pc {
+                        font-size:64px;
+                    }
+                    @include tb {
+                        font-size:52px;
+                    }
+                    @include sp {
+                        font-size:40px;
+                    }
+                }
+                &__img{
+                    max-width:341px;
+                    width:100%;
+                    & img{
+                        width:100%;
+                    }
+                    @include tb{
+                        width: 100%;
+                    }
+                }
+            }
+            &__nav{
+                position: absolute;
+                top:0 ;
+                right:0;
+                width: 310px;
+                height:100vh;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color:rgba(45,54,48,0.3);
+                &__items{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    height:70%;
+                }
+                &__group{
+                    &--top{
+                    }
+                    &--middle{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        &>li{
+                            padding-bottom:32px;
+                        }
+                    }
+                }
+                &__logo{
+                    & img{
+                        aspect-ratio: 125/50;
+                        max-width:125px;
+                    }
+                }
+                &__cta{
+                    & img{
+                        aspect-ratio: 193/193;
+                        max-width:193px;
+                    }
+                }
+            }
+            &__copy-right{
+                color: #2D3630;
+                font-family: "Noto Serif JP";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px; /* 185.714% */
+                letter-spacing: 1.4px;
+                @include tb{
+                    font-size: 9px;
+                }
+            }
+            &__cta{
+                display: none;
+            }
+            @include tb {
+                $cta-h: calc(100vw * 130 / 640);
+                height: calc(100svh - #{$cta-h});
+
+                padding: 24px 24px 0 24px;
+            &__cta {
+
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                z-index: 99999;
+                display: flex;             // ★左右並び
+                gap:4px;
+                align-items: stretch;
+
+                height: calc(100vw * 130 / 640);
+                &--phone {
+                width: calc(100% * 193 / 640);  // ★左の幅比率
+                flex-shrink: 0;                 // つぶれ防止
+                display: block;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    object-fit: cover;
+                }
+                }
+
+                // contact（右）
+                &--contact {
+                width: calc(100% * (640 - 193) / 640); // ★右の幅比率
+                display: block;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    object-fit: cover;
+                }
+                }
+            }
+                &__bg {
+                    background-image: url(img/fv__bg--tb.jpg);
+                    background-position: bottom center;
+                    background-size: cover;
+                    height: calc(100% - 24px);
+                    border-radius: 10px;
+                    position: relative; // ハンバーガー絶対配置用
+                }
+                &__title{
+                    margin:0 auto;
+                    padding:0;
+                    & p{
+                        margin: 0 auto;
+                        padding-left:0;
+                    }
+                }
+                // 右固定ナビは隠す
+                &__nav {
+                    display: none;
+                }
+                // ハンバーガーボタン
+                &__menu-btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    position: absolute;
+                    top: 48px;
+                    right: 54px;
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    font-family: "Noto Serif JP";
+                    cursor: pointer;
+                    z-index: 5;
+
+                &__text {
+                    font-size: 16px;
+                    letter-spacing: 0.08em;
+                    line-height: 1;
+                }
+
+                &__icon {
+                    width: 24px;
+                    height: 18px;
+                    display: grid;
+                    gap: 5px;
+
+                    span {
+                    display: block;
+                    height: 1px;
+                    background: #fff;
+                    }
+                }
+            }
+
+            // 全画面ドロワー
+            &__drawer {
+            position: fixed;
+            inset: 0;
+            background: #F7F8F7;
+            z-index: 50;
+
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s ease;
+            padding-bottom: 110px; 
+            &.is-open {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            &__close {
+                position: absolute;
+                top: 48px;
+                right: 54px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                background: transparent;
+                border: none;
+                color: #2D3630;
+                font-family: "Noto Serif JP";
+                font-size: 16px;
+                cursor: pointer;
+
+                &-icon {
+                width: 20px;
+                height: 20px;
+                position: relative;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 100%;
+                    height: 1px;
+                    background: #2D3630;
+                }
+                &::before { transform: translateY(-50%) rotate(45deg); }
+                &::after  { transform: translateY(-50%) rotate(-45deg); }
+                }
+            }
+
+            &__items {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+
+                font-family: "Noto Serif JP";
+                font-size: 20px;
+                letter-spacing: 0.06em;
+                color: #2D3630;
+
+                a {
+                color: inherit;
+                text-decoration: none;
+                }
+            }
+            }
         }
 
+        // SPだけちょい詰める
+        @include sp {
+            &__menu-btn {
+            top: 12px;
+            right: 12px;
+
+            &__text { font-size: 14px; }
+            }
+            &__drawer {
+            padding-bottom: 96px;
+
+            &__items {
+                gap: 28px;
+                font-size: 18px;
+            }
+            }
+        }
+        }
+        &__concept{
+            background-image: url(img/concept__bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 120px 0 100px 0;
+            &__txt{
+                padding:0 24px;
+            }
+            &__title{
+                padding:0 0 16px 0;
+            }
+            &__subtitle{
+                padding:40px 0 56px 0;
+            }
+            &__figure{
+                max-width:1400px;
+                width:calc(1400/1920*100%);
+                & img{
+                    width:100%;
+                }
+            }
+            &__desc{
+                &--top{
+                    padding-bottom: 24px;
+                }
+                &--bottom{
+                    padding-bottom: 60px;
+                }
+            }
+        }
+
+        &__feature{
+            max-width:1920px;
+            width:100%;
+            margin: 0 auto;
+            padding-top:54px;
+            &__visual{
+                max-width:1600px;
+                width:90%;
+                display: flex;
+                justify-content: space-between;
+            }
+            &__figure{
+                max-width:1400px;
+                width:80%;
+                & img{
+                    width:100%;
+                    aspect-ratio: 1400 / 825;
+                }    
+            }
+            &__title{
+                padding-top:130px;
+                writing-mode: vertical-lr;
+                color: #040404;
+                font-family: "Noto Serif JP";
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 125%;
+                letter-spacing: 0.4em; 
+                position:relative;
+
+                @include pc { font-size:32px; }
+                @include tb { font-size:26px; }
+                @include sp { font-size:20px; }
+                &::before{
+                    content:"";
+                    position:absolute;
+                    height:100px;
+                    width:1px;
+                    background-color:#2D3630;
+                    right:50%;
+                    transform: translateX(50%);
+                    top:0;
+                }
+                @include custom02 {
+                    padding-top:80px;
+                    &::before {
+                        height:60px;
+                    }
+                }
+                @include pc {
+                    padding-top:12%;
+                    &::before {
+                        height:60px;
+                    }
+                }
+                @include tb {
+                    padding-top:56px;
+                    &::before {
+                        height:40px;
+                        right:50%;
+                    }
+                }
+                & span{
+                    padding-top:32px;
+                    font-size:32px;
+                    
+                    @include pc {
+                        font-size:24px;
+                        padding-top:20px;
+                    }
+                    @include tb { 
+                        font-size:20px;
+                        padding-top:14px;
+                    }
+                    @include sp { font-size:14px; }
+                }
+            }
+            &__thumb{
+            &__items {
+                width:85%;
+                margin:0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                @include pc{
+                    width:75%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px; // 任意：アイテム間の余白
+                }
+            }
+
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                background-color: #536C5B;
+                color: #FFF;
+                border-radius: 10px;
+                overflow: hidden; 
+
+                &__left {
+                display: flex;
+                align-items: stretch; 
+                flex: 1;
+                font-family: "Noto Serif JP";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 200%;
+                letter-spacing: 0.1em;
+
+                @include pc { font-size: 14px; }
+                @include tb { font-size: 12px; }
+                }
+
+                &__img {
+                flex: 0 0 105px;      // 横幅は105px固定（必要ならclampでもOK）
+                width: 105px;
+                aspect-ratio: 105 / 100; // ★ 比率の主役
+                height: auto;         // ★ 100%は消す（比率で高さが決まる）
+                align-self: center;   // ★ itemが高くなっても縦中央で崩れない
+                overflow: hidden;     // はみ出しカット
+                }
+
+                &__img img {
+                width: 100%;
+                height: 100%;         // ★ wrapperの比率に従う
+                object-fit: cover;
+                display: block;
+                }
+
+                &__txt {
+                flex: 1;
+                padding: 0 0 0 24px;
+                display: flex;
+                align-items: center; // テキスト縦中央寄せしたい場合
+                }
+
+                &__right {
+                flex: 0 0 auto;      // ★ 伸びない
+                width: 76px;
+                height: 76px;
+                background-color: #fff;
+                border-radius: 9999px;
+                margin: auto 24px auto 0; // ★ 上下中央＋右余白
+                color: #536C5B;
+                text-align: center;
+                font-family: "Noto Serif JP";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 125%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include pc { font-size: 14px; }
+                @include tb { font-size: 12px; }
+                @include sp { font-size: 12px; }
+                }
+            }
+
+
+            }
+            &__main{
+                &__items{
+                    max-width:1100px;
+                    width:100%;
+                    padding:0 48px;
+                    margin-left:22vw;
+                    @include custom01{
+                        margin:0 auto ;
+                    }
+                    @include pc{
+                        padding:0 5%;
+                    }
+                }
+                &__item{
+                    display: flex;
+                    gap:56px;
+                    align-items: center;
+                    padding-top: 100px;
+                    @include pc{
+                        gap:28px;
+                    }
+                    @include tb{
+                        gap:18px;
+                    }
+                    &__txt{
+                        max-width:800px;
+                        width:65%;
+                        &__title{
+                            color: #536C5B;
+                            font-family: "Noto Serif JP";
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 233.333%;
+                            letter-spacing: 0.1em;
+                            border-bottom:1px solid #A5A5A5;
+                            padding-bottom: 14px;
+
+                            @include pc { font-size:19px; }
+                            @include tb { font-size:15px; }
+                            @include sp { font-size:12px; }
+
+                            & span{
+                                color: #536C5B;
+                                font-family: "Noto Serif JP";
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 175%;
+                                letter-spacing: 0.1em;
+                                padding-right:20px;
+
+                                @include pc { font-size:26px; }
+                                @include tb { font-size:20px; }
+                                @include sp { font-size:16px; }
+                            }
+                        }
+                        &__desc{
+                            color: #040404;
+                            font-family: "Noto Serif JP";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 200%;
+                            letter-spacing: 0.05em;
+
+                            @include pc { font-size:14px; }
+                            @include tb { font-size:12px; }
+                            @include sp { font-size:12px; }
+                        }
+                    }
+                    &__img{
+                        max-width:230px;
+                        width:35%;
+                        & img{
+                            aspect-ratio: 230 /220;
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+        &__plan{
+            padding:120px 0 60px 0;
+            @include pc{
+                padding:12% 0 6% 0;
+            }
+            &__subtitle{
+                padding-top:40px;
+                padding-bottom:54px;
+                @include pc{
+                    padding:4% 0 5% 0;
+                }
+            }
+            &__title{
+                padding-bottom:20px;
+            }
+            .plan__nav-buttons{
+                display: flex;
+                gap:30px;
+                position: absolute;
+                right:0;
+            }
+        }
+
+        &__access{
+            padding:80px 0 120px 0;
+            &__title{
+                padding-bottom:32px;
+                @include pc{
+                    padding-bottom: 3%;
+                }
+            }
+            &__subtitle{
+                padding:40px 0 56px 0 ; 
+                @include pc{
+                    padding: 4% 0 6% 0;
+                }
+            }
+            &__desc{
+                padding-bottom:72px;
+                @include pc{
+                    padding-bottom: 7%;
+                }
+            }
+            &__list{
+                color: #040404;
+                font-family: "Noto Serif JP";
+                &__eyebrow{
+                    padding-top:120px;
+                    color: #040404;
+                    font-family: "Noto Serif JP";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 154.167%;
+                    letter-spacing: 0.04em;
+                    border-bottom:1px solid #A5A5A5;
+                    padding-bottom:24px;
+
+                    @include pc { 
+                        font-size:19px;
+                        padding-top:12%;
+                    }
+                    @include tb { font-size:15px; }
+                    @include sp { font-size:12px; }
+                }
+                &__head{
+                    align-items: center;
+                    border-bottom: 1px solid #A5A5A5;
+                }
+                &__left{
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Noto Serif JP";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 233.333%;
+                    letter-spacing: 0.05em;
+                    max-width:350px;
+                    width:40%;
+
+                    @include pc { font-size:19px; }
+                    @include tb { font-size:15px; }
+                    @include sp { font-size:12px; }
+                }
+                &__right{
+                    color: #000;
+                    font-family: "Noto Serif JP";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.05em;
+                    width:55%;
+                    @include pc { font-size:14px; }
+                    @include tb { font-size:12px; }
+                    @include sp { font-size:12px; }
+                    .access-map{
+                        width: 100%;
+                        aspect-ratio: 540/340;
+                    }
+                }
+                &__content{
+                    display: flex;
+                    max-width:940px;
+                    width:94%;
+                    gap:50px;
+                }
+                &__item{
+                    border-bottom:1px solid #A5A5A5;
+                }
+            }
+            &__eyebrow{
+                color: #040404;
+                font-family: "Noto Serif JP";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 154.167%;
+                letter-spacing: 0.04em;
+                border-bottom: 1px solid #A5A5A5;
+                padding-bottom: 24px;
+
+                @include pc { font-size:19px; }
+                @include tb { font-size:15px; }
+                @include sp { font-size:12px; }
+            }
+            &__house{
+                margin-bottom:30px;
+                & img{
+                    aspect-ratio: 350 /230 ;
+                    max-width: 350px;
+                    width:100%;
+                }
+            }
+            &__address-detail{
+                padding-top:31px;
+            }
+
+            &__contact{
+                padding:23px 0 41px 0;
+                &-btn{
+                    display: block;
+                    width: 100%;
+                    padding:16px 0;
+                    background-color: #2D3630;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Noto Serif JP";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 233.333%;
+                    letter-spacing: 0.05em;
+                    position: relative;
+                    &::before{
+                        content:"";
+                        width:12px;
+                        height: 12px;
+                        display:block;
+                        background-image: url(img/access__arrow.png);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        position:absolute;
+                        right:10%;
+                        top:50%;
+                        transform: translateY(-50%);
+                    }
+
+                    @include pc { font-size:19px; }
+                    @include tb { font-size:15px; }
+                    @include sp { font-size:12px; }
+                }
+            }
+            &__feature{
+                padding-bottom:62px;
+            }
+            &__place{
+                color: #040404;
+                font-family: "Noto Serif JP";
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 175%;
+                flex:1;
+
+                @include pc { font-size:26px; }
+                @include tb { font-size:20px; }
+                @include sp { font-size:16px; }
+            }
+            &__address-about{
+                color: #040404;
+                font-family: "Noto Serif JP";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 350%;
+                flex:1;
+                text-align: left;
+                position: relative;
+
+                @include pc { font-size:14px; }
+                @include tb { font-size:12px; }
+                @include sp { font-size:12px; }
+
+                &::before{
+                    content:"";
+                    position: absolute;
+                    top:50%;
+                    transform: translateY(-50%);
+                    left:-30px;
+                    width:18px;
+                    height:25px;
+                    aspect-ratio: 18/25;
+                    background-image: url(img/access__pin.png);
+                    background-size: cover;
+                    display: block;
+                }
+            }
+        }
+        &__works{
+            padding: 60px 48px 140px 0;
+            &__visual{
+                width:100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            &__title{
+                padding-top:130px;
+                writing-mode: vertical-lr;
+                color:#040404;
+                font-family:"Noto Serif JP";
+                font-size:40px;
+                font-weight:400;
+                line-height:125%;
+                letter-spacing:0.4em;
+                position:relative;
+
+                @include custom02 { font-size:32px; }
+                @include pc {
+                    padding-top: 12%;
+                    font-size:28px; }
+                @include tb { font-size:24px; }
+
+                &::before{
+                    content:"";
+                    position:absolute;
+                    height:100px;
+                    width:1px;
+                    background-color:#2D3630;
+                    right:50%;
+                    transform: translateX(50%);
+                    top:0;
+                }
+
+                @include custom02 {
+                    padding-top:80px;
+                    &::before { height:60px; }
+                }
+                @include pc {
+                    padding-top:12%;
+                    &::before { height:60px; }
+                }
+                @include tb {
+                    padding-top:8%;
+                    &::before { 
+                        height:40px;
+                        right:50%;
+                    }
+                }
+            }
+            &__figure{
+                max-width: 1400px;
+                width:90%;
+                & img{
+                    aspect-ratio: 1400 / 825;
+                    width:100%;
+                }
+            }
+            &__lead{
+                padding:180px 0 64px ;
+                margin-left: 334px;
+                @include custom02{
+                    display: inline-block;
+                    margin:0 auto ;
+                }
+                display: flex;
+                align-items:flex-start;
+                &__txt{
+                    color: #040404;
+                    padding-right:16px;
+                    font-family: "Noto Serif JP";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    letter-spacing: 0.03em;
+
+                    @include pc { font-size:14px; }
+                    @include tb { font-size:12px; }
+                    @include sp { font-size:12px; }
+                }
+                &__border{
+                    width:320px;
+                    height: 1px;
+                    background-color: #a5a5a5;
+                }
+            }
+
+            &__swiper--01,
+            &__swiper--02 {
+                max-width: 1248px;
+                padding: 0 24px;
+                margin-left:310px;
+                display: flex;
+                gap: 24px;
+                @include custom02{
+                    margin:0 auto ;
+                }
+
+                .swiper__works--main-01,
+                .swiper__works--main-02 {
+                    width: 75%;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        aspect-ratio: 893 / 596;
+                        cursor: pointer;
+                    }
+                }
+
+                .swiper__works--thumb-01,
+                .swiper__works--thumb-02 {
+                    width: 25%;
+
+                    .swiper-slide {
+                        height: auto !important;
+                    }
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        aspect-ratio: 136 / 142;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &__merit{
+            max-width:1920px;
+            width:100%;
+            &__visual{
+                max-width: 1600px;
+                width:90%;
+                display: flex;
+                justify-content: space-between;
+            }
+            &__figure{
+                max-width:1440px;
+                width:80%;
+                & img{
+                    aspect-ratio: 1400 / 825;
+                    width:100%;
+                }
+            }
+            &__inner{
+                padding:160px 48px 320px 48px;
+                    @include pc{
+                        padding:10% 5% 32% 5%;
+                    }
+            }
+
+            &__title{
+                padding-top:130px;
+                writing-mode: vertical-lr;
+                color:#040404;
+                font-family:"Noto Serif JP";
+                font-size:40px;
+                font-weight:400;
+                line-height:125%;
+                letter-spacing:0.4em;
+                position:relative;
+
+                @include custom02 { font-size:32px; }
+                @include pc {
+                    padding-top: 12%;
+                    font-size:28px; }
+                @include tb { font-size:24px; }
+
+                &::before{
+                    content:"";
+                    position:absolute;
+                    height:100px;
+                    width:1px;
+                    background-color:#2D3630;
+                    right:50%;
+                    transform: translateX(50%);
+                    top:0;
+                }
+
+                @include custom02 {
+                    padding-top:80px;
+                    &::before { height:60px; }
+                }
+                @include pc {
+                    padding-top:12%;
+                    &::before { height:60px; }
+                }
+                @include tb {
+                    padding-top:56px;
+                    &::before { 
+                        height:40px;
+                        right:50%;
+                    }
+                }
+            }
+
+            &__introduce{
+                max-width:885px;
+                width: 90%;
+                padding:50px 20px 60px;
+                margin:0 auto 60px;
+                background-color:#FFF;
+                display:flex;
+                justify-content:center;
+                gap:8px;
+                @include pc{
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 5% 2% 6%;
+                    gap:30px;
+                    margin: 0 auto 10%;
+                }
+
+                &__item{
+                    width:20%;
+                    padding:10px;
+                    flex: 1;
+                    text-align:center;
+                    display: block;
+                    padding:20px 0 40px;
+                    font-size:14px;
+                    font-family:"Noto Serif JP";
+                    color:#000;
+                    background-color:#E3EDC8;
+                    position:relative;
+
+                    @include pc { 
+                        width:80%;
+                        font-size:12px;
+                        padding:2% 0 6%;
+                    }
+                    @include tb { font-size:12px; }
+                    @include sp { font-size:12px; }
+                    &::before{
+                        content: attr(data-num);   // ← ← ココ重要！（HTML側の番号を読む）
+                        position:absolute;
+                        top:-18px;
+                        left:50%;
+                        transform:translateX(-50%);
+                        font-size:18px;
+                        font-family:"Noto Serif JP";
+                        color:#C6D7A9;
+                        font-weight:500;
+                        @include pc{
+                            font-size:14px;
+                            top:-14px;
+                        }
+                    }
+                    &::after{
+                        content:"∨";
+                        font-size:12px;
+                        position:absolute;
+                        bottom:10%;
+                        right:50%;
+                        transform:translateX(50%);
+                        @include tb{
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
+
+            &__items{
+                max-width:1300px;
+                margin:0 auto;
+
+                @include custom02{
+                    max-width:1000px;
+                    padding:0 24px;
+                }
+                @include tb{
+                    max-width:100%;
+                    padding:0 2%;
+                }
+            }
+
+            &__item{
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                column-gap:60px;
+                margin-bottom:120px;
+
+                @include custom02 {
+                    column-gap:40px;
+                    margin-bottom:96px;
+                }
+                @include pc{
+                    column-gap: 4%;
+                    margin-bottom: 10%;
+                }
+
+                @include tb {
+                    flex-direction:column;
+                    align-items:flex-start;
+                }
+            }
+
+            &__item__img{
+                width:45%;
+                order:1;
+
+                & img { width:100%; height:auto; display:block; }
+
+                @include tb { width:100%; }
+            }
+
+            /* 個別 max-width */
+            &__item__img-01 { max-width:640px; aspect-ratio:643/401; }
+            &__item__img-02 { max-width:600px; aspect-ratio:587/423; }
+            &__item__img-03 { max-width:650px; aspect-ratio:649/417; }
+            &__item__img-04 { max-width:600px; aspect-ratio:587/503; }
+            &__item__img-05 { max-width:600px; aspect-ratio:571/469; }
+
+            &__item__txt{
+                width:45%;
+                order:2;
+                border-top:1px solid #A5A5A5;
+                padding-top:32px;
+                margin-top:8px;
+                position:relative;
+
+                @include custom02 { padding-top:28px; }
+                @include pc{
+                    padding-top: 3%;
+                    margin-top: 1%;
+                }
+                @include tb { width:100%; }
+            }
+
+            &__item__txt__number{
+                position:absolute;
+                top:-0.9em;
+                right:0;
+                padding:0 8px;
+                background:#F7F7F2;
+                color:#040404;
+                font-family:"Noto Serif JP";
+                font-size:16px;
+                font-weight:400;
+                line-height:1.6;
+
+                @include pc {
+                    font-size:14px;
+                    padding:0 1%;
+                }
+                @include tb { font-size:12px; }
+                @include sp { font-size:12px; }
+            }
+
+            &__item__txt__title{
+                color:#000;
+                font-family:"Noto Serif JP";
+                font-size:32px;
+                font-weight:400;
+                line-height:1.75;
+                letter-spacing:0.1em;
+                padding:32px 0;
+
+                @include pc { 
+                    font-size:26px;
+                    padding: 3% 0;
+                }
+                @include tb { font-size:20px; }
+                @include sp { font-size:16px; }
+            }
+
+            &__item__txt__desc{
+                color:#040404;
+                font-family:"Noto Serif JP";
+                font-size:16px;
+                font-weight:400;
+                line-height:26px;
+                letter-spacing:0.03em;
+
+                @include pc { font-size:14px; }
+                @include tb { font-size:12px; }
+                @include sp { font-size:12px; }
+            }
+
+            /* 偶数行反転 */
+            &__item:nth-child(even){
+                .section__merit__item__img { order:2; }
+                .section__merit__item__txt { order:1; }
+            }
+
+            @include tb {
+                &__item__img,
+                &__item__txt{
+                    width:100%;
+                    order:0;
+                }
+            }
+        }
+
+
+
+
+        &__cta{
+            background-image: url(img/cta__bg--form.jpg);
+            background-size: cover;
+            background-position: center center;
+            height:500px;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;  
+            @include pc{
+                height:400px;
+            }
+            &__circle{
+                width:1000px;
+                height:1000px;
+                margin: 0 auto;
+                backdrop-filter: blur(9px); 
+                background: rgba(45, 54, 48, 0.3);
+                opacity:0.9;
+                border-radius:1000px;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%); 
+                z-index:1;
+                @include custom02{
+                    width:800px;
+                    height:800px;
+                }
+                @include pc{
+                    width:600px;
+                    height:600px;
+                }
+                @include tb{
+                    width:500px;
+                    height:500px;
+                }
+            }
+            &__inner {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 0 24px;
+                z-index:2;
+                position: relative;
+            }
+            &__part{
+                margin:0 auto;
+            }
+            &__img{
+                width:100%;
+                & img{
+                    aspect-ratio: 1920/495;
+                    width:100%;
+                }
+            }
+
+            /* ======================= */
+            /* EYEBROW */
+            /* ======================= */
+            &__eyebrow {
+                width:100%;
+                color: #FFF;
+                font-feature-settings: 'halt' on;
+                font-family: "Noto Serif JP";
+                font-size: 32px;
+                font-weight: 500;
+                letter-spacing: 0.1em;
+                border-bottom:1px solid #FFF;
+                padding:50px 0 20px 0;
+
+                @include pc { 
+                    width:60%;
+                    margin:0 auto;
+                    font-size: 26px;
+                    padding-top:24px;
+                }
+                @include tb { font-size: 20px; }
+                @include sp { font-size: 16px; }
+            }
+
+            &__deadline {
+                width: 100%;      // 80%やめる
+                max-width: 600px; // これは残してOK（必要なら後で上げる）
+                margin: 0 auto;
+                padding-top: 16px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;         
+                flex-wrap: wrap;  
+                @include tb{
+                    flex-wrap: wrap;  
+                    flex-direction:row;
+                    justify-content: center;
+                }
+            }
+
+
+            /* ======================= */
+            /* DATE */
+            /* ======================= */
+            &__date {
+                color: #fff;
+                width: auto;
+                display: inline-block;
+                padding: 4px 12px;
+                margin-right: 8px;
+                font-size: 14px;
+                font-weight: 700;
+                border-right:1px solid #fff;
+                border-left:1px solid #fff;
+                border-bottom:1px solid #fff;
+                margin-bottom:12px;
+                line-height:1;
+
+                @include pc { font-size: 12px; }
+                @include tb {
+                    width: 60%;
+                    font-size: 12px;
+                    order: 1;
+                    flex: 0 0 100%;   // 全幅で1段
+                    margin: 0 auto 8px;
+                    text-align: center;
+                    margin-right: 0;
+                }
+                @include sp { font-size: 12px; }
+
+                & span{
+                    font-size:28px;
+                    @include pc { font-size: 22px; }
+                    @include tb { font-size: 18px; }
+                    @include sp { font-size: 14px; }
+                }
+            }
+
+            /* ======================= */
+            /* AMAZON (賞品名) */
+            /* ======================= */
+            &__amazon {
+                font-size: 24px; /* ← 後勝ちの 24px を基準 */
+                margin-right: 8px;
+                color: #FFF;
+                font-family: "Noto Serif JP";
+                font-weight: 700;
+                line-height:1;
+
+                @include pc { font-size: 19px; }
+                @include tb {
+                    font-size: 15px;
+                    order: 2;
+                    flex: 0 0 100%;   // 全幅で1段
+                    margin: 0 auto 6px;
+                    text-align: center;
+                    margin-right: 0; 
+                }
+                @include sp { font-size: 12px; }
+
+                & span{
+                    font-size:17px;
+                    @include pc { font-size: 14px; }
+                    @include tb { font-size: 12px; }
+                    @include sp { font-size: 12px; }
+                }
+            }
+
+            /* ======================= */
+            /* MAX */
+            /* ======================= */
+            &__max{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                writing-mode: vertical-rl;
+                background-color:#536C5B ;
+                color:#FFF;
+                text-align:center;
+                font-family:"Noto Serif JP";
+                font-size:14px;
+                font-weight:700;
+                line-height:1;
+                letter-spacing:0.1rem;
+                padding:5px;
+
+                @include pc { font-size:12px; }
+                @include tb {
+                    font-size:12px;
+                    order: 3;         // 3段目の左
+                    flex: 0 0 auto;
+                    align-self: flex-end;
+                    margin-right: 4px; // 価格とくっつける
+                }
+                @include sp { font-size:12px; }
+            }
+
+            /* ======================= */
+            /* PRICE（56px） */
+            /* ======================= */
+            &__price {
+                color: #FFF;
+                font-family: "Noto Serif JP";
+                font-size: 56px;
+                font-weight: 600;
+                line-height:1;
+                letter-spacing: -0.02em;
+                padding-left:4px;
+
+                @include pc { font-size: 45px; }
+                @include tb { 
+                    order: 4;      
+                    flex: 0 0 auto;
+                    align-self: flex-end;
+                    font-size: 36px;
+                }
+                @include sp { font-size: 28px; }
+
+                span {
+                    writing-mode: vertical-rl;
+                    font-size:20px;
+                    font-weight:900;
+                    letter-spacing:0.1rem;
+                    padding-left:4px;
+
+                    @include pc { font-size: 16px; }
+                    @include tb { font-size: 12px; }
+                    @include sp { font-size: 12px; }
+                }
+            }
+
+            &__item{
+                width:100%;
+                padding:16px 0;
+                & img{
+                    aspect-ratio:938/289;
+                    max-width:469px;
+                    width:70%;
+                }
+            }
+
+            /* ======================= */
+            /* BUTTONS（32px） */
+            /* ======================= */
+            &__btn,
+            &__btn--03{
+                width:100%;
+                font-size:32px;
+                @include pc { font-size:26px; }
+                @include tb { font-size:20px; }
+                @include sp { font-size:16px; }
+            }
+
+            &__btn {
+                display:block;
+                width:75%;
+                background:#536C5B;
+                margin:0 auto;
+                color:#fff;
+                padding:30px 0;
+                border-radius:100px;
+                letter-spacing:0.05em;
+                font-family:"Shippori Mincho";
+                transition:opacity .3s ease;
+                &:hover { opacity:0.7; }
+                @include pc{
+                    padding:15px 0;
+                    width:70%;
+                }
+            }
+
+            &__btn--03{
+                display:block;
+                width:70%;
+                margin: 24px auto;
+                background:rgba(16,42,24,0.75);
+                color:#fff;
+                padding:30px 40px;
+                border-radius:100px;
+                letter-spacing:0.05em;
+                font-family:"Shippori Mincho";
+                backdrop-filter:blur(10px);
+                mix-blend-mode:multiply;
+                transition:opacity .3s ease;
+                &:hover{ opacity:0.7; }
+                @include pc{
+                    padding:15px 0;
+                }
+            }
+
+            /* ======================= */
+            /* ATTENTION（14px） */
+            /* ======================= */
+            &__attention{
+                width:569px;
+                padding:16px 27px 0 16px;
+                height:120px;
+                overflow:scroll;
+                color:#000;
+                background-color:#fff;
+                font-family:"Noto Sans JP";
+                font-size:14px;
+                font-weight:400;
+                line-height:192.857%;
+                letter-spacing:0.05em;
+                text-align:start;
+                margin: 0 auto;
+                margin-top: 16px;;
+
+                @include pc { 
+                    font-size:12px;
+                    height:100px;
+                }
+                @include tb { 
+                    font-size:12px;
+                    height:60px;
+                }
+            }
+
+            /* ======================= */
+            /* COPYRIGHT（14px） */
+            /* ======================= */
+            &__copyright{
+                color:#FFF;
+                text-align:center;
+                font-family:"Shippori Mincho";
+                font-size:14px;
+                font-weight:500;
+
+                @include pc { font-size:12px; }
+                @include tb { font-size:12px; }
+                @include sp { font-size:12px; }
+            }
+            
+        }
+
+        
+        &__contact{
+            padding:160px 0;
+            @include pc{
+                padding:16% 0;
+            }
+            &__inner{
+                max-width: 1348px;
+                padding:0 24px;
+                margin: 0 auto;
+                text-align: left;
+            }
+            &__title{
+                color: #2D3630;
+                text-align: left;
+                font-family: "Noto Serif JP";
+                font-size: 89px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0.03em;
+                position: relative;
+                @include custom02{
+                    font-size:72px ;
+                }
+                @include pc {
+                    font-size: 52px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+                @include tb {
+                    font-size: 40px;
+                }
+                @include sp {
+                    font-size: 40px;
+                }
+                &::before{
+                    content: "";
+                    max-width:940px;
+                    width:50%;
+                    height:1px;
+                    background-color: #a5a5a5;
+                    position: absolute;
+                    top:10%;
+                    left:35%;
+                    @include pc{
+                        display: none;
+                    }
+                }
+            }
+
+            &__subtitle{
+                padding:40px 0 32px;
+                @include pc{
+                    font-size: 32px;
+                }
+                @include tb{
+                    font-size: 28px;
+                }
+            }
+            &__desc{
+                color: #040404;
+                text-align: center;
+                font-family: "Noto Serif JP";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 200%;
+                letter-spacing: 0.05em;
+                padding-bottom:56px;
+
+                @include pc {
+                    font-size: 14px;
+                }
+                @include tb {
+                    font-size: 12px;
+                }
+                & span{
+                    color: #536C5B;
+                    text-align: center;
+                    font-family: "Noto Sans JP";
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 200%;
+                    letter-spacing: 0.05em;
+
+                    @include pc {
+                        font-size: 12px;
+                    }
+                    @include tb {
+                        font-size: 12px;
+                    }
+                    @include sp {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            &__options {
+                display: flex;
+                justify-content: center;
+                gap:20px;
+                padding:0 48px;
+                @include pc{
+                    padding:0 5%;
+                }
+                @include tb{
+                    padding:0 3%;
+                    gap:10px;
+                }
+            }
+
+            .contact-option {
+                padding-bottom:140px;
+
+                &__img {
+                    width: 100%;
+                    background-color:#E3E3E3 ;
+                    & img {
+                        width: 100%;
+                        aspect-ratio: 380 / 170;
+                        max-width:380px;
+                        object-fit: cover;
+                    }
+                }
+
+                &__txt {
+                    background:#2D3630;
+                    text-align: center;
+                    color: #fff;
+                    position: relative;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Noto Serif JP";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 108.333%;
+                    letter-spacing: 0.03em;
+                    padding:30px 0 45px;
+                    position: relative;
+
+                    @include pc {
+                        font-size: 16px; 
+                    }
+                    @include tb {
+                        font-size: 12px; 
+                    }
+                    @include sp {
+                        font-size: 12px; 
+                    }
+
+                    &::before{
+                        content:"";
+                        width:12px;
+                        height: 15px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-image: url(img/contact__option__arrow.png);
+                        position:absolute;
+                        bottom:8px;
+                        right:50%;
+                        transform: translateX(50%);
+                        display: block;
+                    }
+                } 
+
+                /* ================================
+                ARROW  
+                16px → PC:12px / TB:12px / SP:12px
+                ================================= */
+                &__arrow {
+                    display: block;
+                    margin-top: 6px;
+                    font-size: 16px;
+                    letter-spacing: 0.1em;
+
+                    @include pc {
+                        font-size: 12px;
+                    }
+                    @include tb {
+                        font-size: 12px;
+                    }
+                    @include sp {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+
+
+        &__form {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #040404;
+            font-family: "Noto Sans JP";
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0.05em; // 0.8px / 16px
+            padding:0 48px;
+                @include pc{
+                    padding:0 5%;
+                }
+        }
+        &__form__select-wrapper{
+            position: relative;
+            &::before{
+                position: absolute;
+                content:"";
+                width:10px;
+                height:12px;
+                background-image: url(img/contact__select__arrow.png);
+                background-repeat: no-repeat;
+                display: block;
+                background-size: contain;
+                top:50%;
+                right:5%;
+            }
+        }
+        .section__contact__form__field:nth-of-type(2)
+        .section__contact__form__select-wrapper::before {
+            top: 38%;                
+            transform: translateY(-50%);
+        }
         &__form__field {
+            display: flex;
+            align-items: flex-start; 
+            gap: 32px;
+            margin-bottom: 32px;
+            @include pc{
+                flex-direction: column;
+            }
+        }
+
+        &__form__label {
+            width: 180px;  
+            flex-shrink: 0;
+            display: block;
+            padding-top: 12px; 
+        }
+
+        &__form__right {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__form__input,
+        &__form__select,
+        &__form__textarea {
+            color: #A5A5A5;
+            background: #EBEBEB;
+            font-family: "Noto Sans JP";
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.05em; // 0.8px / 16px
+            padding: 18px;
+            border: none;
+            width: 100%;
+            
+        }
+
+        &__form__textarea {
+            resize: none;
+            height: 160px;
+        }
+
+        &__form__note {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #666;
+            line-height: 20px;
+        }
+
+        &__form__radio-group {
             display: flex;
             flex-direction: column;
             gap: 8px;
         }
 
-        &__form__label {
-            font-size: 14px;
-            font-weight: 500;
-            color: #333;
-        }
-
-        /* input 共通 */
-        &__form__input,
-        &__form__select,
-        &__form__textarea {
-            width: 100%;
-            padding: 14px 18px;
-            background: #F6F6F6;
-            border: none;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #333;
-        }
-
-        &__form__select {
-            appearance: none;
-            background-image: url("img/arrow-down.svg");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            background-size: 12px;
-        }
-
-        &__form__textarea {
-            height: 140px;
-            resize: none;
-        }
-
-        &__form__note {
-            font-size: 11px;
-            color: #999;
-        }
-
-        /* ラジオボタン */
-        &__form__radio-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-
-            label {
-                font-size: 14px;
-                color: #333;
-                display: flex;
-                align-items: center;
-                gap: 6px;
-            }
-        }
-        /* チェックボックス */
         &__form__privacy {
-            margin-top: 10px;
+            text-align: center;
+            padding: 60px 0;
 
-            label {
-                font-size: 12px;
-                color: #333;
-                display: flex;
-                align-items: center;
-                gap: 6px;
+            input[type="checkbox"] {
+                margin-right: 28px;
+            }
+
+            &__text {
+                border-bottom: 1px solid #272727;
             }
         }
-        /* 送信ボタン */
+
         &__form__submit {
-            width: 260px;
-            margin: 30px auto 0;
-            padding: 16px 40px;
-            border: 1px solid #333;
-            background: transparent;
-            border-radius: 4px;
-            font-size: 14px;
-            letter-spacing: 0.02em;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            transition: 0.3s ease;
-
-            &:hover {
-                background: #333;
-                color: #fff;
-            }
-        }
-
-        /* 右矢印 */
-        &__form__submit__arrow {
-            width: 12px;
-            height: 12px;
-            background-image: url("img/arrow-right.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
+            text-align: center;
+            padding: 18px 0 12px;
+            border: 1px solid #2b2b2b;
             display: inline-block;
-        }
-    }
-    &__merit{
-        padding:160px 0 320px 0;
-        &__visual{
-            display: flex;
-        }
-        &__figure{
-            max-width:1440px;
-            & img{
-                aspect-ratio: 1400 / 825;
-                width:100%;
-            }
-        }
-        &__title{
-            padding-top:130px;
-            writing-mode: vertical-lr;
-            color: #040404;
-            font-family: "Noto Serif JP";
-            font-size: 40px;
-            font-style: normal;
+            max-width: 400px;
+            width:80%;
+            color: #2B2B2B;
+            font-size: 18px;
             font-weight: 400;
-            line-height: 50px; /* 125% */
-            letter-spacing: 16px;
-            padding-left:140px;
-            position:relative;
-            &::before{
-                content:"";
-                position:absolute;
-                height:100px;
-                width:1px;
-                background-color:#2D3630;
-                right:25px;
-                top:0;
-            }
-        }
-        &__introduce{
-            padding-top:100px;
-            margin-left: 500px;
-            & img{
-                aspect-ratio: 885/226;
-                max-width:885px;
+            line-height: 32px;
+            position: relative;
+            background: transparent;
 
+            &::before {
+                content: "";
+                width: 40px;
+                height: 8px;
+                background-image: url(img/contact__submit__arrow.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 50%;
+                right: 10%;
+                transform: translateY(-50%);
+                @include tb{
+                    width: 20px;
+                    top:60%;
+                }
             }
         }
-        &__items{
-            max-width:1300px;
-            margin:0 auto;
+
+        /* ▼▼ フッター ▼▼ */
+        &__form__footer {
+            text-align: center;
         }
-        &__item{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            height:555px;
-            align-items: center;
-            &__img-01{
-                aspect-ratio: 643/401;
-                max-width:643px;
+        }
+        &__company-profile{
+            &__head{
+                background-image: url(img/company-profile__bg.jpg);
+                background-position: center center;
+                background-size: cover;
+                height:490px;
+                color:#fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                @include pc{
+                    height:300px;
+                }
+                @include tb{
+                    height:200px;
+                }
             }
-            &__img-02{
-                aspect-ratio:587/423;
-                max-width:587px;
+            &__items{
+                display: flex;
+                flex-direction: column;
+                max-width:1048px;
+                padding:0 24px;
+                margin: 0 auto;
+                padding-bottom: 300px;
+                @include pc{
+                    padding-bottom: 12%;
+                }
             }
-            &__img-03{
-                aspect-ratio:649/417;
-                max-width:649px;
+            &__item{
+                display: flex;
+                flex-direction:column ;
+                text-align: center;
+                &__img{
+                    max-width:1000px;
+                    width:70%;
+                    margin:0 auto;
+                    & img{
+                        width:100%;
+                        aspect-ratio: 1000/480;
+                    }
+                }
             }
-            &__img-04{
-                aspect-ratio:587/503;
-                max-width:587px;
-            }
-            &__img-05{
-                aspect-ratio:571/469;
-                max-width:571px ;
-            }
-            &__txt{
-                border-top:1px solid #A5A5A5;
-                width:405px;
-                position:relative;
-                &__number{
-                    position:absolute;
-                    top:-3%;
-                    right:-20%;
-                    color: #040404;
-                    text-align: right;
+            &__title{
+                text-align: center;
+                color: #FFF;
+                font-family: "Noto Serif JP";
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0.03em; // 1.2px / 40px
+                padding-bottom: 48px;
+                @include pc{
+                    font-size:32px;
+                    padding-bottom: 5%;
+                }
+                @include pc{
+                    font-size:24px;
+                }
+                @include tb{
+                    font-size:18px;
+                }
+                &-sub{
+                    color: #FFF;
+                    text-align: center;
                     font-family: "Noto Serif JP";
-                    font-size: 16px;
+                    font-size: 24px;
                     font-style: normal;
                     font-weight: 400;
-                    line-height:162.5%;
-                    letter-spacing: 0.48px;
+                    line-height: 59px; /* 245.833% */
+                    letter-spacing: 2.4px;
+                    @include pc{
+                        font-size: 18px;
+                    }
+                    @include tb{
+                        font-size: 14px;
+                    }
+                }
+            }
+            &__subtitle{
+                color: #040404;
+                text-align: center;
+                font-family: "Noto Serif JP";
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                padding:160px 0 30px 0;
+                @include pc{
+                    padding:10% 0 3% 0;
+                    font-size: 24px;
+                }
+                @include tb{
+                    font-size: 20px;
+                }
+            }
+            &__desc{
+                padding-bottom:120px;
+                color: #040404;
+                text-align: center;
+                font-family: "Noto Serif JP";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px; /* 200% */
+                letter-spacing: 0.48px;
+                @include pc{
+                    padding-bottom:12%;
+                    font-size:14px
+                }
+                @include tb{
+                    font-size: 12px;
+                }
+            }
+            &__txt{
+                max-width:792px;
+                margin:0 auto;
+                padding:0 24px;
+                @include pc{
+                    padding: 0 3%;
                 }
                 &__title{
                     color: #000;
+                    text-align: center;
+                    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
                     font-family: "Noto Serif JP";
                     font-size: 32px;
                     font-style: normal;
                     font-weight: 400;
-                    line-height:  175%;
-                    letter-spacing: 3.2px;
-                    padding:50px 0;
+                    line-height: 175%; /* 175% */
+                    letter-spacing: 0.1em; // 3.2px / 32px
+                    padding:40px 0 25px;
+                    @include pc{
+                        font-size: 24px;
+                    }
+                    @include tb{
+                        font-size: 20px;
+                    }
+                    @include sp{
+                        font-size: 16px;
+                    }
                 }
                 &__desc{
                     color: #040404;
@@ -761,386 +2161,370 @@ body{
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
-                    line-height: 26px; /* 162.5% */
-                    letter-spacing: 0.48px;
+                    line-height: 200%; /* 200% */
+                    letter-spacing: 0.05em; // 0.8px / 16px
+                    @include pc{
+                        font-size: 14px;
+                    }
+                    @include tb{
+                        font-size: 12px;
+                    }
                 }
             }
-            &:nth-child(even){
-                flex-direction: row-reverse;
+            &__items{
+                display: flex;
+                flex-direction: column;
+                gap:156px;
+                @include pc{
+                    gap:100px;
+                }
+                @include tb{
+                    gap:60px;
+                }
+            }
+        }
+        &__company-info{
+            color: #000;
+            font-family: "Noto Serif JP";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 150% */
+            letter-spacing: 0.05em; // 0.8px / 16px
+            width:100%;
+            padding:120px 24px;
+            @include pc{
+                padding:0 3% 12% 3%;
+            }
+            &__inner{
+                width:100%;
+                max-width:900px;
+                margin:0 auto;
+                padding:0 24px;
+            }
+            &__row{
+                display: flex;
+                padding:36px 0;
+                border-bottom: 1px solid #A5A5A5 ;
+            }
+            &__dt{
+                flex:3;
+                font-weight: 400;
+            }
+            &__dd{
+                flex:7;
+            }
+        }
+        &__card{
+            &__slider{
+                padding: 0 48px;
             }
         }
     }
-    &__cta{
-        background-image: url(img/cta__bg--form.jpg);
-        background-size: cover;
-        background-position: center center;
-        height:500px;
-        background-repeat: no-repeat;
-        margin: 0 auto;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        &__circle{
-            width:1000px;
-            height:1000px;
-            margin: 0 auto;
-            backdrop-filter: blur(9px); 
-            background: rgba(45, 54, 48, 0.3);
-            opacity:0.9;
-            border-radius:1000px;
-            position: absolute;
-            top:50%;
-            left:50%;
-            transform: translate(-50%, -50%); 
-            z-index:1;
+    .footer{
+        background-color: #2D3630;
+        padding:100px 0 150px 0;
+        width:100%;
+        @include pc{
+            padding: 10% 0 15% 0;
         }
-        &__inner {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 0 24px;
-            z-index:2;
-            position: relative;
+        @include tb{
+            padding:5% 0 25% 0;
         }
-        &__part{
-            margin:0 auto;
-        }
-        &__img{
-            width:100%;
-            & img{
-                aspect-ratio: 1920/495;
-                width:100%;
-            }
-        }
-        &__eyebrow {
-            color: #FFF;
-            font-feature-settings: 'halt' on;
-            font-family: "Noto Serif JP";
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 500;
-            letter-spacing: 3.2px;
-            border-bottom:1px solid #FFF;
-            padding:50px 0 20px 0;
-        }
-        &__deadline {
-            margin-bottom: 24px;
-            padding-top:16px;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-        }
-        &__date {
-            color: #fff;
-            padding: 4px 12px;
-            margin-right: 8px;
-            font-size: 14px;
-            font-weight: 700;
-            border-right:1px solid #fff;
-            border-left:1px solid #fff;
-            border-bottom:1px solid #fff;
-            padding: 0  12px;
-            margin-bottom:12px;
-            line-height:1;
-            & span{
-                font-size:28px;
-            }
-        }
-        &__amazon {
-            font-size: 16px;
-            margin-right: 8px;
-            color: #FFF;
-            leading-trim: both;
-            text-edge: cap;
-            font-family: "Noto Serif JP";
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 700;
-            line-height:1;
-            & span{
-                font-size:17px;
-            }
-        }
-        &__max{
+        &__nav{
             display: flex;
             align-items: center;
             justify-content: center;
-            writing-mode: vertical-rl;
-            background-color:#536C5B ;
-            color: #FFF;
-            text-align: center;
-            leading-trim: both;
-            text-edge: cap;
-            font-family: "Noto Serif JP";
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height:1;
-            letter-spacing: 0.1rem;
-            padding: 5px;
-            text-align: center;
-            vertical-align: center;
-
-        }
-        &__price {
-            color: #FFF;
-            font-family: "Noto Serif JP";
-            font-size: 56px;
-            font-style: normal;
-            font-weight: 600;
-            line-height:1;
-            letter-spacing: -1.12px; 
-            padding-left:4px;
-
-            span {
-                writing-mode: vertical-rl;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 900;
-                letter-spacing: 0.1rem;
-                padding-left:4px;
-            }
-        }
-        &__item{
-            margin-bottom: 12px;
-            & img{
-                aspect-ratio: 938 / 289;
-                max-width: 469px;
-                height:auto;
-            }
-        }
-        /* ボタン */
-        &__btn {
-            display: block;
             width:100%;
-            background: #536C5B;
-            color: #fff;
-            padding: 30px 40px;
-            border-radius: 100px;
-            font-size: 32px;
-            letter-spacing: 0.05em;
-            text-decoration: none;
-            transition: opacity .3s ease;
-            font-family: "Shippori Mincho";
-            &:hover {
-                opacity: 0.7;
+            line-height: 120%;
+            &__items{
+                width: 70%;
+                display: flex;
+                gap:60px;
+                @include pc{
+                    gap:20px;
+                    font-size: 12px;
+                }
+                @include tb{
+                    width: 80%;
+                    display:grid ;
+                    grid-template-columns: repeat(3,1fr);
+                    gap:16px;
+                }
             }
         }
-    }
-    &__company-profile{
-        &__head{
-            background-image: url(img/company-profile__bg.jpg);
-            background-position: center center;
-            background-size: cover;
-            height:490px;
-            color:#fff;
-        }
-        &__items{
-            display: flex;
-            flex-direction: column;
-            max-width:1048px;
-            padding:0 24px;margin: 0 auto;
-        }
-        &__item{
-            display: flex;
-            flex-direction:column ;
-            text-align: center;
-            &__img{
-                width:1000px;
-                & img{
+        &__logo{
+            @include tb{
+                aspect-ratio: 1/1;
+                width:30px;
+                img{
                     width:100%;
                 }
             }
         }
-        &__txt{
-            &__title{
-                color: #000;
-                text-align: center;
-                text-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-                font-family: "Noto Serif JP";
-                font-size: 32px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 56px; /* 175% */
-                letter-spacing: 3.2px;
-            }
-            &__desc{
-                color: #040404;
-                font-family: "Noto Serif JP";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 32px; /* 200% */
-                letter-spacing: 0.8px;
-            }
-        }
     }
-}
-.footer{
-    background-color: #2D3630;
-    padding:100px 0 150px 0;
-    &__nav{
+
+    .card {
+        width: 100%;
+        max-width: 1000px;
+        aspect-ratio: 1000/750;
+        background: #fff;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap:240px;
-        &__items{
+        flex-direction: column;
+        &__images {
+            position: relative;
             display: flex;
-            gap:60px;
+            justify-content: space-between;
+            gap: 20px;
+            .card__zoom-icon{
+                position: absolute;
+                bottom: -10px;
+                right: 40px;
+                width: 38px;
+                height: 38px;
+                z-index: 99;
+                & img {
+                    width: 60px;
+                    aspect-ratio: 38/38;
+                }
+            }
+            }
+        &__zoom-icon {
+                position: absolute;
+                bottom: 8px;
+                right: 8px;
+                width: 38px;
+                height: 38px;
+                z-index:99;
+                & img {
+                    width: 100%;
+                }
+            }
+        &__img{
+            &--main{
+                width: 56%;
+                max-width:560px;
+                aspect-ratio: 560 / 390;
+                border-radius:12px;
+            }
+            &--sub{
+                width: 40%;
+                max-width: 400px;
+                aspect-ratio: 400 / 320;
+            }
+        }
+        &__title {
+            color: #2D3630;
+            font-family: "Noto Serif JP";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 166.667%; /* 166.667% */
+            letter-spacing: 0.05em; // 1.2px / 24px
+            padding:30px 0;
+            border-bottom: 1px solid #000;
+        }
+        &__text {
+            color: #040404;
+            font-family: "Noto Serif JP";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 200%; /* 200% */
+            letter-spacing: 0.05em; // 0.8px / 16px
+            padding:30px 0; 
         }
     }
-}
 
-.card {
-    width: 90%;
-    max-width: 780px;
-    background: #fff;
-    border-radius: 16px;
-    padding: 28px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    .cardSwiper {
+        width: 100%;
+        }
+    .swiper-pagination-bullet-active {
+        background: #7da48f;
+    }
 
-    &__images {
-        position: relative;
+    .cardSwiper .swiper-slide {
+        padding: 0 24px;   /* ← ここが横余白 */
+    }
+
+        @include sp {
+        .cardSwiper .swiper-slide {
+            padding: 0 16px;
+        }
+        }
+    // swiper works01
+
+
+
+
+    .swiper--concept{
+        width:100%;
+        max-width: 1920px;
+        & img{
+            width:100%;
+            aspect-ratio: 640/440;
+        }
+    }
+    .swiper__works--main-01{
+
+    }
+
+
+    .swiper__works--thumb-01 {
+        & img{
+            aspect-ratio: 136/142;
+        }
+    }
+
+    /* =========================
+    Lightbox モーダル
+    ========================= */
+    .lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;             /* 初期は非表示 */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: zoom-out;
+    }
+
+    .lightbox-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 4px;
+    }
+
+
+
+
+    .section__card-slider {
+    padding: 60px 0;
+    @include pc{
+        padding:6% 0;
+    }
+    }
+    .cardSwiper {
+        width: 100%;
+        padding: 20px 0 40px;
+    }
+    .cardSwiper .swiper-slide {
         display: flex;
-        justify-content: space-between;
-        gap: 20px;
+        justify-content: center;
+        width:auto;
+    }
+    .swiper-wrapper--card{
+        // width:100%;
+    }
+    .plan__pager-row{
+        width:80%;
+        margin:0 auto;
+        position: relative;
+    }
 
-        .card__img-main {
-        width: 70%;
-        border-radius: 12px;
+    /* ページネーションの全体 */
+    .swiper-pagination-progressbar {
+    position: relative;
+    width: 85%;      /* 横幅を調整する */
+    max-width:1000px;
+    height: 4px;     /* 太さ */
+    background: #DDDDDD; /* 背景ラインの色 */
+    margin: 40px auto 0;
+    @include pc{
+            width:70%;
+    }
+    }
+
+    /* 実際に伸びる進捗ライン */
+    .swiper-pagination-progressbar-fill {
+    background: #536c5b!important; /* 緑のバー */
+    border-radius: 4px;
+    }
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width:50px;
+        aspect-ratio:50/50 ;
+        position: relative!important;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        height: 50px;
+        margin: auto;
+        width: 50px;
+        position: absolute!important;
+        @include pc{
+            right:0!important;
+            bottom:-20px!important;
         }
+    }
+    .swiper-button-prev::after {
+        background-image: url(img/card__btn--prev.png)!important;
+    }
+    /* 次への矢印カスタマイズ */
+    .swiper-button-next::after {
+        background-image: url(img/card__btn--next.png)!important;
+    }
 
-        .card__img-sub {
-        width: 25%;
-        border-radius: 12px;
-        }
+    .swiper-button-prev::before,
+    .swiper-button-next::before {
+    content: none !important;   // デフォ矢印を消す
+    }
 
-        .card__zoom-icon {
-        position: absolute;
-        bottom: 8px;
-        right: 8px;
-        width: 38px;
-        height: 38px;
+
+
+    .section__works__swiper--01,
+    .section__works__swiper--02 {
+    max-width: 1248px;
+    padding: 0 24px;
+    margin-left: 310px;
+    display: flex;
+    gap: 24px;
+
+    .swiper__works--main-01,
+    .swiper__works--main-02 {
+        width: 75%;
+        overflow: hidden;
+        border-radius: 8px;
 
         img {
-            width: 100%;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 893 / 596; /* mainの比率はここだけ残してOK */
+        object-fit: cover;
+        display: block;
         }
-        }
     }
 
-    &__title {
-        color: #2D3630;
-        font-family: "Noto Serif JP";
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 40px; /* 166.667% */
-        letter-spacing: 1.2px;
+    .swiper__works--thumb-01,
+    .swiper__works--thumb-02 {
+        width: 25%;
+        overflow: hidden;
     }
-    
-    &__text {
-        color: #040404;
-        font-family: "Noto Serif JP";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 32px; /* 200% */
-        letter-spacing: 0.8px;
     }
-}
 
-/* Swiper のパーツはカード外なので別管理 */
-.swiper-button-prev,
-.swiper-button-next {
-  color: #7da48f;
-}
-
-.swiper-pagination-bullet-active {
-  background: #7da48f;
-}
-
-
-
-
-
-.swiper--concept{
-    width:100%;
-    max-width: 1920px;
-    & img{
-        width:100%;
-        aspect-ratio: 640/440;
+    /* サムネの見た目統一（画像バラバラ対策） */
+    .swiper__works--thumb-01 .swiper-slide,
+    .swiper__works--thumb-02 .swiper-slide {
+    aspect-ratio: 136 / 142;
+    overflow: hidden;
+    border-radius: 6px;
     }
-}
-.swiper__works--main-01{
 
-}
-
-
-.swiper__works--thumb-01 {
-    height: 1000px;
-    & img{
-        aspect-ratio: 136/142;
+    .swiper__works--thumb-01 img,
+    .swiper__works--thumb-02 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     }
-}
-
-/* =========================
-   Lightbox モーダル
-========================= */
-.lightbox-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  display: none;             /* 初期は非表示 */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  cursor: zoom-out;
-}
-
-.lightbox-modal img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
-
-
-
-.section__card-slider {
-  padding: 60px 0;
-}
-
-.cardSwiper {
-  width: 100%;
-  padding: 20px 0 40px;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  width: 90%;
-  max-width: 780px;
-  background: #fff;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
-/* ページネーションの全体 */
-.swiper-pagination-progressbar {
-  position: relative;
-  width: 85%;      /* 横幅を調整する */
-  height: 4px;     /* 太さ */
-  background: #dcdcdc; /* 背景ラインの色 */
-  border-radius: 4px;
-  margin: 40px auto 0;
-}
-
-/* 実際に伸びる進捗ライン */
-.swiper-pagination-progressbar-fill {
-  background: #7da48f; /* 緑のバー */
-  border-radius: 4px;
-}
