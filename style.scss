@@ -1382,8 +1382,8 @@
                     height:600px;
                 }
                 @include tb{
-                    width:500px;
-                    height:500px;
+                    width:1000px;
+                    height:1000px;
                 }
             }
             &__inner {
@@ -1466,13 +1466,12 @@
 
                 @include pc { font-size: 12px; }
                 @include tb {
-                    width: 60%;
+                    width: 40%;
                     font-size: 12px;
                     order: 1;
-                    flex: 0 0 100%;   // 全幅で1段
                     margin: 0 auto 8px;
                     text-align: center;
-                    margin-right: 0;
+                    margin: 0 auto;
                 }
                 @include sp { font-size: 12px; }
 
@@ -1583,7 +1582,7 @@
                 & img{
                     aspect-ratio:938/289;
                     max-width:469px;
-                    width:70%;
+                    width:55%;
                 }
             }
 
