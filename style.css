@@ -1735,6 +1735,7 @@ body {
 @media screen and (max-width: 768px) {
   .section__cta__eyebrow {
     font-size: 20px;
+    padding: 32px 0 8px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1756,6 +1757,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__cta__deadline {
+    padding-top: 4px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -1782,7 +1784,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__cta__date {
-    width: 40%;
+    display: inline-block;
     font-size: 12px;
     order: 1;
     margin: 0 auto 8px;
