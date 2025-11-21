@@ -182,6 +182,9 @@
                     writing-mode:vertical-lr;
                     font-size:80px;
                     padding-left:40px;
+                    @include custom02 {
+                        font: size 54px;
+                    }
                     @include pc {
                         font-size:64px;
                     }
@@ -571,7 +574,6 @@
                     gap: 16px; // 任意：アイテム間の余白
                 }
             }
-
             &__item {
                 display: flex;
                 justify-content: space-between;
@@ -579,67 +581,66 @@
                 color: #FFF;
                 border-radius: 10px;
                 overflow: hidden; 
-
-                &__left {
-                display: flex;
-                align-items: stretch; 
-                flex: 1;
-                font-family: "Noto Serif JP";
-                font-size: 15px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 200%;
-                letter-spacing: 0.1em;
-
-                @include pc { font-size: 14px; }
-                @include tb { font-size: 12px; }
+                &__left{
+                    max-width: 105px;
+                    // height:100%;
+                    & img {
+                        // width:100%;
+                        height: 100%;
+                        width:100%;
+                        // aspect-ratio: 105 / 100;
+                        overflow: hidden;    
+                        object-fit: cover;
+                    }
                 }
-
-                &__img {
-                flex: 0 0 105px;      // 横幅は105px固定（必要ならclampでもOK）
-                width: 105px;
-                aspect-ratio: 105 / 100; // ★ 比率の主役
-                height: auto;         // ★ 100%は消す（比率で高さが決まる）
-                align-self: center;   // ★ itemが高くなっても縦中央で崩れない
-                overflow: hidden;     // はみ出しカット
-                }
-
-                &__img img {
-                width: 100%;
-                height: 100%;         // ★ wrapperの比率に従う
-                object-fit: cover;
-                display: block;
-                }
-
-                &__txt {
-                flex: 1;
-                padding: 0 0 0 24px;
-                display: flex;
-                align-items: center; // テキスト縦中央寄せしたい場合
-                }
-
                 &__right {
-                flex: 0 0 auto;      // ★ 伸びない
-                width: 76px;
-                height: 76px;
-                background-color: #fff;
-                border-radius: 9999px;
-                margin: auto 24px auto 0; // ★ 上下中央＋右余白
-                color: #536C5B;
-                text-align: center;
-                font-family: "Noto Serif JP";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 125%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                @include pc { font-size: 14px; }
-                @include tb { font-size: 12px; }
-                @include sp { font-size: 12px; }
-                }
+                    width:80%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include tb{
+                        width:100%;
+                    }
+                    &__txt{
+                        color: var(--rgb-255255255, #FFF);
+                        font-family: "Noto Serif JP";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height:  200%;
+                        letter-spacing: 1.6px;
+                        padding-left:12px;
+                        @include tb{
+                            font-size: 12px;
+                        }
+                    }
+                    &__circle{
+                        flex: 0 0 auto;      // ★ 伸びない
+                        width: 76px;
+                        aspect-ratio: 1/1;
+                        background-color: #fff;
+                        border-radius: 9999px;
+                        margin: auto 24px auto 0;                        
+                        color: #536C5B;
+                        text-align: center;
+                        font-family: "Noto Serif JP";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 125%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include pc { font-size: 14px; }
+                        @include tb {
+                            width:50px;
+                            margin: auto 12px auto 0;                       
+ 
+                            font-size: 12px;
+                        }
+                        @include sp { font-size: 12px; }
+                        }
+                    }
             }
 
 
@@ -947,8 +948,8 @@
             }
         }
         &__works{
-            padding: 60px 48px 140px 0;
             &__visual{
+                padding: 60px 48px 140px 0;
                 width:100%;
                 display: flex;
                 justify-content: space-between;
@@ -1005,16 +1006,22 @@
                     width:100%;
                 }
             }
+            &__inner{
+                max-width:1200px;
+                padding:24px;
+                margin: 0 auto;
+            }
             &__lead{
                 padding:180px 0 64px ;
-                margin-left: 334px;
-                @include custom02{
-                    display: inline-block;
-                    margin:0 auto ;
-                }
+                // margin-left: 334px;
                 display: flex;
                 align-items:flex-start;
+                align-items: center;
+                @include custom02{
+                }
                 &__txt{
+                    display: inline-block;
+                    // margin: 0 auto;
                     color: #040404;
                     padding-right:16px;
                     font-family: "Noto Serif JP";
@@ -1022,29 +1029,32 @@
                     font-style: normal;
                     font-weight: 400;
                     letter-spacing: 0.03em;
-
+                    text-align: center;
+                    
                     @include pc { font-size:14px; }
                     @include tb { font-size:12px; }
                     @include sp { font-size:12px; }
                 }
                 &__border{
+                    text-align: center;
                     width:320px;
                     height: 1px;
                     background-color: #a5a5a5;
+                    
+                    
                 }
             }
 
             &__swiper--01,
             &__swiper--02 {
-                max-width: 1248px;
-                padding: 0 24px;
-                margin-left:310px;
+                // max-width: 1248px;
+                // padding: 0 24px;
+                // margin-left:310px;
                 display: flex;
                 gap: 24px;
                 @include custom02{
                     margin:0 auto ;
                 }
-
                 .swiper__works--main-01,
                 .swiper__works--main-02 {
                     width: 75%;
@@ -1073,7 +1083,6 @@
                 }
             }
         }
-
         &__merit{
             max-width:1920px;
             width:100%;
@@ -2137,6 +2146,9 @@
                 @include pc{
                     padding: 0 3%;
                 }
+                .img{
+
+                }
                 &__title{
                     color: #000;
                     text-align: center;
@@ -2344,7 +2356,7 @@
 
     .cardSwiper {
         width: 100%;
-        }
+    }
     .swiper-pagination-bullet-active {
         background: #7da48f;
     }
@@ -2359,9 +2371,13 @@
         }
         }
     // swiper works01
+.swiperSlide--card{
+    height:100%;
+}
 
-
-
+.swiper-wrapper--thumb{
+    align-content:flex-start;
+}
 
     .swiper--concept{
         width:100%;
@@ -2450,55 +2466,30 @@
     }
 
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        width:50px;
-        aspect-ratio:50/50 ;
-        position: relative!important;
-    }
-
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-        background-repeat: no-repeat;
-        background-size: contain;
-        content: "";
-        height: 50px;
-        margin: auto;
-        width: 50px;
-        position: absolute!important;
-        @include pc{
-            right:0!important;
-            bottom:-20px!important;
-        }
-    }
-    .swiper-button-prev::after {
-        background-image: url(img/card__btn--prev.png)!important;
-    }
-    /* 次への矢印カスタマイズ */
-    .swiper-button-next::after {
-        background-image: url(img/card__btn--next.png)!important;
-    }
-
-    .swiper-button-prev::before,
-    .swiper-button-next::before {
-    content: none !important;   // デフォ矢印を消す
-    }
-
 
 
     .section__works__swiper--01,
     .section__works__swiper--02 {
-    max-width: 1248px;
-    padding: 0 24px;
-    margin-left: 310px;
+    max-width: 1200px;
+    // margin-left: 310px;
     display: flex;
     gap: 24px;
+    margin: 0 auto;
+    @include pc{
+        display: block;
+        grid-template-columns: 1fr 320px;
+        align-items: stretch;
+    }
 
     .swiper__works--main-01,
     .swiper__works--main-02 {
         width: 75%;
         overflow: hidden;
         border-radius: 8px;
+        @include pc{
+            width:100%;
+            margin-bottom: 12px;
+        }
 
         img {
         width: 100%;
@@ -2513,6 +2504,9 @@
     .swiper__works--thumb-02 {
         width: 25%;
         overflow: hidden;
+        @include pc{
+            width:100%;
+        }
     }
     }
 
@@ -2531,3 +2525,37 @@
     object-fit: cover;
     display: block;
     }
+.swiper-navigation-icon{
+    display:none;
+}
+
+.swiper-button-prev{
+    position: relative;
+    &::after{
+        content:"";
+        position: absolute;
+        display:block;
+        width:60px;
+        height:60px;
+        background-image: url(img/card__btn--prev.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom:0;
+        right:30px;
+    }
+}
+.swiper-button-next{
+    position: relative;
+    &::after{
+        position: absolute;
+        bottom:0;
+        right: -30px;
+        content:"";
+        display:block;
+        width:60px;
+        height:60px;
+        background-image: url(img/card__btn--next.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

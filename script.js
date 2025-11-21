@@ -81,15 +81,11 @@ let images02 = [
 // works-01 thumb
 const thumb01Swiper = new Swiper(".swiper__works--thumb-01", {
   spaceBetween: 8,
-  direction: "horizontal",     
-  slidesPerView: 1,            
-  grid: { rows: 4, fill: "row" }, 
-
+  slidesPerView: 4,            
   breakpoints: {
     1081: {
-      slidesPerView: 2,          
-      grid: { rows: 2, fill: "row" }, 
-      spaceBetween: 8,
+      slidesPerView: 2,
+      grid: { rows: 2, fill: "row" },
     },
   },
 });
@@ -104,10 +100,7 @@ const main01Swiper = new Swiper(".swiper__works--main-01", {
 
 const thumb02Swiper = new Swiper(".swiper__works--thumb-02", {
   spaceBetween: 8,
-  direction: "horizontal",
-  slidesPerView: 1,
-  grid: { rows: 4, fill: "row" },
-
+  slidesPerView: 4,            
   breakpoints: {
     1081: {
       slidesPerView: 2,
@@ -302,10 +295,11 @@ document.addEventListener("keydown", function (e) {
    Plan の cardSwiper
 ================================*/
 const cardSwiper = new Swiper(".cardSwiper", {
-  slidesPerView: "auto",
+  slidesPerView: 2.5,
   spaceBetween: 50,
   centeredSlides: true,
   loop: true,
+  loopAdditionalSlides:5,
   pagination: {
     el: ".swiper-pagination",
     type: "progressbar",
