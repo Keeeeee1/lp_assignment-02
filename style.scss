@@ -492,6 +492,7 @@
                 width:90%;
                 display: flex;
                 justify-content: space-between;
+                padding: 32px 0;
             }
             &__figure{
                 max-width:1400px;
@@ -514,7 +515,7 @@
                 position:relative;
 
                 @include pc { font-size:32px; }
-                @include tb { font-size:26px; }
+                @include tb { font-size:22px; }
                 @include sp { font-size:20px; }
                 &::before{
                     content:"";
@@ -554,10 +555,10 @@
                         padding-top:20px;
                     }
                     @include tb { 
-                        font-size:20px;
-                        padding-top:14px;
+                        font-size:16px;
+                        padding-top:12px;
                     }
-                    @include sp { font-size:14px; }
+                    @include sp { font-size:12px; }
                 }
             }
             &__thumb{
@@ -730,7 +731,7 @@
         &__plan{
             padding:120px 0 60px 0;
             @include pc{
-                padding:12% 0 6% 0;
+                padding:12% 0 120px 0;
             }
             &__subtitle{
                 padding-top:40px;
@@ -746,7 +747,14 @@
                 display: flex;
                 gap:30px;
                 position: absolute;
-                right:0;
+                left:105%;
+                
+                // transform: translateX(75%);
+                @include pc{
+                    bottom:-80px;
+                    left:100%;
+                    transform: translateX(-100%);
+                }
             }
         }
 
@@ -806,8 +814,7 @@
                     line-height: 233.333%;
                     letter-spacing: 0.05em;
                     max-width:350px;
-                    width:40%;
-
+                    width:45%;
                     @include pc { font-size:19px; }
                     @include tb { font-size:15px; }
                     @include sp { font-size:12px; }
@@ -895,7 +902,6 @@
                         top:50%;
                         transform: translateY(-50%);
                     }
-
                     @include pc { font-size:19px; }
                     @include tb { font-size:15px; }
                     @include sp { font-size:12px; }
@@ -912,7 +918,6 @@
                 font-weight: 400;
                 line-height: 175%;
                 flex:1;
-
                 @include pc { font-size:26px; }
                 @include tb { font-size:20px; }
                 @include sp { font-size:16px; }
@@ -949,8 +954,7 @@
         }
         &__works{
             &__visual{
-                padding: 60px 48px 140px 0;
-                width:100%;
+                width:90%;
                 display: flex;
                 justify-content: space-between;
             }
@@ -964,12 +968,10 @@
                 line-height:125%;
                 letter-spacing:0.4em;
                 position:relative;
-
                 @include custom02 { font-size:32px; }
                 @include pc {
-                    padding-top: 12%;
                     font-size:28px; }
-                @include tb { font-size:24px; }
+                @include tb { font-size:21px; }
 
                 &::before{
                     content:"";
@@ -981,7 +983,6 @@
                     transform: translateX(50%);
                     top:0;
                 }
-
                 @include custom02 {
                     padding-top:80px;
                     &::before { height:60px; }
@@ -991,7 +992,7 @@
                     &::before { height:60px; }
                 }
                 @include tb {
-                    padding-top:8%;
+                    padding-top:56px;
                     &::before { 
                         height:40px;
                         right:50%;
@@ -1000,7 +1001,7 @@
             }
             &__figure{
                 max-width: 1400px;
-                width:90%;
+                width:80%;
                 & img{
                     aspect-ratio: 1400 / 825;
                     width:100%;
@@ -1017,7 +1018,8 @@
                 display: flex;
                 align-items:flex-start;
                 align-items: center;
-                @include custom02{
+                @include pc{
+                    padding: 18% 0 6% 0;
                 }
                 &__txt{
                     display: inline-block;
@@ -1367,7 +1369,8 @@
             overflow: hidden;
             isolation: isolate;  
             @include pc{
-                height:400px;
+                height:auto;
+                padding: 32px 0;
             }
             &__circle{
                 width:1000px;
@@ -1652,7 +1655,7 @@
             /* ATTENTION（14px） */
             /* ======================= */
             &__attention{
-                width:569px;
+                width:100%;
                 padding:16px 27px 0 16px;
                 height:120px;
                 overflow:scroll;
@@ -1674,6 +1677,7 @@
                 @include tb { 
                     font-size:12px;
                     height:60px;
+                    margin: 16px 0;
                 }
             }
 
@@ -2282,13 +2286,15 @@
     .card {
         width: 100%;
         max-width: 1000px;
-        aspect-ratio: 1000/750;
+        height: 100%;
         background: #fff;
         border-radius: 16px;
         padding: 28px;
         box-shadow: 0 8px 24px rgba(0,0,0,0.08);
         display: flex;
         flex-direction: column;
+        @include tb{
+        }
         &__images {
             position: relative;
             display: flex;
@@ -2351,6 +2357,12 @@
             line-height: 200%; /* 200% */
             letter-spacing: 0.05em; // 0.8px / 16px
             padding:30px 0; 
+            @include pc{
+                font-size: 14px;
+            }
+            @include tb{
+                font-size: 12px;
+            }
         }
     }
 
@@ -2363,6 +2375,9 @@
 
     .cardSwiper .swiper-slide {
         padding: 0 24px;   /* ← ここが横余白 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
         @include sp {
@@ -2371,9 +2386,9 @@
         }
         }
     // swiper works01
-.swiperSlide--card{
-    height:100%;
-}
+    .swiperSlide--card{
+        // height:100%;
+    }
 
 .swiper-wrapper--thumb{
     align-content:flex-start;
@@ -2422,28 +2437,34 @@
 
 
 
-    .section__card-slider {
-    padding: 60px 0;
-    @include pc{
-        padding:6% 0;
-    }
-    }
+    // .section__card-slider {
+    //     padding: 60px 0;
+    //     @include pc{
+    //         padding:6% 0;
+    //     }
+    // }
     .cardSwiper {
         width: 100%;
         padding: 20px 0 40px;
+        height: 600px;
+        @include tb {
+            height: 700px;
+        }
     }
     .cardSwiper .swiper-slide {
-        display: flex;
-        justify-content: center;
-        width:auto;
+        // display: flex;
+        // justify-content: center;
+        // width:auto;
     }
     .swiper-wrapper--card{
         // width:100%;
     }
     .plan__pager-row{
-        width:80%;
+        width:60%;
+        max-width: 1000px;
         margin:0 auto;
         position: relative;
+        padding: 32px 0;
     }
 
     /* ページネーションの全体 */
@@ -2453,7 +2474,7 @@
     max-width:1000px;
     height: 4px;     /* 太さ */
     background: #DDDDDD; /* 背景ラインの色 */
-    margin: 40px auto 0;
+    margin: 0 auto;
     @include pc{
             width:70%;
     }
@@ -2529,8 +2550,14 @@
     display:none;
 }
 
+.plan__pager-row {
+  --swiper-navigation-size: 60px; // ← cardSwiperの中だけ
+}
+
 .swiper-button-prev{
     position: relative;
+    overflow: hidden;
+    text-indent: 9999px;
     &::after{
         content:"";
         position: absolute;
@@ -2541,15 +2568,17 @@
         background-repeat: no-repeat;
         background-size: contain;
         bottom:0;
-        right:30px;
+        // right:30px;
     }
 }
 .swiper-button-next{
     position: relative;
+    text-indent: 9999px;
+    overflow: hidden;
     &::after{
         position: absolute;
         bottom:0;
-        right: -30px;
+        // right: -30px;
         content:"";
         display:block;
         width:60px;

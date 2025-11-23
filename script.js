@@ -295,11 +295,26 @@ document.addEventListener("keydown", function (e) {
    Plan の cardSwiper
 ================================*/
 const cardSwiper = new Swiper(".cardSwiper", {
-  slidesPerView: 2.5,
-  spaceBetween: 50,
+  slidesPerView:1.1,
+  spaceBetween: 12,
   centeredSlides: true,
   loop: true,
   loopAdditionalSlides:5,
+  breakpoints:{
+    768:{
+      slidesPerView:1.5,
+    }
+  },
+  breakpoints:{
+    1240:{
+      slidesPerView:1.6,
+    }
+  },
+  breakpoints:{
+    1440:{
+      slidesPerView:1.8,
+    }
+  },
   pagination: {
     el: ".swiper-pagination",
     type: "progressbar",
