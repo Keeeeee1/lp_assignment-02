@@ -456,6 +456,9 @@
             background-size: cover;
             background-repeat: no-repeat;
             padding: 120px 0 100px 0;
+            @include pc{
+                padding:12% 0 10% 0;
+            }
             &__txt{
                 padding:0 24px;
             }
@@ -478,6 +481,9 @@
                 }
                 &--bottom{
                     padding-bottom: 60px;
+                    @include pc{
+                        padding-bottom: 6%;
+                    }
                 }
             }
         }
@@ -1333,13 +1339,15 @@
                 font-weight:400;
                 line-height:26px;
                 letter-spacing:0.03em;
+                padding-bottom: 24px;
 
-                @include pc { font-size:14px; }
+                @include pc { 
+                    font-size:14px;
+                    padding-bottom: 2.5%; }
                 @include tb { font-size:12px; }
                 @include sp { font-size:12px; }
             }
 
-            /* 偶数行反転 */
             &__item:nth-child(even){
                 .section__merit__item__img { order:2; }
                 .section__merit__item__txt { order:1; }
@@ -2229,9 +2237,15 @@
             &__dt{
                 flex:3;
                 font-weight: 400;
+                @include tb{
+                    flex:3.5;
+                }
             }
             &__dd{
                 flex:7;
+                @include tb{
+                    flex:6.5;
+                }
             }
         }
         &__card{
