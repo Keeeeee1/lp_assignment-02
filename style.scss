@@ -1473,7 +1473,6 @@
                 flex-wrap: wrap;  
                 @include tb{
                     padding-top: 4px;
-                    flex-wrap: wrap;  
                     flex-direction:row;
                     justify-content: center;
                 }
@@ -1491,8 +1490,6 @@
                 border-left:1px solid #fff;
                 border-bottom:1px solid #fff;
                 margin-bottom:12px;
-                line-height:1;
-
                 @include pc { font-size: 12px; }
                 @include tb {
                     display:inline-block;
@@ -1566,10 +1563,6 @@
                 }
                 @include sp { font-size:12px; }
             }
-
-            /* ======================= */
-            /* PRICE（56px） */
-            /* ======================= */
             &__price {
                 color: #FFF;
                 font-family: "Noto Serif JP";
@@ -1578,7 +1571,6 @@
                 line-height:1;
                 letter-spacing: -0.02em;
                 padding-left:4px;
-
                 @include pc { font-size: 45px; }
                 @include tb { 
                     order: 4;      
@@ -1587,7 +1579,6 @@
                     font-size: 36px;
                 }
                 @include sp { font-size: 28px; }
-
                 span {
                     writing-mode: vertical-rl;
                     font-size:20px;
@@ -1596,7 +1587,10 @@
                     padding-left:4px;
 
                     @include pc { font-size: 16px; }
-                    @include tb { font-size: 12px; }
+                    @include tb { 
+                        font-size: 12px;
+                        order:5;
+                    }
                     @include sp { font-size: 12px; }
                 }
             }
