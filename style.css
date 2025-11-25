@@ -1840,7 +1840,6 @@ body {
   color: #FFF;
   font-family: "Noto Serif JP";
   font-weight: 700;
-  line-height: 1;
 }
 @media screen and (max-width: 1080px) {
   .section__cta__amazon {
@@ -1891,7 +1890,6 @@ body {
   font-family: "Noto Serif JP";
   font-size: 14px;
   font-weight: 700;
-  line-height: 1;
   letter-spacing: 0.1rem;
   padding: 5px;
 }
@@ -1919,7 +1917,6 @@ body {
   font-family: "Noto Serif JP";
   font-size: 56px;
   font-weight: 600;
-  line-height: 1;
   letter-spacing: -0.02em;
   padding-left: 4px;
 }
@@ -1956,7 +1953,6 @@ body {
 @media screen and (max-width: 768px) {
   .section__cta__price span {
     font-size: 12px;
-    order: 5;
   }
 }
 @media screen and (max-width: 375px) {
