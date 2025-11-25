@@ -35,15 +35,15 @@
                 aria-expanded="false"
                 aria-controls="fv-drawer">
         <span class="section__fv__menu-btn__text">menu</span>
-        <span class="section__fv__menu-btn__icon" aria-hidden="true">
+        <span class="section__fv__menu-btn__icon">
             <span></span><span></span><span></span>
         </span>
         </button>
         <nav class="section__fv__nav">
             <ul class="section__fv__nav__items">
-                <div class="section__fv__nav__group--top">
-                    <li class="section__fv__nav__item section__fv__nav__logo"><a href="#"><img src="img/nav__logo.png"></a></li>
-                </div>
+                <li class="section__fv__nav__group--top">
+                    <a href="#" class="section__fv__nav__item section__fv__nav__logo"><img src="img/nav__logo.png"></a>
+                </li>
                 <div class="section__fv__nav__group--middle">
                     <li class="section__fv__nav__item"><a href="#merit">Merit</a></li>
                     <li class="section__fv__nav__item"><a href="#feature">Feature</a></li>
@@ -52,9 +52,9 @@
                     <li class="section__fv__nav__item"><a href="#contact">Contact</a></li>
                     <li class="section__fv__nav__item"><a href="#company-profile">Company Profile</a></li>
                 </div>
-                <div class="section__fv__nav__group--bottom">
-                    <li class="section__fv__nav__item section__fv__nav__cta"><a href="#contact"><img src="img/nav__cta.png"></a></li>
-                </div>
+                <li class="section__fv__nav__group--bottom">
+                    <a href="#contact" class="section__fv__nav__item section__fv__nav__cta"><img src="img/nav__cta.png"></a>
+                </li>
             </ul>
         </nav>
         <div class="section__fv__drawer" id="fv-drawer" aria-hidden="true">
@@ -212,19 +212,21 @@
     <section class="section__cta" id="cta-01">
         <div class="section__cta__circle">    </div>
             <div class="section__cta__inner">
-                <p class="section__cta__eyebrow">予約来場キャンペーン開催中！</p>
+                <p class="section__cta__eyebrow">予約来場キャンペーン<br class="br-tb">開催中！</p>
                 <div class="section__cta__deadline">
                     <span class="section__cta__date">2025.<span>4.30</span>まで</span>
-                    <span class="section__cta__amazon">Amazon <br><span>ギフトカード</span></span>
+                    <span class="section__cta__amazon">Amazon <br class="br-tb--none"><span>ギフトカード</span></span>
                     <span class="section__cta__max">最大</span>
                     <span class="section__cta__price">20,000<span>円分</span></span>
                 </div>
                 <div class="section__cta__item">
                     <img src="img/cta__part.png">
                 </div>
-                <a href="#contact" class="section__cta__btn">
-                    お問い合わせフォーム
-                </a>
+                <div class="section__cta__btn">
+                    <a href="#contact">
+                        お問い合わせフォーム
+                    </a>
+                </div>
             </div>
     </section>
     <section class="section__feature" id="feature">
@@ -447,9 +449,11 @@
                 <div class="section__cta__item">
                     <img src="img/cta__part.png">
                 </div>
-                <a href="#contact" class="section__cta__btn">
-                    お問い合わせフォーム
-                </a>
+                <div class="section__cta__btn">
+                    <a href="#contact">
+                        お問い合わせフォーム
+                    </a>
+                </div>
             </div>
     </section>
     <section class="section__access" id="access">
@@ -656,7 +660,7 @@
     <section class="section__cta section__cta-form" id="cta-03">
         <div class="section__cta__circle">    </div>
             <div class="section__cta__inner">
-                <p class="section__cta__eyebrow">予約来場キャンペーン開催中！</p>
+                <p class="section__cta__eyebrow">予約来場キャンペーン<br class="br-tb">開催中！</p>
                 <div class="section__cta__deadline">
                     <span class="section__cta__date">2025.<span>4.30</span>まで</span>
                     <span class="section__cta__amazon">Amazon <br><span>ギフトカード</span></span>
@@ -675,10 +679,14 @@
                     ご建築・ご成約・計画なしの方は対象外となります。<br>
                     ご予約申込後、電話・メール等で連絡がつかない場合は、誠に勝手ながら予約キャンセルとさせていただきます。
                 </p>
-                <a href="#contact" class="section__cta__btn--03">
-                    お問い合わせフォーム
-                </a>
-                <p class="section__cta__copyright">【サーラ住宅株式会社】と【AmazonはAmazon.com,lnc.またはその関連会社の商標です。】</p>
+                <div class="section__cta__btn--03">
+                    <a href="#contact">
+                        お問い合わせフォーム
+                    </a>
+                </div>
+                <p class="section__cta__copyright">
+                    【サーラ住宅株式会社】と<wbr>【Amazonは<wbr>Amazon.com,lnc.または<wbr>その関連会社の商標です。】
+                </p>
             </div>
     </section>
     <section class="section__contact" id="contact">

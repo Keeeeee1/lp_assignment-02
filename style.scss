@@ -1,5 +1,14 @@
     @import './mixin';
-
+    // .section__fv__drawer {
+    //     position: fixed;
+    //     inset: 0;
+    //     background: #F7F8F7;
+    //     z-index: 50;
+    //     opacity: 0;
+    //     pointer-events: none;
+    //     transition: opacity 0.3s ease;
+    //     display: none;
+    // }
     html{
         scroll-behavior: smooth;
     }
@@ -30,7 +39,7 @@
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
-            line-height: 37px; /* 154.167% */
+            line-height:  154.167%;
             letter-spacing: 0.96px;
             @include pc{
                 font-size: 18px;
@@ -52,7 +61,7 @@
             font-size: 40px;
             font-style: normal;
             font-weight: 400;
-            line-height: 56px; /* 140% */
+            line-height: 140%;
             letter-spacing: 4px;
             @include pc{
                 font-size: 28px;
@@ -68,7 +77,7 @@
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            line-height: 32px; /* 200% */
+            line-height:  200% ;
             letter-spacing: 0.8px;
             @include pc{
                 font-size: 14px;
@@ -147,179 +156,179 @@
     }
 
     .section{
-        &__fv{
+        &__fv {
             font-family: "Noto Serif JP";
-            width:100%;
-            padding:40px 40px 0 40px;
-            height:100vh;
+            width: 100%;
+            padding: 40px 40px 0 40px;
+            height: 100vh;
             position: relative;
-            &__bg{
+            &__bg {
                 background-image: url(img/fv__bg.jpg);
-                background-size:cover;
+                background-size: cover;
                 background-position: right top;
                 background-repeat: no-repeat;
-                height:calc(100% - 40px);
+                height: calc(100% - 40px);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                color:#FFF;
+                color: #FFF;
                 border-radius: 10px;
             }
-            &__title{
+            &__title {
                 display: flex;
-                flex-direction:column;
+                flex-direction: column;
                 justify-content: center;
-                gap:50px;
+                gap: 50px;
                 height: 100%;
-                padding-left:10vw;
-                @include tb{
-                    width:50%;
+                padding-left: 10vw;
+                @include tb {
+                    width: 50%;
                 }
-                & p{
-                    writing-mode:vertical-lr;
-                    font-size:80px;
-                    padding-left:40px;
+                & p {
+                    writing-mode: vertical-lr;
+                    font-size: 80px;
+                    padding-left: 40px;
                     @include pc {
-                        font-size:64px;
+                        font-size: 64px;
                     }
                     @include tb {
-                        font-size:52px;
+                        font-size: 52px;
                     }
                     @include sp {
-                        font-size:40px;
+                        font-size: 40px;
                     }
                 }
-                &__img{
-                    max-width:341px;
-                    width:100%;
-                    & img{
-                        width:100%;
+                &__img {
+                    max-width: 341px;
+                    width: 100%;
+                    img {
+                        width: 100%;
                     }
-                    @include tb{
+                    @include tb {
                         width: 100%;
                     }
                 }
             }
-            &__nav{
+            &__nav {
                 position: absolute;
-                top:0 ;
-                right:0;
+                top: 0;
+                right: 0;
                 width: 310px;
-                height:100vh;
-                display:flex;
+                height: 100vh;
+                display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                background-color:rgba(45,54,48,0.3);
-                &__items{
+                background-color: rgba(45,54,48,0.3);
+                &__items {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
-                    height:70%;
+                    height: 70%;
                 }
-                &__group{
-                    &--top{
-                    }
-                    &--middle{
+                &__group {
+                    &--middle {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        &>li{
-                            padding-bottom:32px;
+                        > li {
+                            padding-bottom: 32px;
                         }
                     }
                 }
-                &__logo{
-                    & img{
-                        aspect-ratio: 125/50;
-                        max-width:125px;
-                    }
+                &__logo img {
+                    aspect-ratio: 125/50;
+                    max-width: 125px;
                 }
-                &__cta{
-                    & img{
-                        aspect-ratio: 193/193;
-                        max-width:193px;
-                    }
+                &__cta img {
+                    aspect-ratio: 193/193;
+                    max-width: 193px;
                 }
             }
-            &__copy-right{
+            &__copy-right {
                 color: #2D3630;
                 font-family: "Noto Serif JP";
                 font-size: 12px;
-                font-style: normal;
                 font-weight: 400;
-                line-height: 26px; /* 185.714% */
+                line-height: 26px;
                 letter-spacing: 1.4px;
-                @include tb{
+
+                @include tb {
                     font-size: 9px;
                 }
             }
-            &__cta{
+
+            &__cta {
+                display: none;
+            }
+            &__drawer{
                 display: none;
             }
             @include tb {
                 $cta-h: calc(100vw * 130 / 640);
                 height: calc(100svh - #{$cta-h});
-
                 padding: 24px 24px 0 24px;
-            &__cta {
-                position: fixed;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                z-index: 99999;
-                display: flex;             // ★左右並び
-                gap:4px;
-                align-items: stretch;
-
-                height: calc(100vw * 130 / 640);
-                &--phone {
-                width: calc(100% * 193 / 640);  // ★左の幅比率
-                flex-shrink: 0;                 // つぶれ防止
-                display: block;
-                img {
+                &__cta {
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
                     width: 100%;
-                    height: 100%;
-                    display: block;
-                    object-fit: cover;
-                }
+                    height: calc(100vw * 130 / 640);
+                    z-index: 99999;
+                    display: flex;
+                    gap: 4px;
+                    align-items: stretch;
+
+                    &--phone {
+                        width: calc(100% * 193 / 640);
+                        flex-shrink: 0;
+                        display: block;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &--contact {
+                        width: calc(100% * (640 - 193) / 640);
+                        display: block;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            object-fit: cover;
+                        }
+                    }
                 }
 
-                // contact（右）
-                &--contact {
-                width: calc(100% * (640 - 193) / 640); // ★右の幅比率
-                display: block;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                    object-fit: cover;
-                }
-                }
-            }
                 &__bg {
                     background-image: url(img/fv__bg--tb.jpg);
                     background-position: bottom center;
                     background-size: cover;
                     height: calc(100% - 24px);
                     border-radius: 10px;
-                    position: relative; // ハンバーガー絶対配置用
+                    position: relative;
                 }
-                &__title{
-                    margin:0 auto;
-                    padding:0;
-                    & p{
+
+                &__title {
+                    margin: 0 auto;
+                    padding: 0;
+
+                    p {
                         margin: 0 auto;
-                        padding-left:0;
+                        padding-left: 0;
                     }
                 }
-                // 右固定ナビは隠す
+
                 &__nav {
                     display: none;
                 }
-                // ハンバーガーボタン
+
                 &__menu-btn {
                     display: flex;
                     align-items: center;
@@ -333,107 +342,113 @@
                     font-family: "Noto Serif JP";
                     cursor: pointer;
                     z-index: 5;
-                &__text {
-                    font-size: 16px;
-                    letter-spacing: 0.08em;
-                    line-height: 1;
+
+                    &__text {
+                        font-size: 16px;
+                        letter-spacing: 0.08em;
+                        line-height: 1;
+                    }
+
+                    &__icon {
+                        width: 24px;
+                        height: 18px;
+                        display: grid;
+                        gap: 5px;
+
+                        span {
+                            display: block;
+                            height: 1px;
+                            background: #fff;
+                        }
+                    }
                 }
-
-                &__icon {
-                    width: 24px;
-                    height: 18px;
-                    display: grid;
-                    gap: 5px;
-
-                    span {
+                &__drawer {
                     display: block;
-                    height: 1px;
-                    background: #fff;
+                    position: fixed;
+                    inset: 0;
+                    background: #F7F8F7;
+                    z-index: 50;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity .3s ease;
+                    &.is-open {
+                        opacity: 1;
+                        pointer-events: auto;
                     }
-                }
-            }
-            &__drawer {
-                position: fixed;
-                inset: 0;
-                background: #F7F8F7;
-                z-index: 50;
-                opacity: 0;
-                pointer-events: none;
-                transition: opacity .3s ease;
-                padding-bottom: 110px; 
-                &.is-open {
-                    opacity: 1;
-                    pointer-events: auto;
-                }
-                &__close {
-                    position: absolute;
-                    top: 48px;
-                    right: 54px;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    background: transparent;
-                    border: none;
-                    color: #2D3630;
-                    font-family: "Noto Serif JP";
-                    font-size: 16px;
-                    cursor: pointer;
-
-                    &-icon {
-                    width: 20px;
-                    height: 20px;
-                    position: relative;
-                    &::before { transform: translateY(-50%) rotate(45deg); }
-                    &::after  { transform: translateY(-50%) rotate(-45deg); }
-                    &::before,
-                    &::after {
-                        content: "";
+                    &__close {
                         position: absolute;
-                        left: 0;
-                        top: 50%;
-                        width: 100%;
-                        height: 1px;
-                        background: #2D3630;
+                        top: 48px;
+                        right: 54px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background: transparent;
+                        border: none;
+                        color: #2D3630;
+                        font-family: "Noto Serif JP";
+                        font-size: 16px;
+                        cursor: pointer;
+                        &-icon {
+                            width: 20px;
+                            height: 20px;
+                            position: relative;
+                            &::before,
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                width: 100%;
+                                height: 1px;
+                                background: #2D3630;
+                            }
+                            &::before {
+                                transform: translateY(-50%) rotate(45deg);
+                            }
+                            &::after {
+                                transform: translateY(-50%) rotate(-45deg);
+                            }
+                        }
                     }
+
+                    &__items {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 40px;
+                        font-family: "Noto Serif JP";
+                        font-size: 20px;
+                        letter-spacing: 0.06em;
+                        color: #2D3630;
+
+                        a {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            @include sp {
+                &__menu-btn {
+                    top: 12px;
+                    right: 12px;
+
+                    &__text {
+                        font-size: 14px;
                     }
                 }
 
-                &__items {
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 40px;
-                    font-family: "Noto Serif JP";
-                    font-size: 20px;
-                    letter-spacing: 0.06em;
-                    color: #2D3630;
-                    a {
-                    color: inherit;
-                    text-decoration: none;
+                &__drawer {
+                    padding-bottom: 96px;
+
+                    &__items {
+                        gap: 28px;
+                        font-size: 18px;
                     }
                 }
             }
-        }
-
-        // SPだけちょい詰める
-        @include sp {
-            &__menu-btn {
-            top: 12px;
-            right: 12px;
-
-            &__text { font-size: 14px; }
-            }
-            &__drawer {
-            padding-bottom: 96px;
-
-            &__items {
-                gap: 28px;
-                font-size: 18px;
-            }
-            }
-        }
         }
         &__concept{
             background-image: url(img/concept__bg.png);
@@ -471,7 +486,6 @@
                 }
             }
         }
-
         &__feature{
             max-width:1920px;
             width:100%;
@@ -1354,12 +1368,17 @@
             background-size: cover;
             background-position: center center;
             height:500px;
+            font-family: "Noto Serif JP";
             background-repeat: no-repeat;
             margin: 0 auto;
             text-align: center;
             position: relative;
             overflow: hidden;
             isolation: isolate;  
+            @include pc{
+                height:auto;
+                padding: 32px 0;
+            }
             @include pc{
                 height:auto;
                 padding: 32px 0;
@@ -1392,6 +1411,7 @@
             }
             &__inner {
                 max-width: 720px;
+                width: 80%;
                 margin: 0 auto;
                 padding: 0 24px;
                 z-index:2;
@@ -1407,10 +1427,6 @@
                     width:100%;
                 }
             }
-
-            /* ======================= */
-            /* EYEBROW */
-            /* ======================= */
             &__eyebrow {
                 width:100%;
                 color: #FFF;
@@ -1423,21 +1439,30 @@
                 padding:50px 0 20px 0;
 
                 @include pc { 
-                    width:60%;
+                    width:80%;
                     margin:0 auto;
                     font-size: 26px;
                     padding-top:24px;
                 }
                 @include tb { 
-                    font-size: 20px;
-                    padding:32px 0 8px;
+                    color: #FFF;
+                    text-align: center;
+                    leading-trim: both;
+                    text-edge: cap;
+                    font-feature-settings: 'halt' on;
+                    font-family: "Noto Serif JP";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 32px; /* 133.333% */
+                    letter-spacing: 2.4px;
                 }
                 @include sp { font-size: 16px; }
             }
 
             &__deadline {
-                width: 100%;      // 80%やめる
-                max-width: 600px; // これは残してOK（必要なら後で上げる）
+                width: 100%;      
+                max-width: 600px; 
                 margin: 0 auto;
                 padding-top: 16px;
                 color: #fff;
@@ -1454,10 +1479,6 @@
                 }
             }
 
-
-            /* ======================= */
-            /* DATE */
-            /* ======================= */
             &__date {
                 color: #fff;
                 width: auto;
@@ -1486,7 +1507,7 @@
                 & span{
                     font-size:28px;
                     @include pc { font-size: 22px; }
-                    @include tb { font-size: 18px; }
+                    @include tb { font-size: 28px; }
                     @include sp { font-size: 14px; }
                 }
             }
@@ -1495,7 +1516,7 @@
             /* AMAZON (賞品名) */
             /* ======================= */
             &__amazon {
-                font-size: 24px; /* ← 後勝ちの 24px を基準 */
+                font-size: 24px; 
                 margin-right: 8px;
                 color: #FFF;
                 font-family: "Noto Serif JP";
@@ -1506,7 +1527,7 @@
                 @include tb {
                     font-size: 15px;
                     order: 2;
-                    flex: 0 0 100%;   // 全幅で1段
+                    flex: 0 0 100%;   
                     margin: 0 auto 6px;
                     text-align: center;
                     margin-right: 0; 
@@ -1520,10 +1541,6 @@
                     @include sp { font-size: 12px; }
                 }
             }
-
-            /* ======================= */
-            /* MAX */
-            /* ======================= */
             &__max{
                 display: flex;
                 align-items: center;
@@ -1583,7 +1600,6 @@
                     @include sp { font-size: 12px; }
                 }
             }
-
             &__item{
                 width:100%;
                 padding:16px 0;
@@ -1593,22 +1609,15 @@
                     width:55%;
                 }
             }
-
-            /* ======================= */
-            /* BUTTONS（32px） */
-            /* ======================= */
             &__btn,
             &__btn--03{
-                width:100%;
                 font-size:32px;
                 @include pc { font-size:26px; }
                 @include tb { font-size:20px; }
                 @include sp { font-size:16px; }
             }
-
             &__btn {
-                display:block;
-                width:75%;
+                width:100%;
                 background:#536C5B;
                 margin:0 auto;
                 color:#fff;
@@ -1622,11 +1631,12 @@
                     padding:15px 0;
                     width:70%;
                 }
+                @include tb{
+                    width:100%;
+                }
             }
-
             &__btn--03{
-                display:block;
-                width:70%;
+                width:100%;
                 margin: 24px auto;
                 background:rgba(16,42,24,0.75);
                 color:#fff;
@@ -2444,7 +2454,10 @@
     .cardSwiper {
         width: 100%;
         padding: 20px 0 40px;
-        height: 600px;
+        height: 750px;
+        @include pc {
+            height: 700px;
+        }
         @include tb {
             height: 700px;
         }
@@ -2528,6 +2541,10 @@
         }
     }
     }
+    // ！！！！！！！！！！！！！！！！！！！
+    // これのせいで実機で見るとめちゃ縦長でバグっていた。
+    // 最小限の指定が吉ということか
+    // ！！！！！！！！！！！！！！！！！！！
     .swiper__works--thumb-01 .swiper-slide,
     .swiper__works--thumb-02 .swiper-slide {
         // aspect-ratio: 136 / 142;

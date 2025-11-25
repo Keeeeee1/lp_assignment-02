@@ -305,11 +305,11 @@ const cardSwiper = new Swiper(".cardSwiper", {
       slidesPerView:1.5,
     }
   },
-  breakpoints:{
-    1240:{
-      slidesPerView:1.6,
-    }
-  },
+  // breakpoints:{
+  //   1240:{
+  //     slidesPerView:1.6,
+  //   }
+  // },
   breakpoints:{
     1440:{
       slidesPerView:1.8,

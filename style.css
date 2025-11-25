@@ -32,7 +32,7 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 37px; /* 154.167% */
+  line-height: 154.167%;
   letter-spacing: 0.96px;
 }
 @media screen and (max-width: 1080px) {
@@ -58,7 +58,7 @@ body {
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 56px; /* 140% */
+  line-height: 140%;
   letter-spacing: 4px;
 }
 @media screen and (max-width: 1080px) {
@@ -78,7 +78,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 200% */
+  line-height: 200%;
   letter-spacing: 0.8px;
 }
 @media screen and (max-width: 1080px) {
@@ -266,9 +266,8 @@ body {
   color: #2D3630;
   font-family: "Noto Serif JP";
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 185.714% */
+  line-height: 26px;
   letter-spacing: 1.4px;
 }
 @media screen and (max-width: 768px) {
@@ -277,6 +276,9 @@ body {
   }
 }
 .section__fv__cta {
+  display: none;
+}
+.section__fv__drawer {
   display: none;
 }
 @media screen and (max-width: 768px) {
@@ -289,11 +291,11 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 20.3125vw;
     z-index: 99999;
     display: flex;
     gap: 4px;
     align-items: stretch;
-    height: 20.3125vw;
   }
   .section__fv__cta--phone {
     width: 30.15625%;
@@ -368,6 +370,7 @@ body {
     background: #fff;
   }
   .section__fv__drawer {
+    display: block;
     position: fixed;
     inset: 0;
     background: #F7F8F7;
@@ -375,7 +378,6 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    padding-bottom: 110px;
   }
   .section__fv__drawer.is-open {
     opacity: 1;
@@ -400,12 +402,6 @@ body {
     height: 20px;
     position: relative;
   }
-  .section__fv__drawer__close-icon::before {
-    transform: translateY(-50%) rotate(45deg);
-  }
-  .section__fv__drawer__close-icon::after {
-    transform: translateY(-50%) rotate(-45deg);
-  }
   .section__fv__drawer__close-icon::before, .section__fv__drawer__close-icon::after {
     content: "";
     position: absolute;
@@ -414,6 +410,12 @@ body {
     width: 100%;
     height: 1px;
     background: #2D3630;
+  }
+  .section__fv__drawer__close-icon::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .section__fv__drawer__close-icon::after {
+    transform: translateY(-50%) rotate(-45deg);
   }
   .section__fv__drawer__items {
     height: 100%;
@@ -1643,6 +1645,7 @@ body {
   background-size: cover;
   background-position: center center;
   height: 500px;
+  font-family: "Noto Serif JP";
   background-repeat: no-repeat;
   margin: 0 auto;
   text-align: center;
@@ -1650,22 +1653,10 @@ body {
   overflow: hidden;
   isolation: isolate;
   /* ======================= */
-  /* EYEBROW */
-  /* ======================= */
-  /* ======================= */
-  /* DATE */
-  /* ======================= */
-  /* ======================= */
   /* AMAZON (賞品名) */
   /* ======================= */
   /* ======================= */
-  /* MAX */
-  /* ======================= */
-  /* ======================= */
   /* PRICE（56px） */
-  /* ======================= */
-  /* ======================= */
-  /* BUTTONS（32px） */
   /* ======================= */
   /* ======================= */
   /* ATTENTION（14px） */
@@ -1673,6 +1664,12 @@ body {
   /* ======================= */
   /* COPYRIGHT（14px） */
   /* ======================= */
+}
+@media screen and (max-width: 1080px) {
+  .section__cta {
+    height: auto;
+    padding: 32px 0;
+  }
 }
 @media screen and (max-width: 1080px) {
   .section__cta {
@@ -1715,6 +1712,7 @@ body {
 }
 .section__cta__inner {
   max-width: 720px;
+  width: 80%;
   margin: 0 auto;
   padding: 0 24px;
   z-index: 2;
@@ -1743,7 +1741,7 @@ body {
 }
 @media screen and (max-width: 1080px) {
   .section__cta__eyebrow {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     font-size: 26px;
     padding-top: 24px;
@@ -1751,8 +1749,17 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__cta__eyebrow {
-    font-size: 20px;
-    padding: 32px 0 8px;
+    color: #FFF;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: "halt" on;
+    font-family: "Noto Serif JP";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 2.4px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1824,7 +1831,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__cta__date span {
-    font-size: 18px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1833,7 +1840,7 @@ body {
   }
 }
 .section__cta__amazon {
-  font-size: 24px; /* ← 後勝ちの 24px を基準 */
+  font-size: 24px;
   margin-right: 8px;
   color: #FFF;
   font-family: "Noto Serif JP";
@@ -1971,7 +1978,6 @@ body {
   width: 55%;
 }
 .section__cta__btn, .section__cta__btn--03 {
-  width: 100%;
   font-size: 32px;
 }
 @media screen and (max-width: 1080px) {
@@ -1990,8 +1996,7 @@ body {
   }
 }
 .section__cta__btn {
-  display: block;
-  width: 75%;
+  width: 100%;
   background: #536C5B;
   margin: 0 auto;
   color: #fff;
@@ -2010,9 +2015,13 @@ body {
     width: 70%;
   }
 }
+@media screen and (max-width: 768px) {
+  .section__cta__btn {
+    width: 100%;
+  }
+}
 .section__cta__btn--03 {
-  display: block;
-  width: 70%;
+  width: 100%;
   margin: 24px auto;
   background: rgba(16, 42, 24, 0.75);
   color: #fff;
@@ -2885,7 +2894,12 @@ Lightbox モーダル
 .cardSwiper {
   width: 100%;
   padding: 20px 0 40px;
-  height: 600px;
+  height: 750px;
+}
+@media screen and (max-width: 1080px) {
+  .cardSwiper {
+    height: 700px;
+  }
 }
 @media screen and (max-width: 768px) {
   .cardSwiper {
