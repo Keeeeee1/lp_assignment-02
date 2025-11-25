@@ -1712,7 +1712,7 @@ body {
 }
 .section__cta__inner {
   max-width: 720px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding: 0 24px;
   z-index: 2;
@@ -1971,11 +1971,20 @@ body {
 .section__cta__item {
   width: 100%;
   padding: 16px 0;
-}
-.section__cta__item img {
-  aspect-ratio: 938/289;
+  aspect-ratio: 469/120;
   max-width: 469px;
-  width: 55%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .section__cta__item {
+    aspect-ratio: 336/120;
+  }
+}
+.section__cta__item--pc, .section__cta__item--tb {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
 }
 .section__cta__btn, .section__cta__btn--03 {
   font-size: 32px;

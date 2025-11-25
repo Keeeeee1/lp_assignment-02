@@ -447,8 +447,12 @@
                     <span class="section__cta__price">20,000<span>円分</span></span>
                 </div>
                 <div class="section__cta__item">
-                    <img src="img/cta__part.png">
+                    <picture>
+                        <source class="section__cta__item--pc" srcset="img/cta__part.png" media="(min-width:768px)" type="png">
+                        <img class="section__cta__item--tb" src="img/cta__amazon--tb.png">
+                    </picture>
                 </div>
+                
                 <div class="section__cta__btn">
                     <a href="#contact">
                         お問い合わせフォーム
