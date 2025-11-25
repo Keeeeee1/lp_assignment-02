@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Noto Serif JP";
+  font-family: "Noto Serif JP" sans-serif;
   background-color: #F7F8F7;
   color: #F7F8F7;
   box-sizing: border-box;
@@ -164,6 +164,7 @@ body {
 }
 
 .section__fv {
+  font-family: "Noto Serif JP";
   width: 100%;
   padding: 40px 40px 0 40px;
   height: 100vh;
@@ -198,11 +199,6 @@ body {
   writing-mode: vertical-lr;
   font-size: 80px;
   padding-left: 40px;
-}
-@media screen and (max-width: 1240px) {
-  .section__fv__title p {
-    font: size 54px;
-  }
 }
 @media screen and (max-width: 1080px) {
   .section__fv__title p {
@@ -404,6 +400,12 @@ body {
     height: 20px;
     position: relative;
   }
+  .section__fv__drawer__close-icon::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .section__fv__drawer__close-icon::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
   .section__fv__drawer__close-icon::before, .section__fv__drawer__close-icon::after {
     content: "";
     position: absolute;
@@ -412,12 +414,6 @@ body {
     width: 100%;
     height: 1px;
     background: #2D3630;
-  }
-  .section__fv__drawer__close-icon::before {
-    transform: translateY(-50%) rotate(45deg);
-  }
-  .section__fv__drawer__close-icon::after {
-    transform: translateY(-50%) rotate(-45deg);
   }
   .section__fv__drawer__items {
     height: 100%;
@@ -2983,14 +2979,6 @@ Lightbox モーダル
   .section__works__swiper--02 .swiper__works--thumb-02 {
     width: 100%;
   }
-}
-
-/* サムネの見た目統一（画像バラバラ対策） */
-.swiper__works--thumb-01 .swiper-slide,
-.swiper__works--thumb-02 .swiper-slide {
-  aspect-ratio: 136/142;
-  overflow: hidden;
-  border-radius: 6px;
 }
 
 .swiper__works--thumb-01 img,

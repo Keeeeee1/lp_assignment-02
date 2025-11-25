@@ -4,15 +4,11 @@
         scroll-behavior: smooth;
     }
     body{
-        font-family: "Noto Serif JP";
+        font-family: "Noto Serif JP" sans-serif;
         background-color:#F7F8F7;
         color:#F7F8F7;
         box-sizing:border-box;
     }
-
-
-
-
     .common__inner{
         margin: 0 auto;
     }
@@ -152,6 +148,7 @@
 
     .section{
         &__fv{
+            font-family: "Noto Serif JP";
             width:100%;
             padding:40px 40px 0 40px;
             height:100vh;
@@ -182,9 +179,6 @@
                     writing-mode:vertical-lr;
                     font-size:80px;
                     padding-left:40px;
-                    @include custom02 {
-                        font: size 54px;
-                    }
                     @include pc {
                         font-size:64px;
                     }
@@ -270,7 +264,6 @@
 
                 padding: 24px 24px 0 24px;
             &__cta {
-
                 position: fixed;
                 left: 0;
                 bottom: 0;
@@ -340,7 +333,6 @@
                     font-family: "Noto Serif JP";
                     cursor: pointer;
                     z-index: 5;
-
                 &__text {
                     font-size: 16px;
                     letter-spacing: 0.08em;
@@ -360,76 +352,68 @@
                     }
                 }
             }
-
-            // 全画面ドロワー
             &__drawer {
-            position: fixed;
-            inset: 0;
-            background: #F7F8F7;
-            z-index: 50;
-
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .3s ease;
-            padding-bottom: 110px; 
-            &.is-open {
-                opacity: 1;
-                pointer-events: auto;
-            }
-
-            &__close {
-                position: absolute;
-                top: 48px;
-                right: 54px;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-
-                background: transparent;
-                border: none;
-                color: #2D3630;
-                font-family: "Noto Serif JP";
-                font-size: 16px;
-                cursor: pointer;
-
-                &-icon {
-                width: 20px;
-                height: 20px;
-                position: relative;
-
-                &::before,
-                &::after {
-                    content: "";
+                position: fixed;
+                inset: 0;
+                background: #F7F8F7;
+                z-index: 50;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity .3s ease;
+                padding-bottom: 110px; 
+                &.is-open {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+                &__close {
                     position: absolute;
-                    left: 0;
-                    top: 50%;
-                    width: 100%;
-                    height: 1px;
-                    background: #2D3630;
-                }
-                &::before { transform: translateY(-50%) rotate(45deg); }
-                &::after  { transform: translateY(-50%) rotate(-45deg); }
-                }
-            }
+                    top: 48px;
+                    right: 54px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    background: transparent;
+                    border: none;
+                    color: #2D3630;
+                    font-family: "Noto Serif JP";
+                    font-size: 16px;
+                    cursor: pointer;
 
-            &__items {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 40px;
-
-                font-family: "Noto Serif JP";
-                font-size: 20px;
-                letter-spacing: 0.06em;
-                color: #2D3630;
-
-                a {
-                color: inherit;
-                text-decoration: none;
+                    &-icon {
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    &::before { transform: translateY(-50%) rotate(45deg); }
+                    &::after  { transform: translateY(-50%) rotate(-45deg); }
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        width: 100%;
+                        height: 1px;
+                        background: #2D3630;
+                    }
+                    }
                 }
-            }
+
+                &__items {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 40px;
+                    font-family: "Noto Serif JP";
+                    font-size: 20px;
+                    letter-spacing: 0.06em;
+                    color: #2D3630;
+                    a {
+                    color: inherit;
+                    text-decoration: none;
+                    }
+                }
             }
         }
 
@@ -2544,13 +2528,10 @@
         }
     }
     }
-
-    /* サムネの見た目統一（画像バラバラ対策） */
     .swiper__works--thumb-01 .swiper-slide,
     .swiper__works--thumb-02 .swiper-slide {
-    aspect-ratio: 136 / 142;
-    overflow: hidden;
-    border-radius: 6px;
+        // aspect-ratio: 136 / 142;
+        // overflow: hidden;
     }
 
     .swiper__works--thumb-01 img,
