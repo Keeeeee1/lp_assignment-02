@@ -195,23 +195,23 @@ body {
     width: 50%;
   }
 }
-.section__fv__title p {
+.section__fv__title h1 {
   writing-mode: vertical-lr;
   font-size: 80px;
   padding-left: 40px;
 }
 @media screen and (max-width: 1080px) {
-  .section__fv__title p {
+  .section__fv__title h1 {
     font-size: 64px;
   }
 }
 @media screen and (max-width: 768px) {
-  .section__fv__title p {
+  .section__fv__title h1 {
     font-size: 52px;
   }
 }
 @media screen and (max-width: 375px) {
-  .section__fv__title p {
+  .section__fv__title h1 {
     font-size: 40px;
   }
 }
@@ -1726,7 +1726,7 @@ body {
   width: 100%;
 }
 .section__cta__eyebrow {
-  width: 100%;
+  width: 80%;
   color: #FFF;
   font-feature-settings: "halt" on;
   font-family: "Noto Serif JP";
@@ -1769,6 +1769,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding-top: 16px;
+  padding-bottom: 8px;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -1778,8 +1779,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__cta__deadline {
+    flex-direction: column;
     padding-top: 4px;
-    flex-direction: row;
     justify-content: center;
   }
 }
@@ -1805,7 +1806,6 @@ body {
   .section__cta__date {
     display: inline-block;
     font-size: 12px;
-    order: 1;
     margin: 0 auto 8px;
     text-align: center;
     margin: 0 auto;
@@ -1848,17 +1848,9 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__cta__amazon {
-    font-size: 15px;
-    order: 2;
-    flex: 0 0 100%;
-    margin: 0 auto 6px;
+    font-size: 24px;
     text-align: center;
     margin-right: 0;
-  }
-}
-@media screen and (max-width: 375px) {
-  .section__cta__amazon {
-    font-size: 12px;
   }
 }
 .section__cta__amazon span {
@@ -1871,39 +1863,31 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__cta__amazon span {
-    font-size: 12px;
+    font-size: 24px;
   }
 }
-@media screen and (max-width: 375px) {
-  .section__cta__amazon span {
-    font-size: 12px;
-  }
+.section__cta__max-price {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 .section__cta__max {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  writing-mode: vertical-rl;
   background-color: #536C5B;
   color: #FFF;
-  text-align: center;
   font-family: "Noto Serif JP";
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.1rem;
-  padding: 5px;
-}
-@media screen and (max-width: 1080px) {
-  .section__cta__max {
-    font-size: 12px;
-  }
+  padding: 10px 5px;
 }
 @media screen and (max-width: 768px) {
   .section__cta__max {
-    font-size: 12px;
-    order: 3;
-    flex: 0 0 auto;
-    align-self: flex-end;
+    font-size: 14px;
     margin-right: 4px;
   }
 }
@@ -1912,52 +1896,58 @@ body {
     font-size: 12px;
   }
 }
-.section__cta__price {
+.section__cta__price__number {
   color: #FFF;
   font-family: "Noto Serif JP";
   font-size: 56px;
   font-weight: 600;
   letter-spacing: -0.02em;
-  padding-left: 4px;
-}
-@media screen and (max-width: 1080px) {
-  .section__cta__price {
-    font-size: 45px;
-  }
 }
 @media screen and (max-width: 768px) {
-  .section__cta__price {
-    order: 4;
+  .section__cta__price__number {
     flex: 0 0 auto;
     align-self: flex-end;
-    font-size: 36px;
+    font-size: 64px;
   }
 }
 @media screen and (max-width: 375px) {
-  .section__cta__price {
+  .section__cta__price__number {
     font-size: 28px;
   }
 }
-.section__cta__price span {
-  writing-mode: vertical-rl;
+.section__cta__price__unit {
+  display: flex;
+  flex-direction: column;
   font-size: 20px;
   font-weight: 900;
   letter-spacing: 0.1rem;
-  padding-left: 4px;
-}
-@media screen and (max-width: 1080px) {
-  .section__cta__price span {
-    font-size: 16px;
-  }
+  transform: translateY(25%);
 }
 @media screen and (max-width: 768px) {
-  .section__cta__price span {
-    font-size: 12px;
+  .section__cta__price__unit {
+    font-size: 36px;
+    font-weight: 600;
+    flex-direction: row;
   }
 }
 @media screen and (max-width: 375px) {
-  .section__cta__price span {
+  .section__cta__price__unit {
     font-size: 12px;
+  }
+}
+.section__cta__regulation {
+  color: #FFF;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  position: absolute;
+  bottom: -15%;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  .section__cta__regulation {
+    bottom: 70%;
+    right: 1%;
   }
 }
 .section__cta__item {
@@ -1972,11 +1962,11 @@ body {
     aspect-ratio: 336/120;
   }
 }
-.section__cta__item--pc, .section__cta__item--tb {
+.section__cta__item picture {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  display: block;
+}
+.section__cta__item img {
+  width: 100%;
 }
 .section__cta__btn, .section__cta__btn--03 {
   font-size: 32px;
@@ -2006,6 +1996,7 @@ body {
   letter-spacing: 0.05em;
   font-family: "Shippori Mincho";
   transition: opacity 0.3s ease;
+  position: relative;
 }
 .section__cta__btn:hover {
   opacity: 0.7;
@@ -2018,8 +2009,22 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__cta__btn {
-    width: 100%;
+    background: #0c1c07;
+    width: 80%;
   }
+}
+.section__cta__btn::after {
+  content: "";
+  background-image: url(img/cta__form__arrow.png);
+  display: block;
+  width: 40px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 5%;
 }
 .section__cta__btn--03 {
   width: 100%;
@@ -2035,16 +2040,30 @@ body {
   mix-blend-mode: multiply;
   transition: opacity 0.3s ease;
 }
+.section__cta__btn--03::after {
+  content: "";
+  background-image: url(img/cta__form__arrow.png);
+  display: block;
+  width: 40px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 5%;
+}
 .section__cta__btn--03:hover {
   opacity: 0.7;
 }
 @media screen and (max-width: 1080px) {
   .section__cta__btn--03 {
     padding: 15px 0;
+    width: 80%;
   }
 }
 .section__cta__attention {
-  width: 100%;
+  width: 80%;
   padding: 16px 27px 0 16px;
   height: 120px;
   overflow: scroll;
@@ -2068,8 +2087,8 @@ body {
 @media screen and (max-width: 768px) {
   .section__cta__attention {
     font-size: 12px;
-    height: 60px;
-    margin: 16px 0;
+    height: 100px;
+    margin: 16px auto;
   }
 }
 .section__cta__copyright {
@@ -2228,8 +2247,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__contact__options {
-    padding: 0 3%;
-    gap: 10px;
+    display: block;
   }
 }
 .section__contact .contact-option {
@@ -2238,6 +2256,16 @@ body {
   ARROW  
   16px → PC:12px / TB:12px / SP:12px
   ================================= */
+}
+.section__contact .contact-option.is-active {
+  border-color: #536C5B;
+}
+.section__contact .contact-option.is-active .contact-option__txt {
+  background: #fff;
+  color: #2D3630;
+}
+.section__contact .contact-option.is-active .contact-option__txt::before {
+  background-image: url(img/contact__select__arrow.png);
 }
 .section__contact .contact-option__img {
   width: 100%;
@@ -2249,6 +2277,11 @@ body {
   max-width: 380px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .section__contact .contact-option__img img {
+    max-width: 100%;
+  }
 }
 .section__contact .contact-option__txt {
   background: #2D3630;
@@ -2273,12 +2306,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section__contact .contact-option__txt {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .section__contact .contact-option__txt {
-    font-size: 12px;
+    font-size: 24px;
   }
 }
 .section__contact .contact-option__txt::before {

@@ -184,7 +184,7 @@
                 @include tb {
                     width: 50%;
                 }
-                & p {
+                & h1 {
                     writing-mode: vertical-lr;
                     font-size: 80px;
                     padding-left: 40px;
@@ -1428,7 +1428,7 @@
                 }
             }
             &__eyebrow {
-                width:100%;
+                width:80%;
                 color: #FFF;
                 font-feature-settings: 'halt' on;
                 font-family: "Noto Serif JP";
@@ -1465,6 +1465,7 @@
                 max-width: 600px; 
                 margin: 0 auto;
                 padding-top: 16px;
+                padding-bottom: 8px;
                 color: #fff;
                 display: flex;
                 justify-content: center;
@@ -1472,9 +1473,10 @@
                 gap: 8px;         
                 flex-wrap: wrap;  
                 @include tb{
+                    flex-direction: column;
                     padding-top: 4px;
-                    flex-direction:row;
                     justify-content: center;
+                    // display: block;
                 }
             }
 
@@ -1494,7 +1496,6 @@
                 @include tb {
                     display:inline-block;
                     font-size: 12px;
-                    order: 1;
                     margin: 0 auto 8px;
                     text-align: center;
                     margin: 0 auto;
@@ -1521,73 +1522,81 @@
 
                 @include pc { font-size: 19px; }
                 @include tb {
-                    font-size: 15px;
-                    order: 2;
-                    flex: 0 0 100%;   
-                    margin: 0 auto 6px;
+                    font-size: 24px;
                     text-align: center;
                     margin-right: 0; 
                 }
-                @include sp { font-size: 12px; }
-
                 & span{
                     font-size:17px;
                     @include pc { font-size: 14px; }
-                    @include tb { font-size: 12px; }
-                    @include sp { font-size: 12px; }
+                    @include tb { font-size: 24px; }
                 }
+            }
+            &__max-price{
+                display: flex;
+                gap:8px;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                
             }
             &__max{
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                writing-mode: vertical-rl;
                 background-color:#536C5B ;
                 color:#FFF;
-                text-align:center;
                 font-family:"Noto Serif JP";
                 font-size:14px;
                 font-weight:700;
-                letter-spacing:0.1rem;
-                padding:5px;
-
-                @include pc { font-size:12px; }
+                padding:10px 5px;
                 @include tb {
-                    font-size:12px;
-                    order: 3;         // 3段目の左
-                    flex: 0 0 auto;
-                    align-self: flex-end;
+                    font-size: 14px;
                     margin-right: 4px; // 価格とくっつける
                 }
                 @include sp { font-size:12px; }
             }
             &__price {
-                color: #FFF;
-                font-family: "Noto Serif JP";
-                font-size: 56px;
-                font-weight: 600;
-                letter-spacing: -0.02em;
-                padding-left:4px;
-                @include pc { font-size: 45px; }
-                @include tb { 
-                    order: 4;      
-                    flex: 0 0 auto;
-                    align-self: flex-end;
-                    font-size: 36px;
+                &__number{
+                    color: #FFF;
+                    font-family: "Noto Serif JP";
+                    font-size: 56px;
+                    font-weight: 600;
+                    letter-spacing: -0.02em;
+                    @include tb { 
+                        flex: 0 0 auto;
+                        align-self: flex-end;
+                        font-size: 64px;
+                    }
+                    @include sp { font-size: 28px; }
                 }
-                @include sp { font-size: 28px; }
-                span {
-                    writing-mode: vertical-rl;
+                &__unit{
+                    display: flex;
+                    flex-direction: column;
                     font-size:20px;
                     font-weight:900;
                     letter-spacing:0.1rem;
-                    padding-left:4px;
-
-                    @include pc { font-size: 16px; }
+                    transform: translateY(25%);
                     @include tb { 
-                        font-size: 12px;
+                        font-size: 36px;
+                        font-weight: 600;
+                        flex-direction: row;
                     }
                     @include sp { font-size: 12px; }
+                }
+            }
+            &__regulation{
+                color: #FFF;
+                text-align: center;
+                font-size: 10px;
+                font-weight: 500;
+                position: absolute;
+                bottom:-15%;
+                right: 0;
+                @include tb{
+                    bottom:70%;
+                    right:1%;
                 }
             }
             &__item{
@@ -1599,11 +1608,11 @@
                 @include tb{
                     aspect-ratio: 336/120;
                 }
-                &--pc,
-                &--tb{
-                    width:100%;
-                    object-fit: contain;
-                    display: block;
+                & picture{
+                    width: 100%;
+                }
+                & img{
+                    width: 100%;
                 }
             }
             &__btn,
@@ -1623,13 +1632,28 @@
                 letter-spacing:0.05em;
                 font-family:"Shippori Mincho";
                 transition:opacity .3s ease;
+                position: relative;
                 &:hover { opacity:0.7; }
                 @include pc{
                     padding:15px 0;
                     width:70%;
                 }
                 @include tb{
-                    width:100%;
+                    background:#0c1c07;
+                    width:80%;
+                }
+                &::after{
+                    content: "";
+                    background-image: url(img/cta__form__arrow.png);
+                    display: block;
+                    width: 40px;
+                    height: 20px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    bottom:50%;
+                    transform: translateY(50%);
+                    right:5%;
                 }
             }
             &__btn--03{
@@ -1644,9 +1668,23 @@
                 backdrop-filter:blur(10px);
                 mix-blend-mode:multiply;
                 transition:opacity .3s ease;
+                &::after{
+                    content: "";
+                    background-image: url(img/cta__form__arrow.png);
+                    display: block;
+                    width: 40px;
+                    height: 20px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    bottom:50%;
+                    transform: translateY(50%);
+                    right:5%;
+                }
                 &:hover{ opacity:0.7; }
                 @include pc{
                     padding:15px 0;
+                    width: 80%;
                 }
             }
 
@@ -1654,7 +1692,7 @@
             /* ATTENTION（14px） */
             /* ======================= */
             &__attention{
-                width:100%;
+                width:80%;
                 padding:16px 27px 0 16px;
                 height:120px;
                 overflow:scroll;
@@ -1675,8 +1713,8 @@
                 }
                 @include tb { 
                     font-size:12px;
-                    height:60px;
-                    margin: 16px 0;
+                    height:100px;
+                    margin: 16px auto;
                 }
             }
 
@@ -1804,14 +1842,24 @@
                     padding:0 5%;
                 }
                 @include tb{
-                    padding:0 3%;
-                    gap:10px;
+                    display: block;
+
                 }
             }
 
             .contact-option {
                 padding-bottom:140px;
+                &.is-active {
+                    border-color: #536C5B; // 緑色の枠線
+                }
 
+                &.is-active .contact-option__txt {
+                    background: #fff;
+                    color: #2D3630;
+                }
+                &.is-active .contact-option__txt::before {
+                    background-image: url(img/contact__select__arrow.png);
+                }
                 &__img {
                     width: 100%;
                     background-color:#E3E3E3 ;
@@ -1820,6 +1868,9 @@
                         aspect-ratio: 380 / 170;
                         max-width:380px;
                         object-fit: cover;
+                        @include tb{
+                            max-width:100%;
+                        }
                     }
                 }
 
@@ -1843,12 +1894,8 @@
                         font-size: 16px; 
                     }
                     @include tb {
-                        font-size: 12px; 
+                        font-size: 24px; 
                     }
-                    @include sp {
-                        font-size: 12px; 
-                    }
-
                     &::before{
                         content:"";
                         width:12px;

@@ -336,3 +336,21 @@ document.querySelectorAll('.toggle__btn').forEach(btn => {
     btn.classList.toggle('is-open');
   });
 });
+
+
+document.querySelectorAll('.contact-option').forEach(option => {
+    option.addEventListener('click', function(e) {
+        e.preventDefault(); // ページ遷移を防ぐ（href="#"対策）
+
+        // 全て一旦リセット
+        document.querySelectorAll('.contact-option')
+            .forEach(el => el.classList.remove('is-active'));
+
+        // 今クリックされたものだけ active
+        this.classList.add('is-active');
+
+        // 必要なら hidden input に入れる
+        document.querySelector('#selected_contact_type').value =
+            this.innerText.trim();
+    });
+});
