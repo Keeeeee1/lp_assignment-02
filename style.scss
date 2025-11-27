@@ -820,7 +820,9 @@
                     max-width:350px;
                     width:45%;
                     @include pc { font-size:19px; }
-                    @include tb { font-size:15px; }
+                    @include tb { font-size:15px;
+                        width:50%
+                    }
                     @include sp { font-size:12px; }
                 }
                 &__right{
@@ -833,7 +835,9 @@
                     letter-spacing: 0.05em;
                     width:55%;
                     @include pc { font-size:14px; }
-                    @include tb { font-size:12px; }
+                    @include tb { font-size:12px;
+                        width:50%
+                    }
                     @include sp { font-size:12px; }
                     .access-map{
                         width: 100%;
@@ -845,6 +849,9 @@
                     max-width:940px;
                     width:94%;
                     gap:50px;
+                    @include tb{
+                        gap:16px;
+                    }
                 }
                 &__item{
                     border-bottom:1px solid #A5A5A5;
@@ -957,6 +964,10 @@
             }
         }
         &__works{
+            padding-bottom:140px;
+            @include pc{
+                padding-bottom: 14%;
+            }
             &__visual{
                 width:90%;
                 display: flex;
@@ -1442,7 +1453,7 @@
                     width:80%;
                     margin:0 auto;
                     font-size: 26px;
-                    padding-top:24px;
+                    padding-top:0px;
                 }
                 @include tb { 
                     color: #FFF;
@@ -1593,7 +1604,7 @@
                 font-weight: 500;
                 position: absolute;
                 bottom:-15%;
-                right: 0;
+                right: -26%;
                 @include tb{
                     bottom:70%;
                     right:1%;
@@ -1891,10 +1902,10 @@
                     position: relative;
 
                     @include pc {
-                        font-size: 16px; 
+                        font-size: 24px; 
                     }
                     @include tb {
-                        font-size: 24px; 
+                        font-size: 21px; 
                     }
                     &::before{
                         content:"";
@@ -2351,7 +2362,9 @@
             position: relative;
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
             gap: 20px;
+            height: auto;
             .card__zoom-icon{
                 position: absolute;
                 bottom: -10px;
@@ -2359,12 +2372,23 @@
                 width: 38px;
                 height: 38px;
                 z-index: 99;
+                transform: translateY(50%);
+                transform: translate(50%);
+                @include tb{
+                    width: 25px;
+                    height: 25px;
+                    bottom:-20%;
+                    right:0;
+                }
                 & img {
-                    width: 60px;
+                    width: 100%;
                     aspect-ratio: 38/38;
+                    @include tb{
+                        width: 25px;
+                    }
                 }
             }
-            }
+        }
         &__zoom-icon {
                 position: absolute;
                 bottom: 8px;
@@ -2614,6 +2638,10 @@
     position: relative;
     overflow: hidden;
     text-indent: 9999px;
+    @include tb{
+        width: 30px;
+        height: 30px;
+    }
     &::after{
         content:"";
         position: absolute;
@@ -2624,13 +2652,20 @@
         background-repeat: no-repeat;
         background-size: contain;
         bottom:0;
-        // right:30px;
+        @include tb{
+            width:30px;
+            height: 30px;
+        }
     }
 }
 .swiper-button-next{
     position: relative;
     text-indent: 9999px;
     overflow: hidden;
+    @include tb{
+        width: 30px;
+        height: 30px;
+    }
     &::after{
         position: absolute;
         bottom:0;
@@ -2642,5 +2677,9 @@
         background-image: url(img/card__btn--next.png);
         background-repeat: no-repeat;
         background-size: contain;
+        @include tb{
+            width:30px;
+            height: 30px;
+        }
     }
 }

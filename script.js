@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 ================================*/
 const conceptSwiper = new Swiper(".swiper--concept", {
   slidesPerView: 3,
+  loopAdditionalSlides:3,
+
   loop: true,
   speed: 3000,
   autoplay: {
